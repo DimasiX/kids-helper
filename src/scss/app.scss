@@ -1,0 +1,249 @@
+/* ===========================
+    Variables
+========================= */
+
+$color-text: lighten(#4c68d7, 20%);
+/* ===========================
+    End Variables
+========================= */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: #404040;
+  // background: rgb(38, 143, 164);
+}
+
+.wallpaper{
+  z-index: -10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url('os-x.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: blur(0px);
+}
+
+.blur-img{
+  position: absolute;
+  overflow: hidden;
+  z-index: -2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  filter: blur(0px);
+}
+.overflow{
+  @media screen and(max-width: 768px){
+    background: url('mobile6.jpg');
+  }
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  filter: blur(0px);
+}
+
+*{
+  box-sizing: border-box;
+}
+
+.App{
+  @media screen and(max-width: 768px){
+    width: 100%;
+  }
+  width: 70%;
+  margin: 0 auto;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.65);
+}
+
+/* ===========================
+    Header
+    ========================= */
+
+.header{
+  .menu-butt{
+    background: rgb(147, 221, 151);
+    width: 4em;
+    height: 3em;
+    position: fixed;
+    top: 2em;
+    left: -15%;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+  @media screen and(max-width: 768px){
+    z-index: 100;
+    width: 100%;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    position: fixed;
+    border-radius: 0;
+    transform: translateX(100%);
+    overflow: visible;
+  }
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+  background:transparent;
+  color: #576366;
+  overflow: hidden;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom: 4px solid #3b458c;
+  .nav{
+    @media screen and (max-width: 768px){
+      width: 100%;
+      height: 6em;
+      border-top: 4px solid rgba(255, 255, 255, 0.59);
+    }
+    transition: background .5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 6em;
+    width: 25%;
+    background: rgba(black, 0.7);
+    color: white;
+    text-decoration: none;
+
+    &:hover{
+      background: darken($color-text, 10%);
+    }
+    span{
+      font-size: 2em;
+      text-decoration: none;
+    }
+  }
+  .active{
+    background: darken($color-text, 15%);
+  }
+}
+
+/* ===========================
+  End Header
+========================= */
+
+/* ===========================
+  Home
+========================= */
+.home{
+  @media screen and (max-width: 768px){
+    padding: 4em 0;
+    border-top-left-radius: -20px;
+    border-top-right-radius: -20px;
+    background: rgba(black, 0.59);
+  }
+  height: 50em;
+  position: relative;
+  overflow: hidden;
+  margin: 0em auto;
+  padding: 6em 0;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(black, 0.7);
+  .greetings{
+    @media screen and (max-width: 768px){
+      width: 100%;
+      margin-top: 0;
+      text-shadow: none;
+      color: $color-text;
+      border: none;
+    }
+    display: block;
+    width: 40%;
+    margin: .5em auto;
+    text-align: center;
+    font-size: 3.5em;
+    color: #ffb9d9;
+    border-bottom: 3px solid lighten($color-text, 15%);
+      text-shadow: 1px 1px darken($color-text,10%),
+               2px 3px darken($color-text,20%),
+               3px 2px darken($color-text,10%);
+  }
+}
+
+.home-content{
+  @media screen and (max-width: 768px){
+
+  }
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  form{
+    @media screen and (max-width: 768px){
+      width: 100%;
+    }
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    outline: none;
+  }
+  input{
+    @media screen and (max-width: 768px){
+      width: 95%;
+      input:hover{
+        transform: scale(0);
+        box-shadow: 0 0 20px black;
+      }
+    }
+    transition: transform .3s,  box-shadow .3s;
+    border: 0px solid;
+    margin-bottom: .5em;
+    padding: .5em 0;
+    padding-right: .5em;
+    text-align: center;
+    font-size: 1.75em;
+    font-weight: bold;
+    background: white;
+    color: #37474F;
+    box-shadow: 0 0 0px black;
+    &:hover{
+      transform: scale(1.05);
+      box-shadow: 0 0 20px black;
+    }
+  }
+  button {
+    @media screen and (max-width: 768px){
+      width: 80%;
+    }
+    padding: .5em 1em;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 10px;
+    border: solid 1px rgba(0,0,0, .1);
+    outline: none;
+    color: white;
+    background: #4188dc;
+    cursor: pointer;
+  }
+  li{
+    color: white;
+    font-weight: bold;
+  }
+}
+
+
+/* ===========================
+  End Home
+========================= */
