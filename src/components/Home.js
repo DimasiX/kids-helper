@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 
 const Home = (props) => {
   return(
@@ -9,8 +9,8 @@ const Home = (props) => {
       <h1 className="greetings">Welcome Home!</h1>
       <div className="home-content">
         <form onSubmit={props.addGame}>
-          <input type="text" placeholder="Type Your Name!"/>
-          <button type="submit">Add On It!</button>
+          <input value={props.inputField} type="text" placeholder="Type Your Name!" onChange={props.input}/>
+          <button type="submit" onClick={props.addGame}>Add On It!</button>
         </form>
 
         <ul>
@@ -29,4 +29,10 @@ const Home = (props) => {
   )
 }
 
+/*
+Home.propTypes = {
+  input: PropTypes.func.isRequired,
+  addGame: PropTypes.func.isRequired
+}
+*/
 export default Home;

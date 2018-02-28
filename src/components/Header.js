@@ -1,27 +1,41 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {
   NavLink
 } from 'react-router-dom';
 
-const Header = (props) => {
-  return(
-    <div className="header hide">
-      <div className="menu-butt"></div>
+class Header extends Component {
 
-      <NavLink className="nav" exact to="/">
-          <span>Home</span>
-      </NavLink>
-      <NavLink className="nav" to="/challenges">
-          <span>Challenges</span>
-      </NavLink>
-      <NavLink className="nav" to="/about">
-          <span>About</span>
-      </NavLink>
-      <NavLink className="nav" to="/progress">
-          <span>Progress</span>
-      </NavLink>
-    </div>
-  )
+  state = {
+    isActive: false,
+  }
+
+  addActiveClass = () =>{
+    this.setState({
+      isActive: !this.state.isActive,
+    });
+    this.setState();
+  }
+
+  render = () => {
+    return(
+      <div className={"header " + this.state.isActive}>
+        <div className={"menu-butt " + this.state.isActive} onClick={this.addActiveClass}></div>
+
+        <NavLink className="nav" exact to="/" onClick={this.addActiveClass}>
+            <span>Home</span>
+        </NavLink>
+        <NavLink className="nav" to="/challenges" onClick={this.addActiveClass}>
+            <span>Challenges</span>
+        </NavLink>
+        <NavLink className="nav" to="/about" onClick={this.addActiveClass}>
+            <span>About</span>
+        </NavLink>
+        <NavLink className="nav" to="/progress" onClick={this.addActiveClass}>
+            <span>Progress</span>
+        </NavLink>
+      </div>
+    )
+  }
 }
 
 export default Header;

@@ -62,7 +62,20 @@ body {
 /* ===========================
     Header
     ========================= */
+@media screen and (max-width: 768px) {
+  .false {
+    top: 2em;
+    left: -9em;
+    transform: translateX(100%);
+    display: block; }
+
+  .true {
+    transform: translateX(0%);
+    top: 2em;
+    right: 1em;
+    display: block; } }
 .header {
+  transition: transform .5s;
   position: absolute;
   z-index: 10;
   display: flex;
@@ -75,12 +88,14 @@ body {
   border-bottom-right-radius: 20px;
   border-bottom: 4px solid #3b458c; }
   .header .menu-butt {
-    background: #93dd97;
+    display: none;
+    background: #8c33d0;
     width: 4em;
     height: 3em;
-    position: fixed;
-    top: 2em;
-    left: -15%; }
+    position: fixed; }
+    @media screen and (max-width: 768px) {
+      .header .menu-butt {
+        display: block; } }
     .header .menu-butt:hover {
       cursor: pointer; }
   @media screen and (max-width: 768px) {
@@ -92,8 +107,9 @@ body {
       left: 0;
       position: fixed;
       border-radius: 0;
-      transform: translateX(100%);
-      overflow: visible; } }
+      overflow: visible;
+      background: black;
+      height: 100vh; } }
   .header .nav {
     transition: background .5s;
     display: flex;
@@ -107,7 +123,7 @@ body {
     @media screen and (max-width: 768px) {
       .header .nav {
         width: 100%;
-        height: 6em;
+        height: 25%;
         border-top: 4px solid rgba(255, 255, 255, 0.59); } }
     .header .nav:hover {
       background: #768be0; }
@@ -124,11 +140,10 @@ body {
   Home
 ========================= */
 .home {
-  height: 50em;
   position: relative;
   overflow: hidden;
   margin: 0em auto;
-  padding: 6em 0;
+  padding-top: 6em;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -146,7 +161,7 @@ body {
     margin: .5em auto;
     text-align: center;
     font-size: 3.5em;
-    color: #ffb9d9;
+    color: #fff;
     border-bottom: 3px solid #dee3f8;
     text-shadow: 1px 1px #768be0, 2px 3px #4c68d7, 3px 2px #768be0; }
     @media screen and (max-width: 768px) {
@@ -164,7 +179,7 @@ body {
   flex-direction: column;
   align-items: center; }
   .home-content form {
-    width: 30%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -207,7 +222,14 @@ body {
     @media screen and (max-width: 768px) {
       .home-content button {
         width: 80%; } }
+  .home-content ul {
+    text-align: center;
+    padding: 0;
+    width: 50%; }
   .home-content li {
+    font-size: 2em;
+    list-style: none;
+    margin: 0 auto;
     color: white;
     font-weight: bold; }
 
