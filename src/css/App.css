@@ -181,17 +181,17 @@ body {
   .home-content form {
     width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: center;
     outline: none; }
     @media screen and (max-width: 768px) {
       .home-content form {
-        width: 100%; } }
+        width: 100%;
+        flex-direction: column;
+        align-items: center; } }
   .home-content input {
     transition: transform .3s,  box-shadow .3s;
     border: 0px solid;
-    margin-bottom: .5em;
     padding: .5em 0;
     padding-right: .5em;
     text-align: center;
@@ -210,6 +210,7 @@ body {
       transform: scale(1.05);
       box-shadow: 0 0 20px black; }
   .home-content button {
+    margin-left: .2em;
     padding: .5em 1em;
     font-size: 1.5em;
     border: none;
@@ -221,17 +222,25 @@ body {
     cursor: pointer; }
     @media screen and (max-width: 768px) {
       .home-content button {
-        width: 80%; } }
+        width: 80%;
+        margin-top: .5em; } }
   .home-content ul {
     text-align: center;
     padding: 0;
     width: 50%; }
+    @media screen and (max-width: 768px) {
+      .home-content ul {
+        width: 95%; } }
   .home-content li {
     font-size: 2em;
     list-style: none;
     margin: 0 auto;
     color: white;
     font-weight: bold; }
+    @media screen and (max-width: 768px) {
+      .home-content li {
+        border-bottom: 2px solid rgba(255, 255, 255, 0.62);
+        margin-bottom: .5em; } }
 
 /* ===========================
   End Home

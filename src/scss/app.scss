@@ -209,15 +209,17 @@ body {
   form{
     @media screen and (max-width: 768px){
       width: 100%;
+      flex-direction: column;
+      align-items: center;
     }
     width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: center;
     outline: none;
   }
   input{
+
     @media screen and (max-width: 768px){
       width: 95%;
       input:hover{
@@ -227,7 +229,7 @@ body {
     }
     transition: transform .3s,  box-shadow .3s;
     border: 0px solid;
-    margin-bottom: .5em;
+    // margin-bottom: .5em;
     padding: .5em 0;
     padding-right: .5em;
     text-align: center;
@@ -244,7 +246,9 @@ body {
   button {
     @media screen and (max-width: 768px){
       width: 80%;
+      margin-top: .5em;
     }
+    margin-left: .2em;
     padding: .5em 1em;
     font-size: 1.5em;
     border: none;
@@ -256,12 +260,18 @@ body {
     cursor: pointer;
   }
   ul{
+    @media screen and (max-width: 768px){
+      width: 95%;
+    }
     text-align: center;
     padding: 0;
     width: 50%;
   }
   li{
-
+    @media screen and (max-width: 768px){
+      border-bottom: 2px solid rgba(255, 255, 255, 0.62);
+      margin-bottom: .5em;
+    }
     font-size: 2em;
     list-style: none;
     margin: 0 auto;
