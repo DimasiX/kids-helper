@@ -24,58 +24,65 @@ body {
 /* ===========================
     Header
     ========================= */
-.header{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 100vh;
-
-  transition: transform .5s;
-
-  .menu-butt{
-    width: 2.5em;
-    height: 2em;
-    background: tomato;
-    position: absolute;
-    top: 1em;
-    left: -3.5em;
-  }
-
-  .nav{
+@media screen and (max-width:768px){
+  .header{
+    z-index: 5;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
 
-    text-decoration: none;
-    font-size: 2em;
-    font-weight: normal;
-    letter-spacing: 4px;
-    color: rgb(255, 255, 255);
-    background: rgba(15, 15, 15, 0.99);
-
-    border-top: 2px solid rgba(255, 255, 255, 0.7);
-
-    height: 25%;
     width: 100%;
-  }
-  .active{
-    background: #000000;
+    height: 100vh;
+
+    transition: transform .5s ease-in-out;
+    &.true{
+      transform: translateX(0%);
+    }
+    &.false{
+      transform: translateX(100%);
+    }
+
+    .menu-butt{
+      width: 2.5em;
+      height: 2em;
+      background: tomato;
+      position: absolute;
+      top: 1em;
+      &.true{
+        right: 1em;
+      }
+      &.false{
+        left: -3.5em;
+      }
+    }
+
+    .nav{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-decoration: none;
+      font-size: 2em;
+      font-weight: normal;
+      letter-spacing: 4px;
+      color: rgb(255, 255, 255);
+      background: rgba(15, 15, 15, 0.99);
+
+      border-top: 2px solid rgba(255, 255, 255, 0.7);
+
+      height: 25%;
+      width: 100%;
+      &.active{
+        background: #000000;
+      }
+    }
+
   }
 }
 
-.header, .true{
-  transform: translateX(0%);
-  border: 2px solid red;
-}
-.header, .false{
-  transform: translateX(0%);
-  border: 2px solid blue;
-}
 /* ===========================
   End Header
 ========================= */
@@ -87,9 +94,104 @@ body {
 
   .home{
     width: 100%;
-    height: 100vh;
+
+    background: linear-gradient(135deg, rgb(0, 0, 0), rgb(15, 15, 15));
+    .intro{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+      h1{
+        margin: 0;
+        color: #ffffff;
+        font-size: 3em;
+        text-shadow: .5px .5px rgb(255, 0, 245),
+                     1.5px 1.5px rgb(255, 0, 245),
+                     2px 2px rgb(255, 0, 245);
+        letter-spacing: 10px;
+      }
+      i {
+        z-index: 0;
+        border: solid white;
+        border-width: 0 1px 1px 0;
+        padding: 3px;
+        margin-top: 1em;
+        transform: scale(6) rotate(45deg);
+        position: absolute;
+        bottom: 2em;
+      }
+    }
+    .wishes{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      width: 100%;
+
+      background: #fff;
+
+      .wish{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        height: 50vh;
+        width: 95%;
+
+        border: 2px solid red;
+        h1{
+          margin-top: 1em;
+          text-align: center;
+          color: white;
+          text-shadow: .5px .5px rgb(0, 148, 255),
+                       1.5px 1.5px rgb(0, 148, 255),
+                       2px 2px rgb(0, 148, 255);
+        }
+      }
+    }
   }
 
 /* ===========================
   END Home
 ========================= */
+
+/* TEST
+*/
+#burger-container{
+  z-index: 20;
+  position: fixed;
+  top: 0em;
+  right: 0em;
+  transform: scale(.5);
+}
+#burger span{
+    background: #ff216a;
+    display:block;
+    width:100px;
+    height:14px;
+    margin-bottom: 10px;
+    position: relative;
+    top:0;
+    transition: all ease-in-out 0.4s;
+}
+
+#burger-container.true span:nth-child(2),
+#burger-container.true span:nth-child(3){
+    width: 0;
+    opacity:0;
+
+}
+
+#burger-container.true span:nth-child(1){
+
+    transform: rotate(-45deg);
+    top:36px;
+}
+
+#burger-container.true span:nth-child(4){
+    transform: rotate(45deg);
+    top:-36px;
+}

@@ -18,21 +18,31 @@ class Header extends Component {
 
   render = () => {
     return(
-      <div className={"header " + this.state.isActive}>
-        <div className={"menu-butt " + this.state.isActive} onClick={this.addActiveClass}></div>
+      <div>
+        <div className={""+this.state.isActive} id="burger-container" onClick={this.addActiveClass}>
+          <div id="burger">
+              <span> &nbsp;</span>
+               <span> &nbsp;</span>
+               <span> &nbsp;</span>
+               <span> &nbsp;</span>
+          </div>
+        </div>
 
-        <NavLink className="nav" exact to="/" onClick={this.addActiveClass}>
-            <span>Home</span>
-        </NavLink>
-        <NavLink className="nav" to="/challenges" onClick={this.addActiveClass}>
-            <span>Challenges</span>
-        </NavLink>
-        <NavLink className="nav" to="/about" onClick={this.addActiveClass}>
-            <span>About</span>
-        </NavLink>
-        <NavLink className="nav" to="/progress" onClick={this.addActiveClass}>
-            <span>Progress</span>
-        </NavLink>
+        <div className={"header " + this.state.isActive}>
+
+          <NavLink className="nav" exact to="/" onClick={this.addActiveClass}>
+              <span>Home</span>
+          </NavLink>
+          <NavLink className="nav" to="/challenges" onClick={this.addActiveClass}>
+              <span>Challenges</span>
+          </NavLink>
+          <NavLink className="nav" to="/about" onClick={this.addActiveClass}>
+              <span>About</span>
+          </NavLink>
+          <NavLink className="nav" to="/progress" onClick={this.addActiveClass}>
+              <span>Progress</span>
+          </NavLink>
+        </div>
       </div>
     )
   }

@@ -16,47 +16,47 @@ body {
 /* ===========================
     Header
     ========================= */
-.header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  transition: transform .5s; }
-  .header .menu-butt {
-    width: 2.5em;
-    height: 2em;
-    background: tomato;
-    position: absolute;
-    top: 1em;
-    left: -3.5em; }
-  .header .nav {
+@media screen and (max-width: 768px) {
+  .header {
+    z-index: 5;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    font-size: 2em;
-    font-weight: normal;
-    letter-spacing: 4px;
-    color: white;
-    background: rgba(15, 15, 15, 0.99);
-    border-top: 2px solid rgba(255, 255, 255, 0.7);
-    height: 25%;
-    width: 100%; }
-  .header .active {
-    background: #000000; }
-
-.header, .true {
-  transform: translateX(0%);
-  border: 2px solid red; }
-
-.header, .false {
-  transform: translateX(0%);
-  border: 2px solid blue; }
-
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transition: transform .5s ease-in-out; }
+    .header.true {
+      transform: translateX(0%); }
+    .header.false {
+      transform: translateX(100%); }
+    .header .menu-butt {
+      width: 2.5em;
+      height: 2em;
+      background: tomato;
+      position: absolute;
+      top: 1em; }
+      .header .menu-butt.true {
+        right: 1em; }
+      .header .menu-butt.false {
+        left: -3.5em; }
+    .header .nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 2em;
+      font-weight: normal;
+      letter-spacing: 4px;
+      color: white;
+      background: rgba(15, 15, 15, 0.99);
+      border-top: 2px solid rgba(255, 255, 255, 0.7);
+      height: 25%;
+      width: 100%; }
+      .header .nav.active {
+        background: #000000; } }
 /* ===========================
   End Header
 ========================= */
@@ -65,10 +65,82 @@ body {
 ========================= */
 .home {
   width: 100%;
-  height: 100vh; }
+  background: linear-gradient(135deg, black, #0f0f0f); }
+  .home .intro {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center; }
+    .home .intro h1 {
+      margin: 0;
+      color: #ffffff;
+      font-size: 3em;
+      text-shadow: 0.5px 0.5px #ff00f5, 1.5px 1.5px #ff00f5, 2px 2px #ff00f5;
+      letter-spacing: 10px; }
+    .home .intro i {
+      z-index: 0;
+      border: solid white;
+      border-width: 0 1px 1px 0;
+      padding: 3px;
+      margin-top: 1em;
+      transform: scale(6) rotate(45deg);
+      position: absolute;
+      bottom: 2em; }
+  .home .wishes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: #fff; }
+    .home .wishes .wish {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 50vh;
+      width: 95%;
+      border: 2px solid red; }
+      .home .wishes .wish h1 {
+        margin-top: 1em;
+        text-align: center;
+        color: white;
+        text-shadow: 0.5px 0.5px #0094ff, 1.5px 1.5px #0094ff, 2px 2px #0094ff; }
 
 /* ===========================
   END Home
 ========================= */
+/* TEST
+*/
+#burger-container {
+  z-index: 20;
+  position: fixed;
+  top: 0em;
+  right: 0em;
+  transform: scale(0.5); }
+
+#burger span {
+  background: #ff216a;
+  display: block;
+  width: 100px;
+  height: 14px;
+  margin-bottom: 10px;
+  position: relative;
+  top: 0;
+  transition: all ease-in-out 0.4s; }
+
+#burger-container.true span:nth-child(2),
+#burger-container.true span:nth-child(3) {
+  width: 0;
+  opacity: 0; }
+
+#burger-container.true span:nth-child(1) {
+  transform: rotate(-45deg);
+  top: 36px; }
+
+#burger-container.true span:nth-child(4) {
+  transform: rotate(45deg);
+  top: -36px; }
 
 /*# sourceMappingURL=app.css.map */
