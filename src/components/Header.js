@@ -21,10 +21,10 @@ class Header extends Component {
       <div>
         <div className={""+this.state.isActive} id="burger-container" onClick={this.addActiveClass}>
           <div id="burger">
-              <span> &nbsp;</span>
-               <span> &nbsp;</span>
-               <span> &nbsp;</span>
-               <span> &nbsp;</span>
+              <span></span>
+               <span></span>
+               <span></span>
+               <span></span>
           </div>
         </div>
 
@@ -33,14 +33,14 @@ class Header extends Component {
           <NavLink className="nav" exact to="/" onClick={this.addActiveClass}>
               <span>Home</span>
           </NavLink>
-          <NavLink className="nav" to="/challenges" onClick={this.addActiveClass}>
-              <span>Challenges</span>
+          <NavLink className="nav" to="/add-wish" onClick={this.addActiveClass}>
+              <span>Add Wish</span>
           </NavLink>
           <NavLink className="nav" to="/about" onClick={this.addActiveClass}>
-              <span>About</span>
+              <span>Progress</span>
           </NavLink>
           <NavLink className="nav" to="/progress" onClick={this.addActiveClass}>
-              <span>Progress</span>
+              <span>About</span>
           </NavLink>
         </div>
       </div>

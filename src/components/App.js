@@ -9,6 +9,7 @@ import {
 //My Components
 import Header from './Header';
 import Home from './Home';
+import AddWish from './AddWish';
 //Variables
 
 
@@ -21,7 +22,8 @@ class App extends Component {
       <BrowserRouter>
         <div className="app">
             <Header />
-            <Route path="/" component={Home}/>
+            <Route exact path="/" component={Home}/>
+            <Route path="/add-wish" component={AddWish}/>
         </div>
       </BrowserRouter>
     );
