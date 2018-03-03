@@ -1,5 +1,5 @@
 import React, {Component, PropTypes} from 'react';
-
+import image from '../css/mobile1.jpg';
 class Home extends Component{
   state = {
     isActive: false,
@@ -10,7 +10,9 @@ class Home extends Component{
       isActive: !this.state.isActive,
     });
     this.setState();
-  }
+  };
+
+
 
   render = () => {
     return(
