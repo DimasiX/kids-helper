@@ -1,9 +1,16 @@
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import {
   Link
 } from 'react-router-dom';
 import image from '../css/mobile1.jpg';
+
+
 class Home extends Component{
+  static propTypes = {
+    wishes: PropTypes.array.isRequired,
+  }
+
   state = {
     isActive: false,
   }
@@ -15,24 +22,24 @@ class Home extends Component{
     this.setState();
   };
 
-
-
   render = () => {
     return(
       <div className="home">
         <div className="intro">
           <h1>I WANT!</h1>
-          <Link to="#wishes"><i className="arrow down"></i></Link>
+          <a href="/#wishes"><i className="arrow down"></i></a>
         </div>
         <div className="wishes" id="wishes">
-          <div className="wish">
-            <h1>FUCK UR LADY!</h1>
-            <h2>Date:01.05.2019</h2>
-          </div>
-          <div className="wish">
-            <h1>Have so much damn money, to live in HAWAII</h1>
-            <h2>Date:20.03.2022</h2>
-          </div>
+
+          {this.props.wishes.map((wish,index) => {
+            return(
+              <div className="wish" key={index}>
+                <h1>{wish.name}</h1>
+                <h2>Date: {wish.date}</h2>
+              </div>
+            )
+          })}
+
         </div>
         <div className="add-wish-butt">
           <Link to="add-wish">
@@ -44,4 +51,5 @@ class Home extends Component{
     )
   }
 }
+
 export default Home;
