@@ -5,7 +5,6 @@ import {
   BrowserRouter,
   Route
 }from 'react-router-dom';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 //My Components
 import Header from './Header';
 import Home from './Home';
@@ -48,17 +47,25 @@ class App extends Component {
 
   addWish = (e) => {
     e.preventDefault();
-    this.setState({
-      wishList: [
-        ...this.state.wishList,
-        {
-          name: this.state.input,
-          date: this.state.date,
-        }
-      ],
-      input: "",
-      date: "Next Year",
-    })
+    if(this.state.input == ""){
+      console.log("Hmmmmm");
+    }else{
+      this.setState({
+        input: "",
+        date: "Next Year",
+        wishList: [
+          ...this.state.wishList,
+          {
+            name: this.state.input,
+            date: this.state.date,
+          }
+        ]
+      })
+    }
+  }
+
+  test = (message) => {
+    console.log(message);
   }
 
   render() {
@@ -67,12 +74,13 @@ class App extends Component {
         <div className="app">
             <Header />
 
-            <Route exact path="/" render={()=><Home wishes={this.state.wishList}/>}/>
-            <Route path="/add-wish" render={()=><AddWish handleGetDate={this.getDate}
-                                                         date={this.state.date}
-                                                         inputValue={this.state.input}
-                                                         handleSetInput={this.setInput}
-                                                         handleAddWish={this.addWish}/>}/>
+              <Route exact path="/" render={()=><Home wishes={this.state.wishList}/>}/>
+              <Route path="/add-wish" render={()=><AddWish handleGetDate={this.getDate}
+                                                           date={this.state.date}
+                                                           inputValue={this.state.input}
+                                                           handleSetInput={this.setInput}
+                                                           handleAddWish={this.addWish}
+                                                           testMes={this.test}/>}/>
         </div>
       </BrowserRouter>
     );

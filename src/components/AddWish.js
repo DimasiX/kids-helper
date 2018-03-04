@@ -1,8 +1,22 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 class AddWish extends Component {
+  state = {
+    popUp: false,
+    message: "Hello",
+  }
 
+  popUp = (e) => {
+    e.preventDefault;
+    if(this.props.inputValue !== ""){
+      this.props.handleAddWish(e);
+    }
+    this.setState({
+      popUp: !this.state.popUp
+    });
+  }
   render = () =>{
     return(
         <div className="add-wish">
@@ -13,12 +27,18 @@ class AddWish extends Component {
                      placeholder="Say me your wish"
                      value={this.props.inputValue}
                      onChange={this.props.handleSetInput}
-                     required></input>
+                     ></input>
               <h2>Set the Date:</h2>
 
-              <input type="date" value={this.props.date} onChange={this.props.handleGetDate}/>
+              <input type="date" value={this.props.date} onChange={this.props.handleGetDate} required/>
+              <button type="button" onClick={(e)=>this.popUp(e)}  >Recognize</button>
 
-              <button type="submit" onClick={this.props.handleAddWish} required>Recognize</button>
+              <div className={"modalWindow " + this.state.popUp}>
+                <div className={"modalPopUp " + this.state.popUp}>
+                  <h1>Your Wish Added To List!</h1>
+                  <button type="button" className="testing" onClick={this.popUp}>OK</button>
+                </div>
+              </div>
             </form>
           </div>
         </div>

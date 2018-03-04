@@ -13,7 +13,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  color: #404040; }
+  color: #404040;
+  background: #1b1b1b; }
 
 * {
   box-sizing: border-box; }
@@ -221,6 +222,42 @@ body {
         font-weight: bold;
         letter-spacing: 2px;
         text-transform: uppercase; }
+
+.modalWindow {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.69); }
+  .modalWindow.false {
+    display: none; }
+  .modalWindow.true {
+    display: flex; }
+  .modalWindow .modalPopUp {
+    transition: transform .5s ease-in-out;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    height: 40vh;
+    background: #fff; }
+    .modalWindow .modalPopUp.false {
+      display: flex; }
+    .modalWindow .modalPopUp.true {
+      display: flex; }
+    .modalWindow .modalPopUp h1 {
+      font-size: 2em;
+      color: #6441f1;
+      text-decoration: none; }
+    .modalWindow .modalPopUp button.testing {
+      width: 60%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.41);
+      background: linear-gradient(45deg, #4750cf, #6b74e9);
+      margin-top: 0; }
 
 /* ===========================
   END ADD WISH
