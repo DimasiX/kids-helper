@@ -21,15 +21,21 @@ class App extends Component {
     wishList: [
       {
         name: "Visit Paris",
-        date: "10.05.2019"
+        date: "10.05.2019",
+        isOnEdit: true,
+        isEdit: false,
       },
       {
         name: "Live in Hawaii",
-        date: "10.03.2022"
+        date: "10.03.2022",
+        isOnEdit: false,
+        isEdit: false,
       },
       {
         name: "Buy Mustang 2017",
-        date: "20.03.2020"
+        date: "20.03.2020",
+        isOnEdit: false,
+        isEdit: false,
       },
     ],
   }
@@ -59,6 +65,8 @@ class App extends Component {
           {
             name: this.state.input,
             date: this.state.date,
+            isOnEdit: false,
+            isEdit: false,
           }
         ]
       })

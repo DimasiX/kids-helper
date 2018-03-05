@@ -118,11 +118,71 @@ body {
         width: 95%;
         text-shadow: 0 0 5px rgba(0, 0, 0, 0.57), 0 0 10px rgba(0, 0, 0, 0.81); }
       .home .wishes .wish .more-options {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: absolute;
-        margin: 0;
-        top: -2.5em;
-        right: 1.5em;
-        font-size: 2em; }
+        top: -.5em;
+        right: 1em;
+        transform: rotate(90deg);
+        width: auto; }
+        .home .wishes .wish .more-options:after {
+          color: rgba(255, 255, 255, 0.6);
+          content: '\2807';
+          font-size: 5em; }
+      .home .wishes .wish .menu {
+        padding: 0em 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 75%;
+        height: 50%;
+        position: absolute;
+        top: 1.5em;
+        right: 1em;
+        border-radius: 8px;
+        background: white; }
+        .home .wishes .wish .menu.false {
+          display: none; }
+        .home .wishes .wish .menu .close {
+          position: absolute;
+          top: 0px;
+          right: .1em;
+          width: 32px;
+          height: 32px;
+          opacity: 1; }
+        .home .wishes .wish .menu .close:hover {
+          opacity: 1; }
+        .home .wishes .wish .menu .close:before, .home .wishes .wish .menu .close:after {
+          position: absolute;
+          left: 15px;
+          content: ' ';
+          height: 33px;
+          width: 2px;
+          background-color: #323232; }
+        .home .wishes .wish .menu .close:before {
+          transform: rotate(45deg); }
+        .home .wishes .wish .menu .close:after {
+          transform: rotate(-45deg); }
+        .home .wishes .wish .menu .divide {
+          width: 100%;
+          height: 2px;
+          border-bottom: 2px solid #222222; }
+        .home .wishes .wish .menu .menu-choise {
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 50%;
+          color: rgba(0, 0, 0, 0.9);
+          font-size: 1.5em; }
+          .home .wishes .wish .menu .menu-choise.delete {
+            color: #ff4a90;
+            background: rgba(255, 196, 219, 0.4);
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px; }
   .home i {
     z-index: 0;
     border: solid white;
