@@ -9,6 +9,7 @@ import {
 import Header from './Header';
 import Home from './Home';
 import AddWish from './AddWish';
+import Progress from './Progress';
 //Variables
 var today = new Date();
 
@@ -81,6 +82,8 @@ class App extends Component {
                                                            handleSetInput={this.setInput}
                                                            handleAddWish={this.addWish}
                                                            testMes={this.test}/>}/>
+
+                                                         <Route path="/progress" render={()=><Progress wish={this.state.wishList}/>}/>
         </div>
       </BrowserRouter>
     );

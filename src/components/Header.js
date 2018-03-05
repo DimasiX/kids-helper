@@ -36,10 +36,10 @@ class Header extends Component {
           <NavLink className="nav" to="/add-wish" onClick={this.addActiveClass}>
               <span>Add Wish</span>
           </NavLink>
-          <NavLink className="nav" to="/about" onClick={this.addActiveClass}>
+          <NavLink className="nav" to="/progress" onClick={this.addActiveClass}>
               <span>Progress</span>
           </NavLink>
-          <NavLink className="nav" to="/progress" onClick={this.addActiveClass}>
+          <NavLink className="nav" to="/about" onClick={this.addActiveClass}>
               <span>About</span>
           </NavLink>
         </div>

@@ -33,6 +33,7 @@ class Home extends Component{
             {this.props.wishes.map((wish,index) => {
               return(
                 <div className="wish" key={index}>
+                  <div className="more-options"><h1>...</h1></div>
                   <h1>{wish.name}</h1>
                   <h2>Date: {wish.date}</h2>
                 </div>
