@@ -22,8 +22,8 @@ class App extends Component {
       {
         name: "Visit Paris",
         date: "10.05.2019",
-        isOnEdit: true,
-        isEdit: false,
+        isOnEdit: false,
+        isEdit: true,
       },
       {
         name: "Live in Hawaii",
@@ -41,12 +41,14 @@ class App extends Component {
   }
 
   getDate = (e) => {
+    console.log(e.target.value);
     this.setState({
       date: e.target.value,
     })
   }
 
   setInput = (e) => {
+    console.log(e.target.value);
     this.setState({
       input: e.target.value.replace(/\b\w/g, l => l.toUpperCase()),
     })
@@ -73,8 +75,34 @@ class App extends Component {
     }
   }
 
-  test = (message) => {
-    console.log(message);
+Edit = (index) => {
+    if(this.state.wishList[index].isOnEdit){
+      this.state.wishList[index].isOnEdit = !this.state.wishList[index].isOnEdit;
+      this.setState({});
+    }else{
+      this.state.wishList[index].isOnEdit = !this.state.wishList[index].isOnEdit;
+      this.setState({});
+    }
+  }
+  editWish = (index) => {
+    if(this.state.wishList[index].isEdit){
+      this.state.wishList[index].isEdit = !this.state.wishList[index].isEdit;
+      this.setState({});
+    }else{
+      this.state.wishList[index].isEdit = !this.state.wishList[index].isEdit;
+      this.state.wishList[index].isOnEdit = !this.state.wishList[index].isOnEdit;
+      this.setState({});
+    }
+
+  }
+  saveWishChange = (index) => {
+    this.state.wishList[index].name = this.state.input;
+    this.state.wishList[index].date = this.state.date;
+    this.state.wishList[index].isEdit = !this.state.wishList[index].isEdit;
+    this.setState({
+      input:"",
+      date: "Next Year",
+    });
   }
 
   render() {
@@ -83,7 +111,13 @@ class App extends Component {
         <div className="app">
             <Header />
 
-              <Route exact path="/" render={()=><Home wishes={this.state.wishList}/>}/>
+              <Route exact path="/" render={()=><Home wishes={this.state.wishList}
+                                                      Edit={this.Edit}
+                                                      closeEdit={this.closeEdit}
+                                                      editWish={this.editWish}
+                                                      getInput={this.setInput}
+                                                      saveWishChange={this.saveWishChange}
+                                                      getDate={this.getDate}/>}/>
               <Route path="/add-wish" render={()=><AddWish handleGetDate={this.getDate}
                                                            date={this.state.date}
                                                            inputValue={this.state.input}
