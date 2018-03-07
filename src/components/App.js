@@ -23,35 +23,51 @@ class App extends Component {
         name: "Visit Paris",
         date: "10.05.2019",
         isOnEdit: false,
-        isEdit: true,
+        isEdit: false,
+        achieved: false,
       },
       {
         name: "Live in Hawaii",
         date: "10.03.2022",
         isOnEdit: false,
         isEdit: false,
+        achieved: true,
       },
       {
-        name: "Buy Mustang 2017",
-        date: "20.03.2020",
+        name: "Get Front End Job",
+        date: "15.05.2018",
         isOnEdit: false,
         isEdit: false,
+        achieved: false,
       },
     ],
   }
 
-  getDate = (e) => {
-    console.log(e.target.value);
-    this.setState({
-      date: e.target.value,
-    })
+  getDate = (e, index=-1) => {
+    if(index === -1) {
+      this.setState({
+        date: e.target.value,
+      })
+    }else{
+      this.state.wishList[index].name = e.target.value;
+      this.setState({
+        date: e.target.value,
+      })
+    }
   }
 
-  setInput = (e) => {
-    console.log(e.target.value);
-    this.setState({
-      input: e.target.value.replace(/\b\w/g, l => l.toUpperCase()),
-    })
+  setInput = (e, index=-1) => {
+    if(index === -1){
+      this.setState({
+        input: e.target.value.replace(/\b\w/g, l => l.toUpperCase()),
+      })
+    }else{
+      this.state.wishList[index].name = e.target.value;
+      console.log(this.state.wishList[index].name);
+      this.setState({
+        input: e.target.value.replace(/\b\w/g, l => l.toUpperCase()),
+      })
+    }
   }
 
   addWish = (e) => {
@@ -69,6 +85,7 @@ class App extends Component {
             date: this.state.date,
             isOnEdit: false,
             isEdit: false,
+            achieved: false,
           }
         ]
       })
@@ -78,7 +95,8 @@ class App extends Component {
 Edit = (index) => {
     if(this.state.wishList[index].isOnEdit){
       this.state.wishList[index].isOnEdit = !this.state.wishList[index].isOnEdit;
-      this.setState({});
+      this.setState({
+      });
     }else{
       this.state.wishList[index].isOnEdit = !this.state.wishList[index].isOnEdit;
       this.setState({});
@@ -91,6 +109,8 @@ Edit = (index) => {
     }else{
       this.state.wishList[index].isEdit = !this.state.wishList[index].isEdit;
       this.state.wishList[index].isOnEdit = !this.state.wishList[index].isOnEdit;
+      this.state.input = this.state.wishList[index].name;
+      this.state.date = this.state.wishList[index].date;
       this.setState({});
     }
 

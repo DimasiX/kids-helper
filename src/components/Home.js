@@ -25,7 +25,7 @@ class Home extends Component{
     return(
         <div className="home">
           <div className="intro">
-            <h1>I WANT!</h1>
+            <h1>I WISH!</h1>
             <a href="/#wishes"><i className="arrow down"></i></a>
           </div>
           <div className="wishes" id="wishes">
@@ -41,7 +41,7 @@ class Home extends Component{
                         <div className="divide"></div>
                         <div className="menu-choise delete">Remove</div>
                       </div>
-                    <input type="text" placeholder={wish.name} onChange={this.props.getInput}/>
+                    <input type="text" placeholder={wish.name} value={wish.name} onChange={(e)=>this.props.getInput(e,index)}/>
                     <input type="date" onChange={(e)=>this.props.getDate(e)}/>
                     <button onClick={()=>this.props.saveWishChange(index)}>SAVE</button>
                   </div>
