@@ -124,6 +124,13 @@ Edit = (index) => {
       date: "Next Year",
     });
   }
+  removeWish = (index) => {
+    this.setState({
+      ...this.state
+    })
+    this.state.wishList.splice(index,1);
+    console.log("HEY!");
+  }
 
   render() {
     return (
@@ -137,7 +144,8 @@ Edit = (index) => {
                                                       editWish={this.editWish}
                                                       getInput={this.setInput}
                                                       saveWishChange={this.saveWishChange}
-                                                      getDate={this.getDate}/>}/>
+                                                      getDate={this.getDate}
+                                                      removeWish={this.removeWish}/>}/>
               <Route path="/add-wish" render={()=><AddWish handleGetDate={this.getDate}
                                                            date={this.state.date}
                                                            inputValue={this.state.input}

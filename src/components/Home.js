@@ -39,7 +39,7 @@ class Home extends Component{
                         <div className="close" onClick={()=>this.props.Edit(index)}></div>
                         <div className="menu-choise change-descr" onClick={()=>this.props.editWish(index)}>Save Description</div>
                         <div className="divide"></div>
-                        <div className="menu-choise delete">Remove</div>
+                        <div className="menu-choise delete" onClick={()=>this.props.removeWish(index)}>Remove</div>
                       </div>
                     <input type="text" placeholder={wish.name} value={wish.name} onChange={(e)=>this.props.getInput(e,index)}/>
                     <input type="date" onChange={(e)=>this.props.getDate(e)}/>
@@ -55,7 +55,7 @@ class Home extends Component{
                       <div className="close" onClick={()=>this.props.Edit(index)}></div>
                       <div className="menu-choise change-descr" onClick={()=>this.props.editWish(index)}>Change Description</div>
                       <div className="divide"></div>
-                      <div className="menu-choise delete">Remove</div>
+                      <div className="menu-choise delete" onClick={()=>this.props.removeWish(index)}>Remove</div>
                     </div>
                     <h1>{wish.name}</h1>
                     <h2>Date: {wish.date}</h2>
@@ -77,8 +77,8 @@ class Home extends Component{
 
 Home.propTypes = {
   wishes: PropTypes.array.isRequired,
-  openEdit: PropTypes.func.isRequired,
-  closeEdit: PropTypes.func.isRequired,
+  Edit: PropTypes.func.isRequired,
+  editWish: PropTypes.func.isRequired,
   getInput: PropTypes.func.isRequired,
 }
 export default Home;
