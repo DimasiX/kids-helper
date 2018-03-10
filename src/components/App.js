@@ -132,6 +132,14 @@ Edit = (index) => {
     console.log("HEY!");
   }
 
+  setAchieved = (index) => {
+    this.state.wishList[index].achieved = true;
+    this.setState({});
+  }
+  setNotAchieved = (index) => {
+    this.state.wishList[index].achieved = false;
+    this.setState({});
+  }
   render() {
     return (
       <BrowserRouter>
@@ -153,7 +161,9 @@ Edit = (index) => {
                                                            handleAddWish={this.addWish}
                                                            testMes={this.test}/>}/>
 
-                                                         <Route path="/progress" render={()=><Progress wish={this.state.wishList}/>}/>
+              <Route path="/progress" render={()=><Progress wish={this.state.wishList}
+                                                            setAchieved={this.setAchieved}
+                                                            setNotAchieved={this.setNotAchieved}/>}/>
         </div>
       </BrowserRouter>
     );

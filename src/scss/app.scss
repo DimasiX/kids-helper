@@ -13,6 +13,9 @@ $color-text: lighten(#4c68d7, 20%);
 /* ===========================
     End Variables
 ========================= */
+::-webkit-scrollbar {
+    display: none;
+}
 body {
   margin: 0;
   padding: 0;
@@ -301,6 +304,7 @@ body {
         border-radius: 8px;
 
         background: rgb(255, 255, 255);
+        overflow: hidden;
         .close {
           &:hover{
             cursor: pointer;
@@ -334,6 +338,11 @@ body {
           border-bottom: 2px solid rgb(34, 34, 34);
         }
         .menu-choise{
+          transition: background .15s;
+          &:hover{
+            cursor: pointer;
+            background: rgb(193, 193, 193);
+          }
           text-align: center;
           display: flex;
           justify-content: center;
@@ -343,13 +352,15 @@ body {
           color: rgba(0, 0, 0, 0.9);
           font-size: 1.5em;
           &.delete{
+            &:hover{
+              background: rgba(255, 196, 219, 1);
+            }
             color: rgb(255, 74, 144);
             background: rgba(255, 196, 219, 0.4);
             border-bottom-left-radius: 8px;
             border-bottom-right-radius: 8px;
           }
           &.change-descr{
-
           }
         }
       }
@@ -413,9 +424,9 @@ body {
 }
 @media screen and (max-width:1050px){
   .home{
-    animation: appear .5s;
-    animation-timing-function: ease-in-out;
-    transition: transform .5s;
+    // animation: appear .5s;
+    // animation-timing-function: ease-in-out;
+    // transition: transform .5s;
 
     display: flex;
     flex-direction: column;
@@ -576,6 +587,10 @@ body {
             border-bottom: 2px solid rgb(34, 34, 34);
           }
           .menu-choise{
+            &:hover{
+              cursor:none;
+              background: rgba(0, 0, 0, 0.9);
+            }
             text-align: center;
             display: flex;
             justify-content: center;
@@ -769,14 +784,14 @@ body {
 
   background: rgba(0, 0, 0, 0.69);
   .modalPopUp{
-    transition: visibility .5s ease-in-out, transform .5s ease-in-out;
+    transition: visibility .5s ease-in-out, opacity .5s ease-in-out;
     &.false{
       visibility: hidden;
-      transform: translateX(-200%);
+      opacity: 0;
     }
     &.true{
       visibility: visible;
-      transform: translateX(0%);
+      opacity: 1;
     }
     display: flex;
     flex-direction: column;
@@ -806,9 +821,9 @@ body {
 }
 @media screen and (max-width:1050px){
   .add-wish{
-    animation: appear .5s;
-    animation-timing-function: ease-in-out;
-    transition: transform .5s;
+    // animation: appear .5s;
+    // animation-timing-function: ease-in-out;
+    // transition: transform .5s;
 
     height: 100vh;
     width: 100%;
@@ -885,12 +900,14 @@ body {
     }
   }
   .modalWindow{
-    transition: visibility .5s;
+    transition: visibility .15s ease, opacity .15s ease;
     &.false{
       visibility: hidden;
+      opacity: 0;
     }
     &.true{
       visibility: visible;
+      opacity: 1;
     }
     display: flex;
     flex-direction: column;
@@ -906,14 +923,14 @@ body {
 
     background: rgba(0, 0, 0, 0.69);
     .modalPopUp{
-      transition: visibility .5s ease-in-out, transform .5s ease-in-out;
+      transition: visibility .15s ease, opacity .15s ease;
       &.false{
         visibility: hidden;
-        transform: translateX(-100%);
+        opacity: 0;
       }
       &.true{
         visibility: visible;
-        transform: translateX(0%);
+        opacity: 1;
       }
       display: flex;
       flex-direction: column;
@@ -946,7 +963,6 @@ body {
 /* ===========================
   PROGRESS
 ========================= */
-
 .intro-progress{
   display: flex;
   justify-content: center;
@@ -968,50 +984,213 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  .intro-progress{
+    background: rgba(255, 255, 255, 1)
+  }
+  .wishes{
+    display: flex;
+    flex-wrap: wrap;
+    background: rgb(214, 210, 210);
+    width: 100%;
 
-  .wish-progress{
-    position: relative;
-    .achieve{
-      h1{
-        color: rgba(255, 255, 255, 0.29);
+    .wish-progress{
+      border: 1px solid #fff;
+      position: relative;
+      .achieve{
+        h1{
+          color: rgba(255, 255, 255, 0.29);
+          text-shadow: none;
+        }
+
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        width: 100%;
+        height: 100%;
+        &.false{
+          background: rgba(0, 0, 0, 0.51);
+        }
+        &.true{
+          background: rgba(0, 0, 0, 0);
+        }
       }
-
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
 
-      position: absolute;
-      top: 0;
-      right: 0;
+      width: 50%;
+      height: 50%;
+      min-height: 50vh;
 
-      width: 100%;
-      height: 100%;
-      &.false{
-        background: rgba(0, 0, 0, 0.51);
+      background: linear-gradient(rgb(252, 160, 204), rgb(250, 199, 223));
+      h1{
+        margin: .5em 0;
+        color: rgba(0, 209, 255, 0.75);
+        font-size: 4em;
+        text-shadow: 1px 1px rgb(31, 157, 247),
+                     2px 2px rgb(29, 133, 255),
+                     3px 3px rgb(31, 119, 250);
+        text-align: center;
       }
-      &.true{
-        background: rgba(0, 0, 0, 0);
+      .checker{
+
+        align-self: center;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        width: 10em;
+        height: 4em;
+
+        .check{
+          &.true{
+            background: rgba(0, 180, 218, 1);
+          }
+          &.false{
+            background: rgba(3, 148, 179, 1);
+          }
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          width: 4em;
+          height: 4em;
+
+          border: 2px solid #fff;
+          span{
+            transition: color .25s;
+            font-size: 50px;
+            color: rgba(255, 255, 255, 0.75);
+            &:hover{
+              cursor: pointer;
+              color: rgba(255, 255, 255, 1);
+            }
+          }
+        }
       }
     }
+  }
+  }
+
+
+@media screen and (max-width:1050px){
+  .intro-progress{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    width: 100%;
+    background: #fff;
+    h1{
+      margin: 0;
+      font-size: 4em;
+      display: inline-block;
+      text-shadow: 2px 2px rgb(255, 122, 185);
+      color: rgb(89, 54, 252);
+    }
+  }
+
+  .progress{
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    width: 100%;
-    height: 50%;
-    min-height: 50vh;
-
-    background: linear-gradient(rgb(252, 160, 204), rgb(250, 199, 223));
-    h1{
-      margin: .5em 0;
-      color: rgba(0, 209, 255, 0.75);
-      font-size: 4em;
-      text-shadow: 1px 1px rgb(31, 157, 247),
-                   2px 2px rgb(29, 133, 255),
-                   3px 3px rgb(31, 119, 250);
-      text-align: center;
+    .intro-progress{
+      background: rgba(255, 255, 255, 1)
     }
-  }
+    .wishes{
+      display: flex;
+      flex-direction: column;
+      .wish-progress{
+        position: relative;
+        .achieve{
+          h1{
+            color: rgba(255, 255, 255, 0.29);
+            text-shadow: none;
+          }
+
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+
+          position: absolute;
+          top: 0;
+          right: 0;
+
+          width: 100%;
+          height: 100%;
+          &.false{
+            background: rgba(0, 0, 0, 0.51);
+          }
+          &.true{
+            background: rgba(0, 0, 0, 0);
+          }
+        }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 100%;
+        height: 50%;
+        min-height: 50vh;
+
+        background: linear-gradient(rgb(252, 160, 204), rgb(250, 199, 223));
+        h1{
+          margin: .5em 0;
+          color: rgba(0, 209, 255, 0.75);
+          font-size: 4em;
+          text-shadow: 1px 1px rgb(31, 157, 247),
+                       2px 2px rgb(29, 133, 255),
+                       3px 3px rgb(31, 119, 250);
+          text-align: center;
+        }
+        .checker{
+
+          align-self: center;
+          z-index: 2;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          width: 10em;
+          height: 4em;
+
+          .check{
+            &.true{
+              background: rgba(0, 180, 218, 1);
+            }
+            &.false{
+              background: rgba(3, 148, 179, 1);
+            }
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 4em;
+            height: 4em;
+
+            border: 2px solid #fff;
+            span{
+              transition: color .25s;
+              font-size: 50px;
+              color: rgba(255, 255, 255, 0.75);
+              &:hover{
+                cursor: pointer;
+                color: rgba(255, 255, 255, 1);
+              }
+            }
+          }
+        }
+      }
+    }
+    }
+
 }
 
 
