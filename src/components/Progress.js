@@ -11,7 +11,7 @@ class Progress extends Component{
         {this.props.wish.map((wish, index)=>{
           return(
             <div className={"wish-progress "} key={index}>
-              <div className={"achieve " + wish.achieved}></div>
+              <div className={"achieve " + wish.achieved}><h1>ACHIEVED</h1></div>
               <h1>{wish.name}</h1>
             </div>
           )

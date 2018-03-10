@@ -754,11 +754,16 @@ body {
     min-height: 50vh;
     background: linear-gradient(#fca0cc, #fac7df); }
     .progress .wish-progress .achieve {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       position: absolute;
       top: 0;
       right: 0;
       width: 100%;
       height: 100%; }
+      .progress .wish-progress .achieve h1 {
+        color: rgba(255, 255, 255, 0.29); }
       .progress .wish-progress .achieve.false {
         background: rgba(0, 0, 0, 0.51); }
       .progress .wish-progress .achieve.true {
