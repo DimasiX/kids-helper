@@ -10,6 +10,7 @@ import Header from './Header';
 import Home from './Home';
 import AddWish from './AddWish';
 import Progress from './Progress';
+import About from './About';
 //Variables
 var today = new Date();
 
@@ -154,6 +155,7 @@ Edit = (index) => {
                                                       saveWishChange={this.saveWishChange}
                                                       getDate={this.getDate}
                                                       removeWish={this.removeWish}/>}/>
+
               <Route path="/add-wish" render={()=><AddWish handleGetDate={this.getDate}
                                                            date={this.state.date}
                                                            inputValue={this.state.input}
@@ -164,6 +166,8 @@ Edit = (index) => {
               <Route path="/progress" render={()=><Progress wish={this.state.wishList}
                                                             setAchieved={this.setAchieved}
                                                             setNotAchieved={this.setNotAchieved}/>}/>
+
+              <Route path="/about" component={About}/>
         </div>
       </BrowserRouter>
     );
