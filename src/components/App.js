@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 //import logo from '../logo.svg';
+import '../css/bootstrap.min.css';
 import '../css/App.css';
 import {
   BrowserRouter,

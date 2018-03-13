@@ -55,7 +55,7 @@ body {
   overflow: hidden;
   background: #643fad; }
   .header .nav {
-    transition: background .5s ease-in-out;
+    transition: background .25s ease-in-out;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -67,6 +67,13 @@ body {
     background: #643fad;
     height: 100%;
     width: 25%; }
+    .header .nav:nth-child(odd) {
+      border-right: 2px solid rgba(255, 255, 255, 0.4);
+      border-left: 2px solid rgba(255, 255, 255, 0.4); }
+    .header .nav:nth-child(1) {
+      border-left: 0; }
+    .header .nav:hover {
+      background: #4c1fa7; }
     .header .nav.active {
       background: #4c1fa7; }
 
@@ -132,6 +139,11 @@ body {
       border-top: 2px solid rgba(255, 255, 255, 0.7);
       height: 25%;
       width: 100%; }
+      .header .nav:nth-child(odd) {
+        border-right: 0px solid rgba(255, 255, 255, 0.4);
+        border-left: 0px solid rgba(255, 255, 255, 0.4); }
+      .header .nav:nth-child(1) {
+        border-left: 0; }
       .header .nav.active {
         background: #000000; } }
 /* ===========================
@@ -407,9 +419,9 @@ body {
           align-items: center;
           position: absolute;
           top: -.5em;
-          right: 1.5em;
+          right: 3.5em;
           transform: rotate(90deg);
-          width: auto; }
+          width: 1em; }
           .home .wishes .wish .more-options:hover {
             cursor: none;
             color: rgba(255, 255, 255, 0.6); }
@@ -592,7 +604,7 @@ body {
           box-shadow: 0 3px 6px rgba(31, 31, 31, 0.66); }
 
 .modalWindow {
-  transition: visibility .25s;
+  transition: visibility 1s, opacity 1s;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -605,11 +617,13 @@ body {
   height: 100%;
   background: rgba(0, 0, 0, 0.69); }
   .modalWindow.false {
-    visibility: hidden; }
+    visibility: hidden;
+    opacity: 0; }
   .modalWindow.true {
-    visibility: visible; }
+    visibility: visible;
+    opacity: 1; }
   .modalWindow .modalPopUp {
-    transition: visibility .25s ease-in-out, opacity .25s ease-in-out;
+    transition: visibility 1s ease-in-out, opacity 1s ease-in-out;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -807,6 +821,14 @@ body {
         justify-content: space-between;
         width: 10em;
         height: 4em; }
+        .progress-comp .wishes .wish-progress .checker .arrow.true {
+          background: #009dbe; }
+        .progress-comp .wishes .wish-progress .checker .arrow.false {
+          background: rgba(1, 138, 167, 0); }
+        .progress-comp .wishes .wish-progress .checker .criss.true {
+          background: rgba(179, 3, 61, 0); }
+        .progress-comp .wishes .wish-progress .checker .criss.false {
+          background: #b3033d; }
         .progress-comp .wishes .wish-progress .checker .check {
           display: flex;
           justify-content: center;
@@ -888,9 +910,9 @@ body {
           .progress-comp .wishes .wish-progress .checker .arrow.true {
             background: #009dbe; }
           .progress-comp .wishes .wish-progress .checker .arrow.false {
-            background: rgba(0, 157, 190, 0.3); }
+            background: rgba(0, 157, 190, 0); }
           .progress-comp .wishes .wish-progress .checker .criss.true {
-            background: rgba(179, 3, 61, 0.3); }
+            background: rgba(179, 3, 61, 0); }
           .progress-comp .wishes .wish-progress .checker .criss.false {
             background: #b3033d; }
           .progress-comp .wishes .wish-progress .checker .check {
@@ -917,7 +939,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 4em;
+  padding-top: 6em;
   min-height: 100vh;
   height: 100%;
   background: #7559c7; }
@@ -927,6 +949,10 @@ body {
     text-align: center;
     display: block;
     width: 100%; }
+  .about .about-intro p {
+    color: #f4c501; }
+    .about .about-intro p span {
+      color: rgba(0, 0, 0, 0.5); }
 
 /* ===========================
   END ABOUT

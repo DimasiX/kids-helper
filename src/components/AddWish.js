@@ -5,17 +5,22 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 class AddWish extends Component {
   state = {
     popUp: false,
-    message: "Hello",
   }
 
   popUp = (e) => {
     e.preventDefault;
     if(this.props.inputValue !== ""){
       this.props.handleAddWish(e);
+      this.setState({
+        popUp: true,
+      });
     }
-    this.setState({
-      popUp: !this.state.popUp
-    });
+    if(this.props.inputValue !== ""){
+      setTimeout(()=>{  this.setState({
+          popUp: false
+        });},1500)
+    }
+
   }
   render = () =>{
     return(
@@ -36,7 +41,7 @@ class AddWish extends Component {
               <div className={"modalWindow " + this.state.popUp}>
                 <div className={"modalPopUp " + this.state.popUp}>
                   <h1>Your Wish Added To List!</h1>
-                  <button type="button" className="testing" onClick={this.popUp}>OK</button>
+                  {/*<button type="button" className="testing" onClick={this.popUp}>OK</button>*/}
                 </div>
               </div>
             </form>
