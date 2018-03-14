@@ -18,7 +18,7 @@ class AddWish extends Component {
     if(this.props.inputValue !== ""){
       setTimeout(()=>{  this.setState({
           popUp: false
-        });},1500)
+        });},2000)
     }
 
   }

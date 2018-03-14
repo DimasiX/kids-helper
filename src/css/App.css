@@ -23,7 +23,9 @@ body {
   box-sizing: border-box; }
 
 .app {
-  width: calc(95%);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: calc(80%);
   margin: 2em auto;
   box-shadow: 0 5px 10px #222222;
   position: relative; }
@@ -38,20 +40,21 @@ body {
 #burger-container {
   display: none; }
 
+.header-container {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px; }
+
 .header {
   z-index: 5;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  top: 0em;
-  left: 1;
   width: 100%;
-  height: 6em;
+  height: 4em;
   margin: 0 auto;
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   overflow: hidden;
   background: #643fad; }
   .header .nav {
@@ -60,13 +63,18 @@ body {
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    font-size: 3em;
+    font-size: 2em;
     font-weight: normal;
     letter-spacing: 4px;
     color: white;
     background: #643fad;
     height: 100%;
     width: 25%; }
+    .header .nav span {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
     .header .nav:nth-child(odd) {
       border-right: 2px solid rgba(255, 255, 255, 0.4);
       border-left: 2px solid rgba(255, 255, 255, 0.4); }
@@ -75,7 +83,7 @@ body {
     .header .nav:hover {
       background: #4c1fa7; }
     .header .nav.active {
-      background: #4c1fa7; }
+      background: #4617a4; }
 
 @media screen and (max-width: 1050px) {
   #burger-container {
@@ -199,29 +207,31 @@ body {
       .home .wishes .wish input {
         outline: none;
         margin-bottom: -4em;
-        font-size: 2em;
+        font-size: 2.5em;
         text-align: center;
-        border: none;
-        border-radius: 4px; }
-      .home .wishes .wish input[type="text"] {
         width: 80%;
-        height: 1.5em; }
+        height: 1.5em;
+        color: #000000;
+        background: white; }
       .home .wishes .wish button {
+        transition: box-shadow .25s ease;
         outline: none;
         margin-bottom: -1em;
         width: 50%;
         font-size: 2em;
-        padding: .25em;
+        padding: .1em;
         border-radius: 8px;
-        box-shadow: 0 0 18px #a549c7;
-        background: #a549c7;
-        color: rgba(255, 255, 255, 0.73);
-        border: none; }
+        background: rgba(165, 73, 199, 0);
+        border: 2px solid #a549c7;
+        color: #a549c7; }
+        .home .wishes .wish button:hover {
+          cursor: pointer;
+          box-shadow: 0 0 18px #a549c7; }
       .home .wishes .wish .more-options {
         transition: color .1s;
         position: absolute;
-        top: -.5em;
-        right: 1.5em;
+        top: -1em;
+        right: 2em;
         transform: rotate(90deg);
         width: auto;
         color: rgba(255, 255, 255, 0.6); }
@@ -229,6 +239,7 @@ body {
           cursor: pointer;
           color: rgba(255, 255, 255, 0.9); }
         .home .wishes .wish .more-options:after {
+          padding-right: -2em;
           content: '\2807';
           font-size: 5em; }
       .home .wishes .wish .menu {
@@ -655,16 +666,19 @@ body {
     height: 100%;
     min-height: 100vh;
     width: 100%;
-    padding: 25% 0;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    background: #ffcf00; }
+    background: linear-gradient(-45deg, #007dff, #7d1bb1, #ff006b 110%); }
     .add-wish .intro {
       display: flex;
       flex-direction: column;
       align-self: flex-start;
       width: 100%; }
       .add-wish .intro h1 {
+        color: white;
+        text-shadow: none;
         display: block;
         font-size: 4em;
         width: 100%;
@@ -674,21 +688,28 @@ body {
         flex-direction: column;
         align-items: center; }
         .add-wish .intro form input[type="text"] {
-          border: none;
-          outline: 2px solid #9668fe;
-          padding: .2em 0;
+          transition: box-shadow .25s;
+          outline: none;
+          border-radius: 8px;
           color: white;
-          background: #9668fe;
+          background: linear-gradient(90deg, #4e00fe, #3e00cd);
           width: 95%;
           font-size: 2em;
           text-align: center; }
+          .add-wish .intro form input[type="text"]:focus {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.71); }
           .add-wish .intro form input[type="text"]::-webkit-input-placeholder {
             color: rgba(255, 255, 255, 0.59); }
         .add-wish .intro form h2 {
+          color: rgba(255, 255, 255, 0.56);
           margin-top: 1em;
           margin-bottom: 0; }
         .add-wish .intro form input[type="date"] {
-          color: #9668fe;
+          width: 95%;
+          border: none;
+          outline: none;
+          border-radius: 8px;
+          color: #4e00ff;
           font-size: 2em;
           font-weight: bold;
           padding-left: 2em;
@@ -742,8 +763,11 @@ body {
         visibility: visible;
         opacity: 1; }
       .modalWindow .modalPopUp h1 {
-        font-size: 2em;
-        color: #6441f1;
+        font-size: 3em;
+        background: -webkit-linear-gradient(135deg, #007dff, #7d1bb1, #ff006b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
         text-decoration: none; }
       .modalWindow .modalPopUp button.testing {
         width: 60%;

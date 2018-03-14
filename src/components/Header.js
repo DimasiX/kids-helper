@@ -18,7 +18,7 @@ class Header extends Component {
 
   render = () => {
     return(
-      <div>
+      <div className='header-container'>
         <div className={""+this.state.isActive} id="burger-container" onClick={this.addActiveClass}>
           <div id="burger">
               <span></span>
