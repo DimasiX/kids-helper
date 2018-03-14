@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import '../css/bootstrap.min.css';
 import '../css/App.css';
 import {
+  HashRouter,
   BrowserRouter,
   Route
 }from 'react-router-dom';
@@ -144,7 +145,7 @@ Edit = (index) => {
   }
   render() {
     return (
-      <BrowserRouter>
+      <HashRouter>
         <div className="app">
             <Header />
 
@@ -170,7 +171,7 @@ Edit = (index) => {
 
               <Route path="/about" component={About}/>
         </div>
-      </BrowserRouter>
+      </HashRouter>
     );
   }
 }
