@@ -25,7 +25,7 @@ body {
 .app {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  width: calc(80%);
+  width: 75%;
   margin: 2em auto;
   box-shadow: 0 5px 10px #222222;
   position: relative; }
@@ -125,8 +125,8 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
     width: 100%;
     height: 100vh;
     transition: transform .5s ease-in-out; }
@@ -558,7 +558,7 @@ body {
   padding: 8% 0;
   display: flex;
   align-items: center;
-  background: #ffcf00; }
+  background: linear-gradient(-45deg, #007dff, #7d1bb1, #ff006b 130%); }
   .add-wish .intro {
     display: flex;
     flex-direction: column;
@@ -569,8 +569,7 @@ body {
       font-size: 6em;
       width: 100%;
       text-align: center;
-      color: #7442da;
-      text-shadow: 2px 2px #04eea7, 4px 4px #cd68fc; }
+      color: white; }
     .add-wish .intro form {
       display: flex;
       flex-direction: column;
@@ -578,23 +577,35 @@ body {
       .add-wish .intro form input[type="text"] {
         border: none;
         outline: 2px solid #9668fe;
-        padding: .2em 0;
+        padding: .1em 0;
         color: white;
         background: #9668fe;
         width: 40%;
         font-size: 2em;
-        text-align: center; }
+        text-align: center;
+        transition: box-shadow .25s;
+        outline: none;
+        border-radius: 8px;
+        background: linear-gradient(90deg, #4e00fe, #3e00cd); }
         .add-wish .intro form input[type="text"]::-webkit-input-placeholder {
           color: rgba(255, 255, 255, 0.59); }
+        .add-wish .intro form input[type="text"]:focus {
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
       .add-wish .intro form h2 {
+        color: rgba(255, 255, 255, 0.48);
         margin-top: 1em;
         margin-bottom: 0; }
       .add-wish .intro form input[type="date"] {
-        color: #9668fe;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        outline: none;
+        text-align: right;
+        border-radius: 8px;
+        color: #4e00ff;
         font-size: 2em;
-        font-weight: bold;
-        padding-left: 2em;
-        text-align: center; }
+        font-weight: bold; }
       .add-wish .intro form button {
         transition: box-shadow .1s;
         box-shadow: 0 5px 10px rgba(31, 31, 31, 0.55);
@@ -615,6 +626,8 @@ body {
           box-shadow: 0 3px 6px rgba(31, 31, 31, 0.66); }
 
 .modalWindow {
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
   transition: visibility 1s, opacity 1s;
   display: flex;
   flex-direction: column;
@@ -624,7 +637,6 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  min-height: 100vh;
   height: 100%;
   background: rgba(0, 0, 0, 0.69); }
   .modalWindow.false {
@@ -652,7 +664,12 @@ body {
       margin-top: 0;
       font-size: 3em;
       color: #6441f1;
-      text-shadow: none; }
+      font-size: 3em;
+      background: -webkit-linear-gradient(135deg, #007dff, #7d1bb1, #ff006b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;
+      text-decoration: none; }
     .modalWindow .modalPopUp button.testing {
       width: 35%;
       box-shadow: 0 6px 10px rgba(0, 0, 0, 0.41);
@@ -670,7 +687,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(-45deg, #007dff, #7d1bb1, #ff006b 110%); }
+    background: linear-gradient(-45deg, #007dff, #7d1bb1, #ff006b 130%); }
     .add-wish .intro {
       display: flex;
       flex-direction: column;
@@ -689,10 +706,12 @@ body {
         align-items: center; }
         .add-wish .intro form input[type="text"] {
           transition: box-shadow .25s;
+          padding: .1em;
           outline: none;
           border-radius: 8px;
           color: white;
           background: linear-gradient(90deg, #4e00fe, #3e00cd);
+          border: none;
           width: 95%;
           font-size: 2em;
           text-align: center; }
@@ -705,6 +724,9 @@ body {
           margin-top: 1em;
           margin-bottom: 0; }
         .add-wish .intro form input[type="date"] {
+          display: flex;
+          align-items: center;
+          justify-content: center;
           width: 95%;
           border: none;
           outline: none;
@@ -712,8 +734,7 @@ body {
           color: #4e00ff;
           font-size: 2em;
           font-weight: bold;
-          padding-left: 2em;
-          text-align: center; }
+          text-align: right; }
         .add-wish .intro form button {
           box-shadow: 0 5px 10px rgba(31, 31, 31, 0.55);
           background: #141414;
@@ -729,7 +750,7 @@ body {
           text-transform: uppercase; }
 
   .modalWindow {
-    transition: visibility .15s ease, opacity .15s ease;
+    transition: visibility .75s ease, opacity .75s ease;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -748,7 +769,7 @@ body {
       visibility: visible;
       opacity: 1; }
     .modalWindow .modalPopUp {
-      transition: visibility .15s ease, opacity .15s ease;
+      transition: visibility .75s ease, opacity .75s ease;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -764,6 +785,7 @@ body {
         opacity: 1; }
       .modalWindow .modalPopUp h1 {
         font-size: 3em;
+        color: #6441f1;
         background: -webkit-linear-gradient(135deg, #007dff, #7d1bb1, #ff006b);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;

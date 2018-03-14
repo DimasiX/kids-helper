@@ -32,7 +32,7 @@ body {
 .app{
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  width: calc(80%);
+  width: 75%;
   margin: 2em auto;
   box-shadow: 0 5px 10px rgba(34, 34, 34, 1);
   position: relative;
@@ -158,8 +158,8 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
     width: 100%;
     height: 100vh;
     transition: transform .5s ease-in-out;
@@ -727,7 +727,7 @@ body {
   display: flex;
   align-items: center;
 
-  background: rgb(255, 207, 0);
+  background: linear-gradient(-45deg, rgb(0, 125, 255),rgb(125, 27, 177), rgb(255, 0, 107) 130%);
   //rgb(23, 251, 217)
   .intro{
     display: flex;
@@ -740,9 +740,7 @@ body {
       font-size: 6em;
       width: 100%;
       text-align: center;
-      color: rgb(116, 66, 218);
-      text-shadow: 2px 2px rgb(4, 238, 167),
-                   4px 4px rgb(205, 104, 252);
+      color: rgb(255, 255, 255);
     }
     form{
       display: flex;
@@ -752,7 +750,7 @@ body {
       input[type="text"]{
         border: none;
         outline: 2px solid rgb(150, 104, 254);
-        padding: .2em 0;
+        padding: .1em 0;
         color: white;
         background: rgb(150, 104, 254);
         width: 40%;
@@ -761,17 +759,30 @@ body {
         &::-webkit-input-placeholder{
           color: rgba(255, 255, 255, 0.59);
         }
+        transition: box-shadow .25s;
+        &:focus{
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        outline: none;
+        border-radius: 8px;
+        background: linear-gradient(90deg, rgba(78, 0, 254, 1), rgba(62, 0, 205, 1));
       }
       h2{
+        color: rgba(#ffffff, 0.48);
         margin-top: 1em;
         margin-bottom: 0;
       }
       input[type="date"]{
-        color: rgb(150, 104, 254);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        outline: none;
+        text-align: right;
+        border-radius: 8px;
+        color: rgb(78, 0, 255);
         font-size: 2em;
         font-weight: bold;
-        padding-left: 2em;
-        text-align: center;
       }
       button{
         &:hover{
@@ -804,6 +815,8 @@ body {
   }
 }
 .modalWindow{
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
   transition: visibility 1s, opacity 1s;
   &.false{
     visibility: hidden;
@@ -823,7 +836,6 @@ body {
   left: 0;
 
   width: 100%;
-  min-height: 100vh;
   height: 100%;
 
   background: rgba(0, 0, 0, 0.69);
@@ -850,7 +862,13 @@ body {
       margin-top: 0;
       font-size: 3em;
       color: rgb(100, 65, 241);
-      text-shadow: none;
+      font-size: 3em;
+      background: -webkit-linear-gradient(135deg, rgb(0, 125, 255),rgb(125, 27, 177), rgb(255, 0, 107));
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      font-weight: bold;
+      // color: rgb(100, 65, 241);
+      text-decoration: none;
     }
     button.testing{
       &:active{
@@ -868,7 +886,6 @@ body {
     // animation: appear .5s;
     // animation-timing-function: ease-in-out;
     // transition: transform .5s;
-
     height: 100%;
     min-height: 100vh;
     width: 100%;
@@ -878,7 +895,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    background: linear-gradient(-45deg, rgb(0, 125, 255),rgb(125, 27, 177), rgb(255, 0, 107) 110%);
+    background: linear-gradient(-45deg, rgb(0, 125, 255),rgb(125, 27, 177), rgb(255, 0, 107) 130%);
     //background: rgb(255, 207, 0);
     //rgb(23, 251, 217)
     .intro{
@@ -905,11 +922,12 @@ body {
           &:focus{
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.71);
           }
+          padding: .1em;
           outline: none;
           border-radius: 8px;
           color: white;
           background: linear-gradient(90deg, rgba(78, 0, 254, 1), rgba(62, 0, 205, 1));
-
+          border: none;
           width: 95%;
           font-size: 2em;
           text-align: center;
@@ -923,6 +941,9 @@ body {
           margin-bottom: 0;
         }
         input[type="date"]{
+          display: flex;
+          align-items: center;
+          justify-content: center;
           width: 95%;
           border: none;
           outline: none;
@@ -930,8 +951,7 @@ body {
           color: rgb(78, 0, 255);
           font-size: 2em;
           font-weight: bold;
-          padding-left: 2em;
-          text-align: center;
+          text-align: right;
         }
         button{
           // width: 95%;
@@ -957,7 +977,7 @@ body {
     }
   }
   .modalWindow{
-    transition: visibility .15s ease, opacity .15s ease;
+    transition: visibility .75s ease, opacity .75s ease;
     &.false{
       visibility: hidden;
       opacity: 0;
@@ -981,7 +1001,7 @@ body {
 
     background: rgba(0, 0, 0, 0.69);
     .modalPopUp{
-      transition: visibility .15s ease, opacity .15s ease;
+      transition: visibility .75s ease, opacity .75s ease;
       &.false{
         visibility: hidden;
         opacity: 0;
@@ -1001,6 +1021,7 @@ body {
       background: #fff;
       h1{
         font-size: 3em;
+        color: rgb(100, 65, 241);
         background: -webkit-linear-gradient(135deg, rgb(0, 125, 255),rgb(125, 27, 177), rgb(255, 0, 107));
         -webkit-background-clip:text;
         -webkit-text-fill-color:transparent;
