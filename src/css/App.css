@@ -809,6 +809,8 @@ body {
   height: 100vh;
   width: 100%;
   background: #fff; }
+  .intro-progress * {
+    border: 1px solid red; }
   .intro-progress h1 {
     margin: 0;
     font-size: 4em;
