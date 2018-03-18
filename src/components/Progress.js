@@ -6,6 +6,7 @@ class Progress extends Component{
       <div className="progress-comp">
         <div className="intro-progress">
           <h1 className="h1">TRACK YOUR WISHES</h1>
+          <i className="arrow down"></i>
         </div>
         <div className="wishes">
           {this.props.wish.map((wish, index)=>{

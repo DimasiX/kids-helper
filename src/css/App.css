@@ -17,7 +17,13 @@ body {
   padding: 0;
   font-family: sans-serif;
   color: #404040;
-  background: #403e6c; }
+  background: url("/kids_helper/static/media/pic-4.451ae0ce.jpg");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center; }
+  @media screen and (max-width: 910px) {
+    body {
+      background: #9af6d6; } }
 
 * {
   box-sizing: border-box; }
@@ -30,7 +36,7 @@ body {
   box-shadow: 0 5px 10px #222222;
   position: relative; }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 910px) {
   .app {
     width: 100%;
     margin: 0 auto; } }
@@ -85,7 +91,7 @@ body {
     .header .nav.active {
       background: #4617a4; }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 910px) {
   #burger-container {
     display: block;
     z-index: 20;
@@ -116,7 +122,7 @@ body {
   #burger-container.true span:nth-child(4) {
     transform: rotate(45deg);
     top: -36px; } }
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 910px) {
   .header {
     z-index: 5;
     display: flex;
@@ -170,11 +176,20 @@ body {
   .home .intro {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 75vh;
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center; }
+    justify-content: center;
+    align-items: center; }
+    .home .intro i {
+      z-index: 0;
+      border: solid #fff;
+      border-width: 0 1px 1px 0;
+      padding: 3px;
+      margin-top: 1em;
+      transform: scale(6) rotate(45deg);
+      position: absolute;
+      bottom: 6em;
+      left: calc(50% - 3px); }
     .home .intro h1 {
       margin: 0;
       color: #ffffff;
@@ -309,16 +324,6 @@ body {
             border-bottom-right-radius: 8px; }
             .home .wishes .wish .menu .menu-choise.delete:hover {
               background: #ffc4db; }
-  .home i {
-    z-index: 0;
-    border: solid white;
-    border-width: 0 1px 1px 0;
-    padding: 3px;
-    margin-top: 1em;
-    transform: scale(6) rotate(45deg);
-    position: absolute;
-    bottom: 6em;
-    left: calc(50% - 3px); }
   .home .add-wish-butt {
     display: flex;
     flex-direction: column;
@@ -351,7 +356,7 @@ body {
       .home .add-wish-butt a span:nth-child(2) {
         transform: rotate(90deg) translateX(-1em); }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 910px) {
   .home {
     display: flex;
     flex-direction: column;
@@ -393,10 +398,10 @@ body {
         border-left: 0;
         border-right: 0;
         border-bottom: 0; } }
-      @media screen and (max-width: 1050px) and (min-aspect-ratio: 1 / 1) {
+      @media screen and (max-width: 910px) and (min-aspect-ratio: 1 / 1) {
         .home .wishes .wish {
           height: 100vh; } }
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 910px) {
         .home .wishes .wish h1 {
           margin-top: 1em;
           text-align: center;
@@ -562,6 +567,7 @@ body {
   .add-wish .intro {
     display: flex;
     flex-direction: column;
+    min-height: 75vh;
     align-self: flex-start;
     width: 100%; }
     .add-wish .intro h1 {
@@ -678,7 +684,7 @@ body {
       .modalWindow .modalPopUp button.testing:active {
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.68); }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 910px) {
   .add-wish {
     height: 100%;
     min-height: 100vh;
@@ -806,9 +812,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  position: relative;
+  height: 75vh;
   width: 100%;
   background: #fff; }
+  .intro-progress i {
+    z-index: 0;
+    border: solid #5936fc;
+    border-width: 0 1px 1px 0;
+    padding: 3px;
+    margin-top: 1em;
+    transform: scale(6) rotate(45deg);
+    position: absolute;
+    bottom: 6em;
+    left: calc(50% - 3px); }
   .intro-progress h1 {
     margin: 0;
     font-size: 4em;
@@ -825,10 +842,9 @@ body {
   .progress-comp .wishes {
     display: flex;
     flex-wrap: wrap;
-    background: #d6d2d2;
+    background: white;
     width: 100%; }
     .progress-comp .wishes .wish-progress {
-      border: 1px solid #fff;
       position: relative;
       display: flex;
       flex-direction: column;
@@ -836,7 +852,9 @@ body {
       width: 50%;
       height: 50%;
       min-height: 50vh;
-      background: linear-gradient(#fca0cc, #fac7df); }
+      background: linear-gradient(135deg, #54ffea, #4355fc); }
+      .progress-comp .wishes .wish-progress:nth-child(odd) {
+        border-right: 1px solid rgba(255, 255, 255, 0.77); }
       .progress-comp .wishes .wish-progress .achieve {
         display: flex;
         justify-content: center;
@@ -855,7 +873,7 @@ body {
           background: rgba(0, 0, 0, 0); }
       .progress-comp .wishes .wish-progress h1 {
         margin: .5em 0;
-        color: rgba(0, 209, 255, 0.75);
+        color: #00d0ff;
         font-size: 4em;
         text-shadow: 1px 1px #1f9df7, 2px 2px #1d85ff, 3px 3px #1f77fa;
         text-align: center; }
@@ -890,7 +908,7 @@ body {
               cursor: pointer;
               color: white; }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 910px) {
   .intro-progress {
     display: flex;
     justify-content: center;
@@ -915,6 +933,7 @@ body {
       display: flex;
       flex-direction: column; }
       .progress-comp .wishes .wish-progress {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.77);
         position: relative;
         display: flex;
         flex-direction: column;
@@ -922,7 +941,9 @@ body {
         width: 100%;
         height: 50%;
         min-height: 50vh;
-        background: linear-gradient(#fca0cc, #fac7df); }
+        background: linear-gradient(135deg, #54ffea, #4355fc); }
+        .progress-comp .wishes .wish-progress:nth-child(odd) {
+          border-right: none; }
         .progress-comp .wishes .wish-progress .achieve {
           display: flex;
           justify-content: center;
@@ -941,7 +962,7 @@ body {
             background: rgba(0, 0, 0, 0); }
         .progress-comp .wishes .wish-progress h1 {
           margin: .5em 0;
-          color: rgba(0, 209, 255, 0.75);
+          color: #00d0ff;
           font-size: 4em;
           text-shadow: 1px 1px #1f9df7, 2px 2px #1d85ff, 3px 3px #1f77fa;
           text-align: center; }
@@ -981,29 +1002,24 @@ body {
 /* ===========================
   ABOUT
 ========================= */
-.about {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 6em;
-  min-height: 100vh;
-  height: 100%;
-  background: #7559c7; }
-  .about .about-intro h1 {
-    font-size: 3em;
-    color: rgba(255, 255, 255, 0.69);
-    text-align: center;
-    display: block;
-    width: 100%; }
-  .about .about-intro p {
-    color: #f4c501; }
-    .about .about-intro p span {
-      color: rgba(0, 0, 0, 0.5); }
+.container-fluid {
+  padding-top: 5em;
+  height: 75vh; }
+  @media screen and (max-width: 910px) {
+    .container-fluid {
+      height: 100vh; } }
 
 /* ===========================
   END ABOUT
 ========================= */
 /* TEST
 */
+.scroller {
+  height: 75vh;
+  overflow: auto; }
+  @media screen and (max-width: 910px) {
+    .scroller {
+      height: 100vh;
+      overflow: auto; } }
 
 /*# sourceMappingURL=app.css.map */

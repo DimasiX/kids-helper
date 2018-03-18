@@ -26,7 +26,7 @@ class Home extends Component{
         <div className="home">
           <div className="intro">
             <h1>I WISH!</h1>
-            <a href="/#wishes"><i className="arrow down"></i></a>
+            <i className="arrow down"></i>
           </div>
           <div className="wishes" id="wishes">
 

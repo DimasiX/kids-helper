@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 //import logo from '../logo.svg';
 import '../css/bootstrap.min.css';
 import '../css/App.css';
+
 import {
   HashRouter,
   BrowserRouter,
@@ -17,6 +18,8 @@ import About from './About';
 var today = new Date();
 
 console.log(today);
+
+
 class App extends Component {
   state = {
     date: "Next Year",
@@ -148,28 +151,30 @@ Edit = (index) => {
       <HashRouter>
         <div className="app">
             <Header />
+              <div className="scroller">
+                <Route exact path="/" render={()=><Home wishes={this.state.wishList}
+                                                        Edit={this.Edit}
+                                                        closeEdit={this.closeEdit}
+                                                        editWish={this.editWish}
+                                                        getInput={this.setInput}
+                                                        saveWishChange={this.saveWishChange}
+                                                        getDate={this.getDate}
+                                                        removeWish={this.removeWish}/>}/>
 
-              <Route exact path="/" render={()=><Home wishes={this.state.wishList}
-                                                      Edit={this.Edit}
-                                                      closeEdit={this.closeEdit}
-                                                      editWish={this.editWish}
-                                                      getInput={this.setInput}
-                                                      saveWishChange={this.saveWishChange}
-                                                      getDate={this.getDate}
-                                                      removeWish={this.removeWish}/>}/>
+                <Route path="/add-wish" render={()=><AddWish handleGetDate={this.getDate}
+                                                             date={this.state.date}
+                                                             inputValue={this.state.input}
+                                                             handleSetInput={this.setInput}
+                                                             handleAddWish={this.addWish}
+                                                             testMes={this.test}/>}/>
 
-              <Route path="/add-wish" render={()=><AddWish handleGetDate={this.getDate}
-                                                           date={this.state.date}
-                                                           inputValue={this.state.input}
-                                                           handleSetInput={this.setInput}
-                                                           handleAddWish={this.addWish}
-                                                           testMes={this.test}/>}/>
+                <Route path="/progress" render={()=><Progress wish={this.state.wishList}
+                                                              setAchieved={this.setAchieved}
+                                                              setNotAchieved={this.setNotAchieved}/>}/>
 
-              <Route path="/progress" render={()=><Progress wish={this.state.wishList}
-                                                            setAchieved={this.setAchieved}
-                                                            setNotAchieved={this.setNotAchieved}/>}/>
+                <Route path="/about" component={About}/>
+              </div>
 
-              <Route path="/about" component={About}/>
         </div>
       </HashRouter>
     );

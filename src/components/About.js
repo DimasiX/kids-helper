@@ -3,16 +3,19 @@ import React from 'react';
 
 const About = (props) => {
   return(
-  <div class="container-full">
     <div className="about">
-      <div className="about-intro">
-        <h1 className="display-1">Hey, What's Up!</h1>
-        <p className="lead m-4 text-left text-lg-center">Hey, this app made for testing my React and CSS skills, to use it, please DON'T refresh the browser</p>
-        <p><span className="m-4">*this app is responsive for mobiles (not the tablets)</span></p>
-      </div>
+      <div class="container-fluid d-flex flex-column justify-content-between bg-light fvh">
+        <div className="container">
+          <h1 className="display-4 font-weight-light text-center mb-5">Greetings Here!</h1>
+          <p className="lead text-center">Hope You spend good time making your wishes!</p>
+        </div>
 
+        <div>
+          <p className="text-center">*This app made for developing my React skills*</p>
+        </div>
+      </div>
     </div>
-  </div>
+
 
   )
 }
