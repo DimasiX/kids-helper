@@ -390,7 +390,7 @@ body {
           height: 2px;
           border-bottom: 2px solid rgb(34, 34, 34);
         }
-        .menu-choise{
+        .menu-choice{
           transition: background .15s;
           &:hover{
             cursor: pointer;
@@ -630,7 +630,7 @@ body {
             height: 2px;
             border-bottom: 2px solid rgb(34, 34, 34);
           }
-          .menu-choise{
+          .menu-choice{
             &:hover{
               cursor:none;
               background: rgba(0, 0, 0, 0.9);

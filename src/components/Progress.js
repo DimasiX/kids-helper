@@ -12,14 +12,14 @@ class Progress extends Component{
           {this.props.wish.map((wish, index)=>{
             return(
               <div className={"wish-progress "} key={index}>
-                <div className={"achieve " + wish.achieved}>
+                <div className={"achieve " + wish.isAchieved}>
 
 
                 </div>
                 <h1>{wish.name}</h1>
                 <div className="checker">
-                  <div className={"check arrow " + wish.achieved}><span onClick={() => this.props.setAchieved(index)}>&#10003;</span></div>
-                  <div className={"check criss " + wish.achieved}><span onClick={() => this.props.setNotAchieved(index)}>&#215;</span></div>
+                  <div className={"check arrow " + wish.isAchieved}><span onClick={() => this.props.setAchieved(index)}>&#10003;</span></div>
+                  <div className={"check criss " + wish.isAchieved}><span onClick={() => this.props.setNotAchieved(index)}>&#215;</span></div>
                 </div>
               </div>
             )

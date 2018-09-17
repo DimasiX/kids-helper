@@ -4,11 +4,16 @@
   "private": true,
   "homepage": "https://dima24kmagic.github.io/kids_helper",
   "dependencies": {
+    "axios": "^0.18.0",
+    "moment": "^2.22.2",
     "react": "^16.2.0",
     "react-addons-css-transition-group": "^15.6.2",
     "react-dom": "^16.2.0",
+    "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.1.1"
+    "react-scripts": "1.1.1",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "start": "react-scripts start",

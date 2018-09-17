@@ -304,7 +304,7 @@ body {
           width: 100%;
           height: 2px;
           border-bottom: 2px solid #222222; }
-        .home .wishes .wish .menu .menu-choise {
+        .home .wishes .wish .menu .menu-choice {
           transition: background .15s;
           text-align: center;
           display: flex;
@@ -314,15 +314,15 @@ body {
           height: 50%;
           color: rgba(0, 0, 0, 0.9);
           font-size: 1.5em; }
-          .home .wishes .wish .menu .menu-choise:hover {
+          .home .wishes .wish .menu .menu-choice:hover {
             cursor: pointer;
             background: #c1c1c1; }
-          .home .wishes .wish .menu .menu-choise.delete {
+          .home .wishes .wish .menu .menu-choice.delete {
             color: #ff4a90;
             background: rgba(255, 196, 219, 0.4);
             border-bottom-left-radius: 8px;
             border-bottom-right-radius: 8px; }
-            .home .wishes .wish .menu .menu-choise.delete:hover {
+            .home .wishes .wish .menu .menu-choice.delete:hover {
               background: #ffc4db; }
   .home .add-wish-butt {
     display: flex;
@@ -490,7 +490,7 @@ body {
             width: 100%;
             height: 2px;
             border-bottom: 2px solid #222222; }
-          .home .wishes .wish .menu .menu-choise {
+          .home .wishes .wish .menu .menu-choice {
             text-align: center;
             display: flex;
             justify-content: center;
@@ -499,10 +499,10 @@ body {
             height: 50%;
             color: rgba(0, 0, 0, 0.9);
             font-size: 1.5em; }
-            .home .wishes .wish .menu .menu-choise:hover {
+            .home .wishes .wish .menu .menu-choice:hover {
               cursor: none;
               background: rgba(0, 0, 0, 0.9); }
-            .home .wishes .wish .menu .menu-choise.delete {
+            .home .wishes .wish .menu .menu-choice.delete {
               color: #ff4a90;
               background: rgba(255, 196, 219, 0.4);
               border-bottom-left-radius: 8px;
