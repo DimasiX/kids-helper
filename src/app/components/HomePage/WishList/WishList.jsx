@@ -5,11 +5,10 @@ import connect from "react-redux/es/connect/connect";
 
 class WishList extends Component {
   render() {
-    const { wishes, onToggleEditMenu } = this.props;
+    const { wishes } = this.props;
     return (
       <div className="wishes" id="wishes">
-        {Object.keys(wishes).forEach(v => {
-          console.log(v, wishes[v]);
+        {Object.keys(wishes).map(v => {
           return <Wish wish={wishes[v]} />;
         })}
       </div>
@@ -31,3 +30,6 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(WishList);
+
+
+
