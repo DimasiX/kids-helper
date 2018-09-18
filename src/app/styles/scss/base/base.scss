@@ -1,27 +1,21 @@
 * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
-  // border: 1px solid red;
+
+  margin: 0;
+  padding: 0;
 }
 
-::-webkit-scrollbar {
-  display: none;
+html {
+  font-size: 82.5%; // 16px
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  color: #404040;
-  background: url("/src/app/images/mountains.jpeg");
-  background-size: auto;
-  background-repeat: no-repeat;
-  background-position: center;
-  // background: rgb(38, 143, 164);
-  @media screen and(max-width: 910px) {
-    background: rgb(154, 246, 214);
-  }
+  font-size: 1rem;
+  color: $elegant_dark;
 }
 
-head {
-  font-size: 25rem;
+.app {
+  font-size: 1rem;
 }

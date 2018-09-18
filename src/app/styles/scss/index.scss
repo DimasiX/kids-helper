@@ -1,12 +1,13 @@
 // Variables
-@import "scss/variables/variables";
+@import "./variables/variables";
 
-// Base
-@import "base/base";
+// Base Styles
+@import "./base/base";
 
-// Layouts
-@import "layout/app";
-@import "layout/home";
+// Layout
+@import "./layout/home";
+@import "./layout/app";
 
 // Components
-@import "components/header";
+@import "./components/home-intro";
+@import "./components/arrow";
