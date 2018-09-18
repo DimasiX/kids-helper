@@ -2,23 +2,71 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4097cb0b-29d7-4dcc-b36f-bc693660f5f5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/WishList/AddWishButton.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/WishList/SaveWishButton.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/WishList/WishEdit.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/base/base.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/variables/variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/styles/scss/components/header.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/styles/scss/index.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/styles/scss/layout/app.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/styles/scss/layout/home.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/styles/scss/output/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/styles/scss/output/index.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/reducers/reducer.root.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/reducers/reducer.wishes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/store.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.sass-cache/a5f37a6de2cdb9bc9952ba87fcad978360ff5fef/base.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/a5f37a6de2cdb9bc9952ba87fcad978360ff5fef/base.scssc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.sass-cache/c80fab0ea04345814b1cff8fa9ba3b971b8fcf2c/index.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/c80fab0ea04345814b1cff8fa9ba3b971b8fcf2c/index.scssc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AddWish.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddWish.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/WishList/Wish.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WishList/Wish.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/WishList/WishList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WishList/WishList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/api/api.scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/api/api.scripts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/jquery-3.3.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/smooth_scroll.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.sass-cache/3032f4efa855101463ce53bf0936ec606cb0448d/app.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.sass-cache/ef9fe16f1e4971cd93e01d9cfb80911ce9a95810/app.scssc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bootstrap-js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/AboutPage/About.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AddWish.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/AddWishPage/AddWish.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Header/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/HomePage/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Progress.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/ProgressPage/Progress.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/WishList/AddWishButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/HomePage/WishList/AddWishButton.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/WishList/SaveWishButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/HomePage/WishList/SaveWishButton.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/WishList/Wish.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/HomePage/WishList/Wish.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/WishList/WishEdit.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/HomePage/WishList/WishEdit.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/WishList/WishList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/HomePage/WishList/WishList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/WishList/WishMenu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/HomePage/WishList/WishMenu.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/api/api.scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/api.utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/app.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/cozy.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/images/cozy.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/mobile.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/images/mobile.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/mobile1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/images/mobile1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/mobile2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/images/mobile2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/mobile3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/images/mobile3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/mobile4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/images/mobile4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/mobile5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/images/mobile5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/mobile6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/images/mobile6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/mountains.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/images/mountains.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/os-x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/images/os-x.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/test.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/images/test.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/world.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/images/world.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/e3d90c7627154c4ad28f40d3d52131f1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/images/e3d90c7627154c4ad28f40d3d52131f1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/pic-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/images/pic-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/pic-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/images/pic-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/pic-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/images/pic-3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/pic-4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/images/pic-4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/registerServiceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/registerServiceWorker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/scss/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/base/base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/scss/base/base.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/index.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/output/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/output/index.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/variables/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/scss/variables/variables.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,23 +86,25 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="1" />
+          <entry key="css" value="5" />
+          <entry key="html" value="1" />
           <entry key="jpeg" value="1" />
           <entry key="jpg" value="6" />
-          <entry key="js" value="8" />
+          <entry key="js" value="17" />
           <entry key="json" value="1" />
-          <entry key="jsx" value="10" />
-          <entry key="scss" value="4" />
+          <entry key="jsx" value="14" />
+          <entry key="scss" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="1" />
+          <entry key="CSS" value="5" />
+          <entry key="HTML" value="1" />
           <entry key="Image" value="7" />
           <entry key="JSON" value="1" />
-          <entry key="JSX Harmony" value="10" />
-          <entry key="JavaScript" value="8" />
-          <entry key="SCSS" value="4" />
+          <entry key="JSX Harmony" value="14" />
+          <entry key="JavaScript" value="17" />
+          <entry key="SCSS" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
@@ -65,89 +115,226 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="640" />
-          <entry key="json" value="105" />
-          <entry key="jsx" value="1001" />
-          <entry key="scss" value="82" />
+          <entry key="css" value="2" />
+          <entry key="js" value="1488" />
+          <entry key="json" value="107" />
+          <entry key="jsx" value="1413" />
+          <entry key="scss" value="209" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JSON" value="105" />
-          <entry key="JSX Harmony" value="1001" />
-          <entry key="JavaScript" value="640" />
-          <entry key="SCSS" value="82" />
+          <entry key="CSS" value="2" />
+          <entry key="JSON" value="107" />
+          <entry key="JSX Harmony" value="1413" />
+          <entry key="JavaScript" value="1488" />
+          <entry key="SCSS" value="209" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/scss/app.scss">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="19" column="35" lean-forward="true" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/scss/base/base.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/scss/index.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/scss/variables/variables.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Header.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.52072966">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/app/components/App.jsx">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="373">
+                  <caret line="172" column="52" selection-start-line="172" selection-start-column="52" selection-end-line="172" selection-end-column="52" />
+                  <folding>
+                    <element signature="e#0#41#0" expanded="true" />
+                    <element signature="e#109#146#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/app/components/HomePage/Home.jsx">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="292">
+                  <caret line="26" column="10" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
+                  <folding>
+                    <element signature="e#0#41#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/index.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="133">
+                  <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+                  <folding>
+                    <element signature="e#0#26#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/app/components/HomePage/WishList/WishList.jsx">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="209">
+                  <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+                  <folding>
+                    <element signature="e#0#41#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/app/components/HomePage/WishList/Wish.jsx">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="482">
+                  <caret line="42" selection-start-line="42" selection-end-line="42" />
+                  <folding>
+                    <element signature="e#0#41#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/store/reducers/reducer.wishes.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="171">
+                  <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/store/store.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="399">
+                  <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+                  <folding>
+                    <element signature="e#0#32#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/app/components/AboutPage/About.jsx">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="361">
+                  <caret line="19" column="3" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/app/components/Header/Header.jsx">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="278">
+                  <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+                  <folding>
+                    <element signature="e#0#41#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/store/reducers/reducer.root.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="95">
+                  <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/app/styles/scss/base/base.scss">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="57">
+                  <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/app/styles/scss/app.scss">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-10666">
+                  <caret line="669" column="3" selection-start-line="423" selection-start-column="2" selection-end-line="669" selection-end-column="3" />
+                  <folding>
+                    <element signature="e#3486#9081#0" />
+                    <element signature="e#9129#15140#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/app/styles/scss/layout/home.scss">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <caret line="242" column="1" selection-start-line="242" selection-start-column="1" selection-end-line="242" selection-end-column="1" />
+                  <folding>
+                    <element signature="e#6#5601#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/app/styles/scss/components/header.scss">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="577">
+                  <caret line="149" column="1" selection-start-line="149" selection-start-column="1" selection-end-line="149" selection-end-column="1" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/app/styles/scss/layout/app.scss">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="228">
+                  <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/app/styles/scss/variables/variables.scss">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="171">
+                  <caret line="9" selection-start-line="9" selection-end-line="9" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/app/styles/scss/index.scss">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="114">
+                  <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/app/styles/scss/output/index.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="133">
+                  <caret line="7" selection-start-line="7" selection-end-line="7" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -165,12 +352,26 @@
         <option value="$PROJECT_DIR$/src/components/api/api.scripts.js" />
         <option value="$PROJECT_DIR$/src/components/WishList/Wish.jsx" />
         <option value="$PROJECT_DIR$/src/components/App.js" />
-        <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/scss/variables/variables.scss" />
-        <option value="$PROJECT_DIR$/src/scss/index.scss" />
-        <option value="$PROJECT_DIR$/src/scss/app.scss" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/components/Header.js" />
         <option value="$PROJECT_DIR$/src/scss/base/base.scss" />
+        <option value="$PROJECT_DIR$/src/scss/app.scss" />
+        <option value="$PROJECT_DIR$/src/scss/layout/app.scss" />
+        <option value="$PROJECT_DIR$/src/scss/components/header.scss" />
+        <option value="$PROJECT_DIR$/src/scss/layout/home.scss" />
+        <option value="$PROJECT_DIR$/src/scss/index.scss" />
+        <option value="$PROJECT_DIR$/src/index.css" />
+        <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/src/app/components/App.js" />
+        <option value="$PROJECT_DIR$/src/app/components/App.jsx" />
+        <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/src/store/reducers/reducer.root.js" />
+        <option value="$PROJECT_DIR$/src/store/store.js" />
+        <option value="$PROJECT_DIR$/src/app/components/HomePage/WishList/Wish.jsx" />
+        <option value="$PROJECT_DIR$/src/store/reducers/reducer.wishes.js" />
+        <option value="$PROJECT_DIR$/src/app/components/HomePage/Home.jsx" />
+        <option value="$PROJECT_DIR$/src/app/components/HomePage/WishList/WishList.jsx" />
       </list>
     </option>
   </component>
@@ -196,6 +397,8 @@
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
+      <autoscrollToSource Scope="false" />
+      <autoscrollFromSource Scope="true" ProjectPane="true" />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
@@ -212,12 +415,6 @@
               <item name="wish_app" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
-            <path>
-              <item name="wish_app" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="wish_app" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="scss" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -232,7 +429,97 @@
             <path>
               <item name="wish_app" type="b2602c69:ProjectViewProjectNode" />
               <item name="wish_app" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wish_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wish_app" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+              <item name="react-redux" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wish_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wish_app" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+              <item name="react-redux" type="462c0819:PsiDirectoryNode" />
+              <item name="es" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wish_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wish_app" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+              <item name="react-redux" type="462c0819:PsiDirectoryNode" />
+              <item name="es" type="462c0819:PsiDirectoryNode" />
+              <item name="connect" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wish_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wish_app" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wish_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wish_app" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wish_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wish_app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wish_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wish_app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wish_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wish_app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="AboutPage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wish_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wish_app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Header" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wish_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wish_app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="HomePage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wish_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wish_app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="HomePage" type="462c0819:PsiDirectoryNode" />
+              <item name="WishList" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wish_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wish_app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="store" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wish_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wish_app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="store" type="462c0819:PsiDirectoryNode" />
+              <item name="reducers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -245,11 +532,21 @@
     <property name="SearchEverywhereHistoryKey" value="packa&#9;FILE&#9;file:///home/dima/programming/projects/wish_app/package.json" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537252027707" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537260837598" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="prettierjs.PrettierConfiguration.Package" value="/usr/lib/node_modules/prettier" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/store/reducers" />
+      <recent name="$PROJECT_DIR$/src/app/components/ProgressPage" />
+      <recent name="$PROJECT_DIR$/src/app/components/Home" />
+      <recent name="$PROJECT_DIR$/src/app/components/AddWish" />
+      <recent name="$PROJECT_DIR$/src/app/components/AboutPage" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -274,12 +571,12 @@
       <option name="presentableId" value="Default" />
       <updated>1537188968698</updated>
       <workItem from="1537188973541" duration="7237000" />
-      <workItem from="1537251155457" duration="871000" />
+      <workItem from="1537251155457" duration="6840000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8108000" />
+    <option name="totallyTimeSpent" value="14077000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
@@ -290,10 +587,10 @@
       <window_info id="UI Designer" order="2" />
       <window_info id="Learn" order="3" />
       <window_info id="Capture Tool" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.122719735" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.122719735" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.2840671" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.2840671" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="2" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="3" />
@@ -322,38 +619,10 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/css/mobile1.jpg">
+    <entry file="file://$PROJECT_DIR$/src/app/images/mobile1.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/api/api.scripts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="165" column="4" lean-forward="true" selection-start-line="165" selection-start-column="4" selection-end-line="165" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-            <element signature="e#109#139#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/WishList/AddWishButton.jsx">
+    <entry file="file://$PROJECT_DIR$/src/app/components/HomePage/WishList/AddWishButton.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
@@ -363,7 +632,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/AddWish.js">
+    <entry file="file://$PROJECT_DIR$/src/app/components/AddWishPage/AddWish.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1140">
           <caret line="61" column="2" selection-start-line="61" selection-start-column="2" selection-end-line="61" selection-end-column="2" />
@@ -373,115 +642,231 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/WishList/WishList.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/WishList/Wish.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/WishList/WishMenu.jsx">
+    <entry file="file://$PROJECT_DIR$/src/app/components/HomePage/WishList/WishMenu.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/WishList/SaveWishButton.jsx">
+    <entry file="file://$PROJECT_DIR$/src/app/components/HomePage/WishList/SaveWishButton.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="6" column="71" selection-start-line="6" selection-start-column="71" selection-end-line="6" selection-end-column="71" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/WishList/WishEdit.jsx">
+    <entry file="file://$PROJECT_DIR$/src/app/components/HomePage/WishList/WishEdit.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
           <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Header.js">
+    <entry file="file://$PROJECT_DIR$/src/app/images/cozy.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/images/mobile.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/images/os-x.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/images/world.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/images/mountains.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/images/test.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/styles/scss/variables/variables.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/styles/scss/base/base.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/styles/scss/components/header.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="577">
+          <caret line="149" column="1" selection-start-line="149" selection-start-column="1" selection-end-line="149" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/styles/scss/output/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/styles/scss/layout/home.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state>
+          <caret line="242" column="1" selection-start-line="242" selection-start-column="1" selection-end-line="242" selection-end-column="1" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#6#5601#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/styles/scss/index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/styles/scss/layout/app.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/styles/scss/app.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10666">
+          <caret line="669" column="3" selection-start-line="423" selection-start-column="2" selection-end-line="669" selection-end-column="3" />
+          <folding>
+            <element signature="e#3486#9081#0" />
+            <element signature="e#9129#15140#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/api.utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/AboutPage/About.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="3" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/App.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="172" column="52" selection-start-line="172" selection-start-column="52" selection-end-line="172" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#109#146#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/react-redux/es/connect/connect.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1273">
+          <caret line="102" column="15" selection-start-line="102" selection-start-column="15" selection-end-line="102" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="26" column="15" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/Header/Header.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+        <state relative-caret-position="133">
+          <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/cozy.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/mobile.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/os-x.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/world.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/mountains.jpeg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/test.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scss/app.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
+    <entry file="file://$PROJECT_DIR$/src/store/store.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="35" lean-forward="true" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+        <state relative-caret-position="399">
+          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scss/variables/variables.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scss/index.scss">
+    <entry file="file://$PROJECT_DIR$/src/store/reducers/reducer.root.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scss/base/base.scss">
+    <entry file="file://$PROJECT_DIR$/src/app/components/HomePage/WishList/Wish.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        <state relative-caret-position="482">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/reducers/reducer.wishes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/HomePage/Home.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="26" column="10" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/HomePage/WishList/WishList.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
