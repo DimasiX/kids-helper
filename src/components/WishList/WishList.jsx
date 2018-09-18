@@ -1,13 +1,13 @@
-import React, { Component, Fragment } from "react";
+import React, {Component} from "react";
 import Wish from "./Wish";
 
 class WishList extends Component {
   render() {
-    const { wishes } = this.props;
+    const { wishes, onToggleEditMenu } = this.props;
     return (
       <div className="wishes" id="wishes">
-        {wishes.map(wish => {
-          return <Wish wish={wish}/>;
+        {wishes.map((wish, index) => {
+          return <Wish wish={wish} onToggleEditMenu={onToggleEditMenu} key={index}/>;
         })}
       </div>
     );

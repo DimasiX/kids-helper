@@ -1,0 +1,25 @@
+@keyframes appear {
+  0% {
+    transform: translateX(-100%); }
+  100% {
+    transform: translateX(0%); } }
+::-webkit-scrollbar {
+  display: none; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: #404040;
+  background: url("/src/css/mountains.jpeg");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center; }
+  @media screen and (max-width: 910px) {
+    body {
+      background: #9af6d6; } }
+
+head {
+  font-size: 25rem; }
+
+/*# sourceMappingURL=index.css.map */

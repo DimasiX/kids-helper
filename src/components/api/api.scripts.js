@@ -1,3 +1,4 @@
-export const uniqureID = () => {
-  return Math.round(new Date().getTime() / 1000);
+export const uniqueID = () => {
+  let randomizer = 999999999999;
+  return Math.round(Math.random() * randomizer);
 };

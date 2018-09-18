@@ -6,7 +6,7 @@ import Home from "./Home";
 import AddWish from "./AddWish";
 import Progress from "./Progress";
 import About from "./About";
-import { uniqureID } from "./api/api.scripts";
+import { uniqueID } from "./api/api.scripts";
 //Styles
 import "../css/bootstrap.min.css";
 import "../css/App.css";
@@ -19,7 +19,7 @@ class App extends Component {
       input: "",
       wishList: [
         {
-          id: uniqureID(),
+          id: uniqueID(),
           name: "Visit Paris",
           date: "10.05.2019",
           isOnEdit: false,
@@ -27,7 +27,7 @@ class App extends Component {
           isAchieved: false
         },
         {
-          id: uniqureID(),
+          id: uniqueID(),
           name: "Live in Hawaii",
           date: "10.03.2022",
           isOnEdit: false,
@@ -35,7 +35,7 @@ class App extends Component {
           isAchieved: true
         },
         {
-          id: uniqureID(),
+          id: uniqueID(),
           name: "Get Front End Job",
           date: "15.05.2018",
           isOnEdit: false,
@@ -76,7 +76,6 @@ class App extends Component {
   addWish = e => {
     e.preventDefault();
     if (this.state.input == "") {
-      console.log("Hmmmmm");
     } else {
       this.setState({
         input: "",
@@ -106,19 +105,19 @@ class App extends Component {
       this.setState({});
     }
   };
-  editWish = index => {
-    if (this.state.wishList[index].isEdit) {
-      this.state.wishList[index].isEdit = !this.state.wishList[index].isEdit;
-      this.setState({});
-    } else {
-      this.state.wishList[index].isEdit = !this.state.wishList[index].isEdit;
-      this.state.wishList[index].isOnEdit = !this.state.wishList[index]
-        .isOnEdit;
-      this.state.input = this.state.wishList[index].name;
-      this.state.date = this.state.wishList[index].date;
-      this.setState({});
-    }
-  };
+  // editWish = index => {
+  //   if (this.state.wishList[index].isEdit) {
+  //     this.state.wishList[index].isEdit = !this.state.wishList[index].isEdit;
+  //     this.setState({});
+  //   } else {
+  //     this.state.wishList[index].isEdit = !this.state.wishList[index].isEdit;
+  //     this.state.wishList[index].isOnEdit = !this.state.wishList[index]
+  //       .isOnEdit;
+  //     this.state.input = this.state.wishList[index].name;
+  //     this.state.date = this.state.wishList[index].date;
+  //     this.setState({});
+  //   }
+  // };
   saveWishChange = index => {
     this.state.wishList[index].name = this.state.input;
     this.state.wishList[index].date = this.state.date;
@@ -154,6 +153,18 @@ class App extends Component {
     });
   };
 
+  toggleEditMenu = editWish => {
+    let wishes = this.state.wishList.map(wish => {
+      if (wish.id === editWish.id) {
+        return { ...wish, isEdit: !wish.isEdit };
+      }
+      return wish;
+    });
+    this.setState({
+      wishList: wishes
+    });
+  };
+
   render() {
     return (
       <HashRouter>
@@ -168,7 +179,7 @@ class App extends Component {
                   wishes={this.state.wishList}
                   Edit={this.Edit}
                   closeEdit={this.closeEdit}
-                  editWish={this.editWish}
+                  onToggleEditMenu={this.toggleEditMenu}
                   getInput={this.setInput}
                   saveWishChange={this.saveWishChange}
                   getDate={this.getDate}

@@ -1,9 +1,7 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
-import image from "../css/mobile1.jpg";
 import WishList from "./WishList/WishList";
-import Wish from "./WishList/Wish";
+import AddWishButton from "./WishList/AddWishButton";
 
 class Home extends Component {
   static propTypes = {
@@ -11,15 +9,16 @@ class Home extends Component {
   };
 
   render = () => {
-    const { wishes } = this.props;
+    const { wishes, onToggleEditMenu } = this.props;
 
     return <div className="home">
         <div className="intro">
           <h1>I WISH!</h1>
           <i className="arrow down" />
         </div>
-        {/*<WishList wishes={wishes}/>*/}
-        <div className="wishes" id="wishes">
+        <WishList wishes={wishes} onToggleEditMenu={onToggleEditMenu}/>
+
+        {/*<div className="wishes" id="wishes">
           {wishes.map((wish, index) => {
             if (wish.isEdit === true) {
               return <div className="wish" key={index}>
@@ -58,22 +57,16 @@ class Home extends Component {
                 <h2>Date: {wish.date}</h2>
               </div>;
           })}
-        </div>
+        </div>*/}
 
-        <div className="add-wish-butt">
-          <Link to="add-wish">
-            <span />
-            <span />
-          </Link>
-        </div>
+        <AddWishButton />
       </div>;
   };
 }
-
 Home.propTypes = {
   wishes: PropTypes.array.isRequired,
   Edit: PropTypes.func.isRequired,
-  editWish: PropTypes.func.isRequired,
+  onToggleEditMenu: PropTypes.func.isRequired,
   getInput: PropTypes.func.isRequired
 };
 

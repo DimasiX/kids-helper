@@ -1,0 +1,9 @@
+@keyframes appear {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+$color-text: lighten(#4c68d7, 20%);
