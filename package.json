@@ -17,7 +17,7 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "start": "concurrently \"sass --watch ./src/scss/index.scss:./src/scss/output/index.css\"   \"react-scripts start\" ",
+    "start": "concurrently \" sass --watch src/app/styles/scss/index.scss:src/app/styles/css/index.css \"   \"react-scripts start\" ",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
