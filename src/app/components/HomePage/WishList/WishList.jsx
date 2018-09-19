@@ -9,8 +9,7 @@ class WishList extends Component {
     return (
       <div className="wishes" id="wishes">
         {Object.keys(wishes).map((wish, index)=> {
-          console.log(wishes[wish]);
-          return <Wish key={index} wish={wishes[wish]} />;
+          return <Wish key={index} wish={wishes[wish]} wishKey={wish}/>;
         })}
       </div>
     );

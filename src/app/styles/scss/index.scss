@@ -11,7 +11,9 @@
 // Components
 @import "./components/home-intro";
 @import "./components/arrow";
-@import "./components/wish";
-@import "./components/plus-button";
+@import "components/wish/wish";
+@import "components/wish/plus-button";
 @import "./components/footer";
 @import "./components/inputs";
+@import "./components/daypicker-input";
+@import "./components/wish/wish-menu";

@@ -1,0 +1,99 @@
+.more-options {
+  position: relative;
+}
+
+.menu {
+  width: 40%;
+  height: 15vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+
+  //padding: 1rem 1rem;
+
+  background: $elegant_white;
+
+  border-radius: 4px;
+
+  overflow: hidden;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+
+  &__close {
+    position: absolute;
+    top: .25rem;
+    right: .25rem;
+
+    width: 2.5rem;
+    height: 2.5rem;
+
+    cursor: pointer;
+
+    //background: red;
+
+    &:after {
+      content: "";
+
+      position: absolute;
+      left: 50%;
+
+      transform: rotate(45deg);
+
+      width: 1px;
+      height: 80%;
+
+      background: $elegant_half_dark;
+
+      border-radius: 2px;
+    }
+    &:before {
+      content: "";
+
+      position: absolute;
+      left: 50%;
+
+      transform: rotate(-45deg);
+
+      width: 1px;
+      height: 80%;
+
+      background: $elegant_half_dark;
+
+      border-radius: 2px;
+    }
+
+    &:hover {
+      &:before, &:after {
+        background: $elegant_dark;
+      }
+    }
+  }
+
+  &__btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    width: 100%;
+    height: 50%;
+    color: $elegant_dark;
+
+    transition: background .15s;
+    &:hover{
+      background: rgba(0,0,0,.2);
+    }
+
+    &--save{
+
+      border-bottom: 1px solid $elegant_dark;
+    }
+  }
+}

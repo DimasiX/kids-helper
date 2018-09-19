@@ -1,10 +1,25 @@
 // Colors
-$elegant_dark: rgba(0, 0, 0, 0.95);
-$elegant_white: rgba(255, 255, 255, 0.95);
-$elegant_gold: rgba(246, 167, 23, 0.83);
+$BLACK: rgb(0, 0, 0);
+$elegant_dark: rgb(9, 9, 9);
+$elegant_half_dark: rgb(70, 70, 70);
+$elegant_white: rgb(234, 234, 234);
+$elegant_gold: rgb(239, 176, 37);
 $elegant_dark_gold: rgb(186, 131, 32);
 $elegant_deep_blue: rgb(7, 14, 29);
 $input_focus: #3fa0ff;
 
 // Layout Colors
-$homeInto: rgba(0, 0, 0, 0.9);
+$homeIntro: rgb(11, 11, 11);
+
+// Wish components
+$wish_bg: $elegant_dark ;
+$wish_text_color: $elegant_white;
+
+$dots_size: 0.6rem;
+
+// Components
+
+// Shadows
+$light_shadow: 0, 2px, 4px rgba($BLACK, 0.1);
+$medium_shadow: 0, 2px, 4px rgba($BLACK, 0.25);
+$hard_shadow: 0, 2px, 4px rgba($BLACK, 0.75);
