@@ -1,0 +1,42 @@
+.plus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 3.5rem;
+  height: 3.5rem;
+
+  border-radius: 50%;
+
+  transition: box-shadow 0.15s;
+
+  &:hover {
+    box-shadow: 0 0 5px $elegant_gold;
+
+    span {
+      &.gold {
+        background: $elegant_dark_gold;
+      }
+    }
+  }
+
+  span {
+    position: absolute;
+
+    width: 4px;
+    height: 2rem;
+
+    background: $elegant_white; // Default background is white
+
+    &.gold {
+      background: $elegant_gold;
+    }
+
+    &:nth-child(1) {
+      transform: rotate(90deg);
+    }
+    &:nth-child(2) {
+      //border: 10px solid white;
+    }
+  }
+}

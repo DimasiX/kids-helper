@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Wish from "./Wish";
+import Wish from "../Wish/Wish";
 import { bindActionCreators } from "redux";
 import connect from "react-redux/es/connect/connect";
 
@@ -8,8 +8,8 @@ class WishList extends Component {
     const { wishes } = this.props;
     return (
       <div className="wishes" id="wishes">
-        {Object.keys(wishes).map(v => {
-          return <Wish wish={wishes[v]} />;
+        {Object.keys(wishes).map((wish, index)=> {
+          return <Wish key={index} wish={wishes[wish]} />;
         })}
       </div>
     );

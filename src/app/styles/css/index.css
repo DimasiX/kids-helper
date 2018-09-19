@@ -1,4 +1,3 @@
-
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -47,5 +46,38 @@ body {
   .arrow--down {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg); }
+
+.plus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  transition: box-shadow 0.15s; }
+  .plus:hover {
+    box-shadow: 0 0 5px rgba(246, 167, 23, 0.83); }
+    .plus:hover span.gold {
+      background: #ba8320; }
+  .plus span {
+    position: absolute;
+    width: 4px;
+    height: 2rem;
+    background: #f1f1f1; }
+    .plus span.gold {
+      background: rgba(246, 167, 23, 0.83); }
+    .plus span:nth-child(1) {
+      transform: rotate(90deg); }
+
+.footer {
+  width: 100%;
+  height: 5rem; }
+  .footer.black {
+    border-top: 1px solid #f1f1f1;
+    background: #111111; }
+  .footer.center {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
 
 /*# sourceMappingURL=index.css.map */

@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import WishList from "./WishList/WishList";
-import AddWishButton from "./WishList/AddWishButton";
-import HomeIntro from "./HomeIntro";
+import PlusButton from "../PlusButton/PlusButton";
+import HomeIntro from "./HomeIntro/HomeIntro";
+import Footer from "../Footer/Footer";
 
 class Home extends Component {
   render = () => {
@@ -13,7 +14,9 @@ class Home extends Component {
 
         <WishList />
 
-        <AddWishButton />
+        <Footer className="black center">
+          <PlusButton styles="gold"/>
+        </Footer>
       </div>
     );
   };
