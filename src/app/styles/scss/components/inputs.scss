@@ -1,0 +1,25 @@
+.input {
+  border: none;
+  outline: none;
+
+  font-size: 2rem;
+
+  box-shadow: none;
+
+  transition: box-shadow 0.15s;
+
+  background: $elegant_white;
+  color: $elegant_deep_blue;
+
+  &:focus {
+    box-shadow: 0 2px 4px rgba($elegant_dark, 0.25);
+  }
+  &__text {
+    font-family: "Inconsolata", monospace;
+    padding: 0.25rem 0;
+    padding-left: 1rem;
+  }
+  &--rounded {
+    border-radius: 4px;
+  }
+}

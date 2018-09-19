@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const PlusButton = props => {
-  const { styles } = props;
+  const { styles, endpoint } = props;
   return (
-    <Link to="add" className="plus plus--link">
+    <Link to={endpoint} className="plus plus--link">
       <span className={styles}/>
       <span className={styles}/>
     </Link>

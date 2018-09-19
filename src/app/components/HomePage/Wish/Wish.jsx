@@ -1,26 +1,24 @@
 import React, { Component } from "react";
 import WishMenu from "./WishMenu";
-import WishEdit, { WISH_DATE, WISH_NAME } from "./WishEdit";
+import WishInfo, { WISH_DATE, WISH_NAME } from "./WishInfo";
 import SaveWishButton from "./SaveWishButton";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
+import WishInfoContainer from "./WishInfoContainer";
 class Wish extends Component {
   render() {
-    const { wish, onToggleEditMenu } = this.props;
-    console.log(wish.isEdit);
+    const { wish } = this.props;
     return (
       <div className="wish">
-        <div
-          className="more-options"
-          onClick={() => {
-            onToggleEditMenu(wish);
-          }}
-        />
+        <div className="more-options" />
 
-        {wish.isEdit ? <WishMenu /> : null}
+        {wish.isMenuOpen ? <WishMenu /> : null}
 
-        <WishEdit element={WISH_NAME} wish={wish} />
-        <WishEdit element={WISH_DATE} wish={wish} />
+        <div className="wish__info">
+          <WishInfoContainer elName={WISH_NAME} wish={wish} />
+          <WishInfoContainer elName={WISH_DATE} wish={wish} />
+        </div>
+
         <SaveWishButton wish={wish} />
       </div>
     );

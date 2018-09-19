@@ -15,7 +15,7 @@ class Home extends Component {
         <WishList />
 
         <Footer className="black center">
-          <PlusButton styles="gold"/>
+          <PlusButton endpoint="add" styles="gold" />
         </Footer>
       </div>
     );

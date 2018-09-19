@@ -6,11 +6,13 @@
   padding: 0; }
 
 html {
-  font-size: 82.5%; }
+  font-size: 82.5%;
+  font-family: 'Inconsolata', monospace;
+  font-family: 'Noto Serif JP', sans-serif; }
 
 body {
   font-size: 1rem;
-  color: #111111; }
+  color: rgba(0, 0, 0, 0.95); }
 
 .app {
   font-size: 1rem; }
@@ -30,22 +32,53 @@ body {
   position: relative;
   height: 100vh;
   width: 100%;
-  background: #111111; }
+  background: rgba(0, 0, 0, 0.95); }
   .home__intro h1 {
     font-size: 3rem;
+    font-weight: 300;
     color: #ffffff; }
   .home__intro .home__arrow {
     position: absolute;
     bottom: 4rem; }
 
 .arrow {
-  border: solid #f1f1f1;
+  border: solid rgba(255, 255, 255, 0.95);
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: .65rem; }
   .arrow--down {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg); }
+
+.wish {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  height: 50vh;
+  background: #070e1d;
+  color: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.95); }
+  .wish__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 90%; }
+    .wish__info__text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inconsolata', monospace;
+      font-weight: 100; }
+      .wish__info__text p {
+        font-size: 2.5rem; }
+    .wish__info__date {
+      color: rgba(255, 255, 255, 0.5);
+      margin-bottom: 2rem; }
+      .wish__info__date p {
+        font-size: 1.75rem; }
 
 .plus {
   display: flex;
@@ -63,7 +96,7 @@ body {
     position: absolute;
     width: 4px;
     height: 2rem;
-    background: #f1f1f1; }
+    background: rgba(255, 255, 255, 0.95); }
     .plus span.gold {
       background: rgba(246, 167, 23, 0.83); }
     .plus span:nth-child(1) {
@@ -73,11 +106,28 @@ body {
   width: 100%;
   height: 5rem; }
   .footer.black {
-    border-top: 1px solid #f1f1f1;
-    background: #111111; }
+    border-top: 1px solid rgba(255, 255, 255, 0.95);
+    background: rgba(0, 0, 0, 0.95); }
   .footer.center {
     display: flex;
     justify-content: center;
     align-items: center; }
+
+.input {
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  box-shadow: none;
+  transition: box-shadow 0.15s;
+  background: rgba(255, 255, 255, 0.95);
+  color: #070e1d; }
+  .input:focus {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25); }
+  .input__text {
+    font-family: "Inconsolata", monospace;
+    padding: 0.25rem 0;
+    padding-left: 1rem; }
+  .input--rounded {
+    border-radius: 4px; }
 
 /*# sourceMappingURL=index.css.map */
