@@ -1,43 +1,16 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
-import { WISH_DATE, WISH_NAME } from "./WishInfo";
+import React, {Component} from "react";
+import {connect} from "react-redux";
+import {bindActionCreators} from "redux";
+import {WISH_DATE, WISH_NAME} from "./WishInfo";
 import InputText from "../../../Inputs/InputText";
 import DayPickerInput from "react-day-picker/DayPickerInput";
 import "react-day-picker/lib/style.css";
-import { DATEFORMAT } from "../../../../../services/api.values";
-import moment from "moment";
+import {DATEFORMAT} from "../../../../../services/api.values";
 
 class WishInfoEdit extends Component {
-  state = {
-    wishText: "",
-    dateToAchieve: ""
-  };
-
-  componentWillMount() {
-    const { wish } = this.props;
-    this.setState({
-      wishText: wish.wishText,
-      dateToAchieve: wish.dateToAchieve
-    });
-  }
-
-  onTextInputChange = e => {
-    let v = e.target.value;
-    this.setState({
-      wishText: v
-    });
-  };
-
-  onDateInputChange = date => {
-    let newDate = moment(date);
-    this.setState({
-      dateToAchieve: newDate
-    });
-  };
 
   renderEditElement = elName => {
-    let { wishText, dateToAchieve } = this.state;
+    let { wishText, dateToAchieve, onTextChange, onDateChange } = this.props;
     dateToAchieve = dateToAchieve.format(DATEFORMAT);
 
     switch (elName) {
@@ -45,7 +18,7 @@ class WishInfoEdit extends Component {
         return (
           <div className="wish__info__text wish__info__text--edit">
             <p>Your Wish:</p>
-            <InputText onChange={this.onTextInputChange} value={wishText} />
+            <InputText onChange={onTextChange} value={wishText} />
           </div>
         );
       case WISH_DATE:
@@ -53,7 +26,7 @@ class WishInfoEdit extends Component {
           <div className="wish__info__date wish__info__date--edit">
             <p>Date to achieve:</p>
             <DayPickerInput
-              onDayChange={this.onDateInputChange}
+              onDayChange={onDateChange}
               value={dateToAchieve}
               showOverlay={true}
               placeholder="Select Date"
@@ -65,7 +38,7 @@ class WishInfoEdit extends Component {
     }
   };
   render() {
-    const { elName, wish } = this.props;
+    const { elName } = this.props;
     return this.renderEditElement(elName);
   }
 }

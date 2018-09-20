@@ -4,11 +4,24 @@ import WishInfoEdit from "./WishInfoEdit";
 
 class WishInfoContainer extends Component {
   render() {
-    const { elName, wish } = this.props;
+    const {
+      elName,
+      wish,
+      onTextChange,
+      onDateChange,
+      dateToAchieve,
+      wishText
+    } = this.props;
     return (
       <Fragment>
         {wish.isEditing ? (
-          <WishInfoEdit elName={elName} wish={wish} />
+          <WishInfoEdit
+            dateToAchieve={dateToAchieve}
+            wishText={wishText}
+            onTextChange={onTextChange}
+            onDateChange={onDateChange}
+            elName={elName}
+          />
         ) : (
           <WishInfo elName={elName} wish={wish} />
         )}

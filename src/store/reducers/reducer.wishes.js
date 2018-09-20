@@ -1,5 +1,4 @@
 import moment from "moment";
-import { DATEFORMAT } from "../../services/api.values";
 
 const initialState = {
   wishID: {
