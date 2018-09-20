@@ -3,6 +3,9 @@
   border-radius: 4px;
   top: 0;
   input {
+    color: $elegant_dark;
+    background-color: $elegant_white;
+
     padding: 0.25rem 0;
     padding-left: 1rem;
 
@@ -17,8 +20,12 @@
   .DayPickerInput-Overlay{
     display: flex;
     justify-content: center;
+
     width: 100%;
     margin-bottom: 2rem;
+
+    background-color: $elegant_white;
+
   }
 
   .DayPicker-Day {

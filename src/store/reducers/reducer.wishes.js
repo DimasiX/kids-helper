@@ -4,13 +4,13 @@ import { DATEFORMAT } from "../../services/api.values";
 const initialState = {
   wishID: {
     wishText: "Live in Hawaii",
-    dateToAchieve: moment().format(DATEFORMAT),
+    dateToAchieve: moment(),
     isEditing: false,
     isMenuOpen: true
   },
   wishID2: {
     wishText: "Visit France",
-    dateToAchieve: moment().format(DATEFORMAT),
+    dateToAchieve: moment(),
     isEditing: false,
     isMenuOpen: false
   }
@@ -19,6 +19,7 @@ const initialState = {
 export const OPEN_MENU = "wish/OPEN_MENU";
 export const CLOSE_MENU = "wish/CLOSE_MENU";
 export const EDIT_WISH = "wish/EDIT_WISH";
+export const SAVE_EDITED_WISH = "wish/SAVE_EDITED_WISH";
 
 export default (state = initialState, action) => {
   switch (action.type) {
@@ -47,17 +48,40 @@ export default (state = initialState, action) => {
         }
       };
     }
+    case SAVE_EDITED_WISH: {
+      const wishID = action.payload.wishID;
+      const newWishText = action.payload.wishData.wishText;
+      const newWishDate = action.payload.wishData.dateToAchieve;
+      return {
+        ...state,
+        [wishID]: {
+          ...state[wishID],
+          wishText: newWishText,
+          dateToAchieve: newWishDate,
+          isEditing: false,
+          isMenuOpen: false
+        }
+      };
+    }
     default:
       return state;
   }
 };
 
 export const EditWish = wishID => {
-  console.log("EDITING WISH", wishID);
   return dispatch => {
     dispatch({
       type: EDIT_WISH,
       payload: wishID
+    });
+  };
+};
+
+export const SaveEditedWish = (wishID, wishData) => {
+  return dispatch => {
+    dispatch({
+      type: EDIT_WISH,
+      payload: { wishID, wishData }
     });
   };
 };

@@ -7,8 +7,8 @@ class MenuDots extends Component {
   render() {
     const { wishKey, OpenMenu } = this.props;
     return (
-      <div className="open-dots" onClick={() => OpenMenu(wishKey)}>
-        <div className="dots">
+      <div className="open-dots" >
+        <div className="dots" onClick={() => OpenMenu(wishKey)}>
           <div className="dots__dot" />
           <div className="dots__dot" />
           <div className="dots__dot" />

@@ -161,6 +161,8 @@ body {
   border-radius: 4px;
   top: 0; }
   .DayPickerInput input {
+    color: #090909;
+    background-color: #eaeaea;
     padding: 0.25rem 0;
     padding-left: 1rem;
     border-top-right-radius: 4px;
@@ -172,7 +174,8 @@ body {
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-bottom: 2rem; }
+    margin-bottom: 2rem;
+    background-color: #eaeaea; }
   .DayPickerInput .DayPicker-Day {
     transition: background-color 0.15s; }
     .DayPickerInput .DayPicker-Day:hover {
