@@ -27,7 +27,7 @@ class WishInfoEdit extends Component {
             <DayPickerInput
               onDayChange={onDateChange}
               value={dateToAchieve}
-              showOverlay={true}
+              showOverlay={false}
               placeholder="Select Date"
             />
           </div>

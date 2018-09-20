@@ -4,8 +4,8 @@ const initialState = {
   wishID: {
     wishText: "Live in Hawaii",
     dateToAchieve: moment(),
-    isEditing: false,
-    isMenuOpen: true
+    isEditing: true,
+    isMenuOpen: false
   },
   wishID2: {
     wishText: "Visit France",
