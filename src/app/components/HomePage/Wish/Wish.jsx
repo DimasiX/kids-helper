@@ -7,6 +7,7 @@ import { bindActionCreators } from "redux";
 import WishInfoContainer from "./Info/WishInfoContainer";
 import MenuDots from "./Menu/MenuDots";
 import moment from "moment";
+import { SaveEditedWish } from "../../../../store/reducers/reducer.wishes";
 
 class Wish extends Component {
   constructor() {
@@ -39,6 +40,14 @@ class Wish extends Component {
     });
   };
 
+  onSaveWish = () => {
+    let {SaveEditedWish, wishKey} = this.props;
+
+    let wishData = this.state;
+
+    SaveEditedWish(wishKey, wishData)
+  };
+
   render() {
     const { wishText, dateToAchieve } = this.state;
 
@@ -48,7 +57,7 @@ class Wish extends Component {
         <div className="more-options">
           <MenuDots wishKey={wishKey} />
           {wish.isMenuOpen ? (
-            <WishMenu wishKey={wishKey} isEditing={wish.isEditing} />
+            <WishMenu onSave={this.onSaveWish} wishKey={wishKey} isEditing={wish.isEditing} />
           ) : null}
         </div>
 
@@ -69,9 +78,9 @@ class Wish extends Component {
             elName={WISH_DATE}
             wish={wish}
           />
-        </div>
 
-        <SaveWishButton wish={wish} />
+          <SaveWishButton onClick={this.onSaveWish} wish={wish} />
+        </div>
       </div>
     );
   }
@@ -84,7 +93,12 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => {
-  return bindActionCreators({}, dispatch);
+  return bindActionCreators(
+    {
+      SaveEditedWish: (wishID, wishData) => SaveEditedWish(wishID, wishData)
+    },
+    dispatch
+  );
 };
 
 export default connect(

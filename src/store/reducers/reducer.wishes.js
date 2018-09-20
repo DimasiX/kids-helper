@@ -77,9 +77,10 @@ export const EditWish = wishID => {
 };
 
 export const SaveEditedWish = (wishID, wishData) => {
+  console.log("SAVE:", wishID, wishData);
   return dispatch => {
     dispatch({
-      type: EDIT_WISH,
+      type: SAVE_EDITED_WISH,
       payload: { wishID, wishData }
     });
   };

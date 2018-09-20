@@ -4,7 +4,7 @@ class SaveWishButton extends Component {
   render() {
     const { onClick, wish } = this.props;
 
-    return wish.isEdit ? <button onClick={onClick}>SAVE</button> : null;
+    return wish.isEditing ? <button onClick={onClick}>SAVE</button> : null;
   }
 }
 

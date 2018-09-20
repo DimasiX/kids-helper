@@ -1,14 +1,13 @@
-import React, {Component} from "react";
-import {connect} from "react-redux";
-import {bindActionCreators} from "redux";
-import {WISH_DATE, WISH_NAME} from "./WishInfo";
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import { WISH_DATE, WISH_NAME } from "./WishInfo";
 import InputText from "../../../Inputs/InputText";
 import DayPickerInput from "react-day-picker/DayPickerInput";
 import "react-day-picker/lib/style.css";
-import {DATEFORMAT} from "../../../../../services/api.values";
+import { DATEFORMAT } from "../../../../../services/api.values";
 
 class WishInfoEdit extends Component {
-
   renderEditElement = elName => {
     let { wishText, dateToAchieve, onTextChange, onDateChange } = this.props;
     dateToAchieve = dateToAchieve.format(DATEFORMAT);
@@ -43,10 +42,4 @@ class WishInfoEdit extends Component {
   }
 }
 
-const mapStateToProps = state => ({});
-const mapDispatchToProps = dispatch => bindActionCreators({}, dispatch);
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(WishInfoEdit);
+export default WishInfoEdit;
