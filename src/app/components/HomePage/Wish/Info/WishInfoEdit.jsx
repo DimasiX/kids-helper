@@ -1,11 +1,9 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
-import { WISH_DATE, WISH_NAME } from "./WishInfo";
+import React, {Component} from "react";
+import {WISH_DATE, WISH_NAME} from "./WishInfo";
 import InputText from "../../../Inputs/InputText";
 import DayPickerInput from "react-day-picker/DayPickerInput";
 import "react-day-picker/lib/style.css";
-import { DATEFORMAT } from "../../../../../services/api.values";
+import {DATEFORMAT} from "../../../../../services/api.values";
 
 class WishInfoEdit extends Component {
   renderEditElement = elName => {
