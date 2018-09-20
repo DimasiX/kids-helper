@@ -41,11 +41,13 @@ class Wish extends Component {
   };
 
   onSaveWish = () => {
-    let {SaveEditedWish, wishKey} = this.props;
+    let { SaveEditedWish, wishKey } = this.props;
 
     let wishData = this.state;
 
-    SaveEditedWish(wishKey, wishData)
+    if (wishData.wishText !== "") {
+      SaveEditedWish(wishKey, wishData);
+    }
   };
 
   render() {
@@ -57,7 +59,11 @@ class Wish extends Component {
         <div className="more-options">
           <MenuDots wishKey={wishKey} />
           {wish.isMenuOpen ? (
-            <WishMenu onSave={this.onSaveWish} wishKey={wishKey} isEditing={wish.isEditing} />
+            <WishMenu
+              onSave={this.onSaveWish}
+              wishKey={wishKey}
+              isEditing={wish.isEditing}
+            />
           ) : null}
         </div>
 
