@@ -1,17 +1,22 @@
-import React, { Component } from "react";
-import { HashRouter, Route, Switch } from "react-router-dom";
+import React, {Component} from "react";
+import {HashRouter, Route, Switch} from "react-router-dom";
 //Components
-import Header from "./Header/Header";
 import Home from "./HomePage/Home";
+import AddWish from "./AddWishPage/AddWish";
 
 class App extends Component {
+  MyCoolMethod = () => {
+
+
+
+  };
   render() {
     return (
       <HashRouter>
         <div className="app">
-          <Header />
           <Switch>
-            <Route exact path="/" render={() => <Home />} />
+            <Route path="/Add" render={() => <AddWish />} />
+            <Route path="/" render={() => <Home />} />
           </Switch>
         </div>
       </HashRouter>

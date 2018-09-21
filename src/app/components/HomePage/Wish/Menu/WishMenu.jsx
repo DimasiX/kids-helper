@@ -1,14 +1,26 @@
-import React, {Component} from "react";
-import {bindActionCreators} from "redux";
-import {CloseMenu, EditWish, RemoveWish} from "../../../../../store/reducers/reducer.wishes";
+import React, { Component } from "react";
+import { bindActionCreators } from "redux";
+import {
+  CloseMenu,
+  EditWish,
+  RemoveWish
+} from "../../../../../store/reducers/reducer.wishes";
 import connect from "react-redux/es/connect/connect";
 
 class WishMenu extends Component {
+
   render() {
     const SAVE_TEXT = "Save";
     const EDIT_TEXT = "Edit";
 
-    const { wishKey, isEditing, onSave, CloseMenu, EditWish, RemoveWish } = this.props;
+    const {
+      wishKey,
+      isEditing,
+      onSave,
+      CloseMenu,
+      EditWish,
+      RemoveWish
+    } = this.props;
 
     const saveBtn = () => {
       return (
@@ -34,7 +46,12 @@ class WishMenu extends Component {
         <div className="menu__close" onClick={() => CloseMenu(wishKey)} />
         {isEditing ? saveBtn() : editBtn()}
         {/*<div className="menu__" />*/}
-        <div className="menu__btn menu__btn--delete" onClick={() => RemoveWish(wishKey)}>Remove</div>
+        <div
+          className="menu__btn menu__btn--delete"
+          onClick={() => RemoveWish(wishKey)}
+        >
+          Remove
+        </div>
       </div>
     );
   }

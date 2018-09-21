@@ -15,8 +15,6 @@
   top: 1rem;
   right: 1rem;
 
-  //padding: 1rem 1rem;
-
   background: $elegant_white;
 
   border-radius: 4px;
@@ -25,10 +23,29 @@
 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 
+  opacity: 1;
+
+  transition: opacity 0.15s, transform 0.15s;
+
+  transform: translateY(0);
+
+  &-enter {
+    opacity: 0;
+    transform: translateY(3px);
+    transition: opacity .25s, transform 0.25s;
+  }
+
+  &-leave {
+    opacity: 0;
+    transform: translateY(3px);
+    transition: opacity .15s, transform 0.15s;
+
+  }
+
   &__close {
     position: absolute;
-    top: .25rem;
-    right: .25rem;
+    top: 0rem;
+    right: 0rem;
 
     width: 2.5rem;
     height: 2.5rem;
@@ -41,12 +58,12 @@
       content: "";
 
       position: absolute;
-      left: 50%;
+      right: 0.75rem;
 
       transform: rotate(45deg);
 
       width: 1px;
-      height: 80%;
+      height: $close_size;
 
       background: $elegant_half_dark;
 
@@ -56,12 +73,12 @@
       content: "";
 
       position: absolute;
-      left: 50%;
+      right: 0.75rem;
 
       transform: rotate(-45deg);
 
       width: 1px;
-      height: 80%;
+      height: $close_size;
 
       background: $elegant_half_dark;
 
@@ -69,13 +86,14 @@
     }
 
     &:hover {
-      &:before, &:after {
+      &:before,
+      &:after {
         background: $elegant_dark;
       }
     }
   }
 
-  &__btn{
+  &__btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,13 +104,12 @@
     height: 50%;
     color: $elegant_dark;
 
-    transition: background .15s;
-    &:hover{
-      background: rgba(0,0,0,.2);
+    transition: background 0.15s;
+    &:hover {
+      background: rgba(0, 0, 0, 0.2);
     }
 
-    &--save{
-
+    &--save {
       border-bottom: 1px solid $elegant_dark;
     }
   }

@@ -5,15 +5,16 @@
 @import "./base/base";
 
 // Layout
-@import "./layout/home";
-@import "./layout/app";
+@import "components/home/home-layout";
+@import "components/add-wish/add-page";
+@import "components/app/app";
 
 // Components
-@import "./components/home-intro";
+@import "components/home/home-intro";
 @import "./components/arrow";
-@import "components/wish/wish";
-@import "components/wish/plus-button";
+@import "components/home/wish/wish";
+@import "components/home/wish/plus-button";
 @import "./components/footer";
 @import "./components/inputs";
 @import "./components/daypicker-input";
-@import "./components/wish/wish-menu";
+@import "components/home/wish/wish-menu";

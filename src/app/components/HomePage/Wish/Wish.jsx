@@ -8,6 +8,7 @@ import WishInfoContainer from "./Info/WishInfoContainer";
 import MenuDots from "./Menu/MenuDots";
 import moment from "moment";
 import { SaveEditedWish } from "../../../../store/reducers/reducer.wishes";
+import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 
 class Wish extends Component {
   constructor() {
@@ -52,19 +53,27 @@ class Wish extends Component {
 
   render() {
     const { wishText, dateToAchieve } = this.state;
+    const newVal = 5;
+    console.log(newVal);
 
     const { wish, wishKey } = this.props;
     return (
       <div className="wish">
         <div className="more-options">
           <MenuDots wishKey={wishKey} />
-          {wish.isMenuOpen ? (
-            <WishMenu
-              onSave={this.onSaveWish}
-              wishKey={wishKey}
-              isEditing={wish.isEditing}
-            />
-          ) : null}
+          <ReactCSSTransitionGroup
+            transitionName="menu"
+            transitionEnterTimeout={250}
+            transitionLeaveTimeout={150}
+          >
+            {wish.isMenuOpen ? (
+              <WishMenu
+                onSave={this.onSaveWish}
+                wishKey={wishKey}
+                isEditing={wish.isEditing}
+              />
+            ) : null}
+          </ReactCSSTransitionGroup>
         </div>
 
         <div
@@ -84,7 +93,6 @@ class Wish extends Component {
             elName={WISH_DATE}
             wish={wish}
           />
-
           <SaveWishButton onClick={this.onSaveWish} wish={wish} />
         </div>
       </div>
