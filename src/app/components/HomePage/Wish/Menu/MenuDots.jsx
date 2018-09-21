@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { OpenMenu } from "../../../../../store/reducers/reducer.wishes";
-
 class MenuDots extends Component {
   render() {
     const { wishKey, OpenMenu } = this.props;
