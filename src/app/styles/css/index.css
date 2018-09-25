@@ -33,13 +33,14 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
   height: 100%;
   color: #eaeaea; }
   .add__intro {
-    margin-top: 2rem;
+    margin-top: 3rem;
     font-size: 3rem;
     text-transform: uppercase;
-    border-bottom: 2px solid #eaeaea; }
+    border-bottom: 3px solid #eaeaea; }
   .add__plus {
     display: flex;
     flex-direction: column;
@@ -51,6 +52,7 @@ body {
   width: 100%;
   height: 100%; }
 
+/* WISH COMPONENTS */
 .home__intro {
   display: flex;
   flex-direction: column;
@@ -67,15 +69,6 @@ body {
   .home__intro .home__arrow {
     position: absolute;
     bottom: 4rem; }
-
-.arrow {
-  border: solid #eaeaea;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: .65rem; }
-  .arrow--down {
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg); }
 
 .wish {
   display: flex;
@@ -125,89 +118,6 @@ body {
       transition: background 0.15s; }
       .wish__info__save:hover {
         background: #464646; }
-
-.plus {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 3.5rem;
-  height: 3.5rem;
-  border-radius: 50%;
-  transition: box-shadow 0.15s; }
-  .plus:hover {
-    box-shadow: 0 0 5px #efb025; }
-    .plus:hover span.gold {
-      background: #ba8320; }
-  .plus span {
-    position: absolute;
-    width: 4px;
-    height: 2rem;
-    background: #eaeaea; }
-    .plus span.gold {
-      background: #efb025; }
-    .plus span.s {
-      height: 2rem; }
-    .plus span.m {
-      height: 5rem; }
-    .plus span:nth-child(1) {
-      transform: rotate(90deg); }
-
-.footer {
-  width: 100%;
-  height: 5rem; }
-  .footer.black {
-    border-top: 1px solid #eaeaea;
-    background: #090909; }
-  .footer.center {
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-
-.input {
-  border: none;
-  outline: none;
-  font-size: 1.5rem;
-  box-shadow: none;
-  transition: box-shadow 0.15s;
-  background: #eaeaea;
-  color: #070e1d; }
-  .input:focus {
-    box-shadow: 0 2px 4px rgba(9, 9, 9, 0.25); }
-  .input__text {
-    font-family: "Inconsolata", monospace;
-    padding: 0.25rem 0;
-    padding-left: 1rem; }
-  .input--rounded {
-    border-radius: 4px; }
-
-.DayPickerInput {
-  color: #000;
-  border-radius: 4px;
-  top: 0; }
-  .DayPickerInput input {
-    font-family: "Inconsolata", monospace;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #090909;
-    background-color: #eaeaea;
-    padding: 0.25rem 0;
-    padding-left: 1rem;
-    border-top-right-radius: 4px;
-    border-top-left-radius: 4px;
-    border: none;
-    outline: none;
-    font-size: 1.5rem; }
-  .DayPickerInput .DayPickerInput-Overlay {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 2rem;
-    background-color: #eaeaea; }
-  .DayPickerInput .DayPicker-Day {
-    transition: background-color 0.15s; }
-    .DayPickerInput .DayPicker-Day:hover {
-      background-color: #efb025 !important; }
 
 .more-options {
   position: relative; }
@@ -289,5 +199,120 @@ body {
       .open-dots .dots:hover__dot {
         background: #eaeaea;
         border: 5px solid red; }
+
+/* ADD WISH COMPONENTS*/
+.add-wish-form {
+  position: absolute;
+  top: 5px;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  background: #eaeaea;
+  transform: translateY(97%); }
+
+.add-wish-form__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 9rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 75vh;
+  overflow: hidden; }
+
+/* INDEPENDENT COMPONENTS */
+.DayPickerInput {
+  color: #000;
+  border-radius: 4px;
+  top: 0; }
+  .DayPickerInput input {
+    font-family: "Inconsolata", monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #090909;
+    background-color: #eaeaea;
+    padding: 0.25rem 0;
+    padding-left: 1rem;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    border: none;
+    outline: none;
+    font-size: 1.5rem; }
+  .DayPickerInput .DayPickerInput-Overlay {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 2rem;
+    background-color: #eaeaea; }
+  .DayPickerInput .DayPicker-Day {
+    transition: background-color 0.15s; }
+    .DayPickerInput .DayPicker-Day:hover {
+      background-color: #efb025 !important; }
+
+.plus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  transition: box-shadow 0.15s; }
+  .plus:hover {
+    box-shadow: 0 0 5px #efb025; }
+    .plus:hover span.gold {
+      background: #ba8320; }
+  .plus span {
+    position: absolute;
+    width: 4px;
+    height: 2rem;
+    background: #eaeaea; }
+    .plus span.gold {
+      background: #efb025; }
+    .plus span.s {
+      height: 2rem; }
+    .plus span.m {
+      height: 5rem; }
+    .plus span:nth-child(1) {
+      transform: rotate(90deg); }
+
+.footer {
+  width: 100%;
+  height: 5rem; }
+  .footer.black {
+    border-top: 1px solid #eaeaea;
+    background: #090909; }
+  .footer.center {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+
+.input {
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  box-shadow: none;
+  transition: box-shadow 0.15s;
+  background: #eaeaea;
+  color: #070e1d; }
+  .input:focus {
+    box-shadow: 0 2px 4px rgba(9, 9, 9, 0.25); }
+  .input__text {
+    font-family: "Inconsolata", monospace;
+    padding: 0.25rem 0;
+    padding-left: 1rem; }
+  .input--rounded {
+    border-radius: 4px; }
+
+.arrow {
+  border: solid #eaeaea;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: .65rem; }
+  .arrow--down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg); }
 
 /*# sourceMappingURL=index.css.map */

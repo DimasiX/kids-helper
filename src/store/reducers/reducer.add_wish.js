@@ -1,12 +1,17 @@
+import {
+  AnimateAddFormClose,
+  AnimateAddFormOpen
+} from "../../services/api.animate";
+
 let initialState = {
   isAddFormOpen: false
 };
 
-const OPEN_ADD_FORM = "add-wish/OPEN_ADD_FORM";
+const TOGGLE_ADD_FORM = "add-wish/TOGGLE_ADD_FORM";
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case OPEN_ADD_FORM:
+    case TOGGLE_ADD_FORM:
       return {
         ...state,
         isAddFormOpen: !state.isAddFormOpen
@@ -18,8 +23,18 @@ export default (state = initialState, action) => {
 
 export const OpenAddForm = () => {
   return dispatch => {
+    AnimateAddFormOpen();
     dispatch({
-      type: OPEN_ADD_FORM
+      type: TOGGLE_ADD_FORM
+    });
+  };
+};
+
+export const CloseAddForm = () => {
+  AnimateAddFormClose();
+  return dispatch => {
+    dispatch({
+      type: TOGGLE_ADD_FORM
     });
   };
 };

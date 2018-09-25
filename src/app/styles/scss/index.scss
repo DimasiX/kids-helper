@@ -10,12 +10,17 @@
 @import "components/app/app";
 
 // Components
+
+/* WISH COMPONENTS */
 @import "components/home/home-intro";
-@import "components/single/arrow";
 @import "components/home/wish/wish";
+@import "components/home/wish/wish-menu";
+@import "components/home/wish/open-menu-dots";
+/* ADD WISH COMPONENTS*/
+@import "components/add-wish/form/add-form";
+/* INDEPENDENT COMPONENTS */
+@import "components/single/daypicker-input";
 @import "components/single/plus-button";
 @import "components/single/footer";
 @import "components/single/inputs";
-@import "components/single/daypicker-input";
-@import "components/home/wish/wish-menu";
-@import "components/home/wish/open-menu-dots";
+@import "components/single/arrow";

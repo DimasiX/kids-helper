@@ -11,7 +11,7 @@ class AddWish extends Component {
       <div className="add">
         <div className="add__intro">Add Wish</div>
 
-        {isAddFormOpen ? <AddWishForm /> : null}
+        <AddWishForm />
 
         <div className="add__plus">
           <PlusButton size={"m"} isLink={false} onClick={OpenAddForm} />
