@@ -11,12 +11,19 @@ html {
   font-size: 82.5%; // 16px
   font-family: 'Inconsolata', monospace;
   font-family: 'Noto Serif JP', sans-serif;
+  height: 100%;
 }
 
 body {
   background: $elegant_dark;
   font-size: 1rem;
   color: $elegant_dark;
+  height: 100%;
+}
+
+#root{
+  height: 100%;
+  width: 100%;
 }
 
 .app {

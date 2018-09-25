@@ -1,0 +1,35 @@
+.open-dots {
+  display: flex;
+  justify-content: flex-end;
+  height: 10%;
+
+  .dots {
+    display: flex;
+    cursor: pointer;
+    padding: 1.25rem;
+
+    color: rgba($elegant_white, 0.5);  // please note, that color prop is control border color of dot
+    &__dot {
+      width: $dots_size;
+      height: $dots_size;
+
+      border-radius: 100%;
+
+      border: 4px solid;
+
+      transition: color 0.15s;
+
+      &:not(:last-child) {
+        margin-right: 0.5rem;
+      }
+    }
+
+    &:hover {
+      color: rgba($elegant_white, .8);
+      &__dot {
+        background: $elegant_white;
+        border: 5px solid red;
+      }
+    }
+  }
+}

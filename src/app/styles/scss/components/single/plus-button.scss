@@ -32,6 +32,14 @@
       background: $elegant_gold;
     }
 
+    &.s {
+      height: 2rem;
+    }
+
+    &.m{
+      height: 5rem;
+    }
+
     &:nth-child(1) {
       transform: rotate(90deg);
     }

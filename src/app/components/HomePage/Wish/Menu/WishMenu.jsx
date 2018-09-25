@@ -1,13 +1,17 @@
 import React, { Component } from "react";
 import { bindActionCreators } from "redux";
 import {
-  CloseMenu,
-  EditWish,
+  CloseMenuAndAnimate,
+  EditWishAndAnimate,
   RemoveWish
 } from "../../../../../store/reducers/reducer.wishes";
 import connect from "react-redux/es/connect/connect";
+import { AnimateWishMenuOnOpen } from "../../../../../services/api.animate";
 
 class WishMenu extends Component {
+  componentDidMount() {
+    AnimateWishMenuOnOpen();
+  }
 
   render() {
     const SAVE_TEXT = "Save";
@@ -60,8 +64,8 @@ class WishMenu extends Component {
 const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
-      CloseMenu: wishID => CloseMenu(wishID),
-      EditWish: wishID => EditWish(wishID),
+      CloseMenu: wishID => CloseMenuAndAnimate(wishID),
+      EditWish: wishID => EditWishAndAnimate(wishID),
       RemoveWish: wishID => RemoveWish(wishID)
     },
     dispatch

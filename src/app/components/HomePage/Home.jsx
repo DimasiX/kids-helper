@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import WishList from "./WishList/WishList";
-import PlusButton from "../Independent Components/PlusButton/PlusButton";
+import PlusButton from "../single/PlusButton/PlusButton";
 import HomeIntro from "./HomeIntro/HomeIntro";
-import Footer from "../Independent Components/Footer/Footer";
+import Footer from "../single/Footer/Footer";
 
 class Home extends Component {
   render = () => {

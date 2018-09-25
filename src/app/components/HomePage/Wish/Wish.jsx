@@ -53,8 +53,6 @@ class Wish extends Component {
 
   render() {
     const { wishText, dateToAchieve } = this.state;
-    const newVal = 5;
-    console.log(newVal);
 
     const { wish, wishKey } = this.props;
     return (
@@ -64,7 +62,7 @@ class Wish extends Component {
           <ReactCSSTransitionGroup
             transitionName="menu"
             transitionEnterTimeout={250}
-            transitionLeaveTimeout={150}
+            transitionLeaveTimeout={300}
           >
             {wish.isMenuOpen ? (
               <WishMenu
@@ -76,7 +74,10 @@ class Wish extends Component {
           </ReactCSSTransitionGroup>
         </div>
 
-        <div
+        <form
+          onSubmit={() => {
+            console.log("SUBMIT");
+          }}
           className={`wish__info ${wish.isEditing ? "wish__info--edit" : ""}`}
         >
           <WishInfoContainer
@@ -93,8 +94,12 @@ class Wish extends Component {
             elName={WISH_DATE}
             wish={wish}
           />
-          <SaveWishButton onClick={this.onSaveWish} wish={wish} />
-        </div>
+          <SaveWishButton
+            type={"submit"}
+            onClick={this.onSaveWish}
+            wish={wish}
+          />
+        </form>
       </div>
     );
   }

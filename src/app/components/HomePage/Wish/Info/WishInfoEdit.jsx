@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {WISH_DATE, WISH_NAME} from "./WishInfo";
-import InputText from "../../../Independent Components/Inputs/InputText";
+import InputText from "../../../single/Inputs/InputText";
 import DayPickerInput from "react-day-picker/DayPickerInput";
 import "react-day-picker/lib/style.css";
 import {DATEFORMAT} from "../../../../../services/api.values";

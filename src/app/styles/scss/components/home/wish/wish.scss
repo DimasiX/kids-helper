@@ -12,42 +12,6 @@
 
   border-top: 1px solid $elegant_white;
 
-  .open-dots {
-    display: flex;
-    justify-content: flex-end;
-    height: 10%;
-    //padding-top: 1.25rem;
-    //padding-right: 1.25rem;
-
-    .dots {
-      display: flex;
-      cursor: pointer;
-      padding: 1.25rem;
-      color: $elegant_white;
-
-      &__dot {
-        width: $dots_size;
-        height: $dots_size;
-
-        background: rgba($elegant_white, 0.8);
-
-        border-radius: 100%;
-
-        transition: background 0.15s;
-
-        &:not(:last-child) {
-          margin-right: 0.5rem;
-        }
-      }
-
-      &:hover {
-        &__dot {
-          background: $elegant_white;
-        }
-      }
-    }
-  }
-
   &__info {
     display: flex;
     flex-direction: column;

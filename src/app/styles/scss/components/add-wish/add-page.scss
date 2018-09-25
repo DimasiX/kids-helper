@@ -1,3 +1,26 @@
 .add {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+
   color: $elegant_white;
+
+  &__intro{
+    margin-top: 2rem;
+    font-size: 3rem;
+    text-transform: uppercase;
+    border-bottom: 2px solid $elegant_white;
+  }
+
+  &__plus{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+  }
 }

@@ -1,5 +1,6 @@
 import moment from "moment";
 import { uniqueID } from "../../services/api.utils";
+import { AnimateMenuOnClose } from "../../services/api.animate";
 
 const initialState = {
   [uniqueID()]: {
@@ -76,12 +77,13 @@ export default (state = initialState, action) => {
   }
 };
 
-export const EditWish = wishID => {
+export const EditWishAndAnimate = wishID => {
   return dispatch => {
     dispatch({
       type: EDIT_WISH,
       payload: wishID
     });
+    AnimateMenuOnClose();
   };
 };
 
@@ -91,6 +93,7 @@ export const SaveEditedWish = (wishID, wishData) => {
       type: SAVE_EDITED_WISH,
       payload: { wishID, wishData }
     });
+    AnimateMenuOnClose();
   };
 };
 
@@ -103,12 +106,13 @@ export const OpenMenu = wishID => {
   };
 };
 
-export const CloseMenu = wishID => {
+export const CloseMenuAndAnimate = wishID => {
   return dispatch => {
     dispatch({
       type: CLOSE_MENU,
       payload: wishID
     });
+    AnimateMenuOnClose();
   };
 };
 
