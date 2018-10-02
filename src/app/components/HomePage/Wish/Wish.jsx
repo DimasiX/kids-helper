@@ -1,17 +1,13 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 import WishMenu from "./Menu/WishMenu";
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
+import {connect} from "react-redux";
+import {bindActionCreators} from "redux";
 import MenuDots from "./Menu/MenuDots";
-import {
-  OpenWishMenu,
-  SaveEditedWish
-} from "../../../../store/reducers/reducer.wishes";
+import {OpenWishMenu, SaveEditedWish} from "../../../../store/reducers/reducer.wishes";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import WishInfoContainer from "./Info/WishInfoContainer";
 import SaveWishButton from "./SaveWishButton";
-import { WISH_DATE, WISH_NAME } from "./Info/WishInfo";
-import {Motion, spring} from "react-motion";
+import {WISH_DATE, WISH_NAME} from "./Info/WishInfo";
 
 class Wish extends Component {
   render() {

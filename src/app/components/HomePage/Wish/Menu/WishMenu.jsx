@@ -1,9 +1,23 @@
-import React, {Component} from "react";
-import {bindActionCreators} from "redux";
-import {CloseMenuAndAnimate, EditWishAndAnimate, RemoveWish} from "../../../../../store/reducers/reducer.wishes";
+import React, { Component } from "react";
+import { bindActionCreators } from "redux";
+import {
+  CloseMenuAndAnimate,
+  EditWishAndAnimate,
+  RemoveWish
+} from "../../../../../store/reducers/reducer.wishes";
 import connect from "react-redux/es/connect/connect";
+import { AnimateWishMenuOnOpen } from "../../../../../services/api.animate";
 
 class WishMenu extends Component {
+  constructor() {
+    super();
+    this.menuRef = React.createRef();
+  }
+
+  componentDidMount() {
+    AnimateWishMenuOnOpen(this.menuRef.current);
+  }
+
   render() {
     const SAVE_TEXT = "Save";
     const EDIT_TEXT = "Edit";
@@ -37,18 +51,20 @@ class WishMenu extends Component {
     };
 
     return (
-      <div className="menu">
-        <div
-          className="menu__close"
-          onClick={() => CloseMenuAndAnimate(wishID)}
-        />
-        {isEditing ? saveBtn() : editBtn()}
-        {/*<div className="menu__" />*/}
-        <div
-          className="menu__btn menu__btn--delete"
-          onClick={() => RemoveWish(wishID)}
-        >
-          Remove
+      <div className="wrapper-listener">
+        <div className="menu" ref={this.menuRef}>
+          <div
+            className="menu__close"
+            onClick={() => CloseMenuAndAnimate(wishID, this.menuRef.current)}
+          />
+          {isEditing ? saveBtn() : editBtn()}
+          {/*<div className="menu__" />*/}
+          <div
+            className="menu__btn menu__btn--delete"
+            onClick={() => RemoveWish(wishID)}
+          >
+            Remove
+          </div>
         </div>
       </div>
     );

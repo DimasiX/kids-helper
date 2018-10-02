@@ -1,11 +1,10 @@
-import { TweenLite } from "gsap";
+import {TweenLite} from "gsap";
 
-export const AnimateMenuOnClose = () => {
+export const AnimateMenuOnClose = target => {
   const duration = 0.15;
-  let menu = document.querySelector(".menu-leave");
-  menu &&
+  target &&
     TweenLite.fromTo(
-      menu,
+      target,
       duration,
       {
         opacity: "1",
@@ -41,13 +40,11 @@ export const AnimateAllMenusClose = () => {
     );
 };
 
-export const AnimateWishMenuOnOpen = () => {
+export const AnimateWishMenuOnOpen = target => {
   const duration = 0.15;
-  let menu = document.querySelector(".menu-enter");
-  console.log(menu);
-  menu &&
+  target &&
     TweenLite.fromTo(
-      menu,
+      target,
       duration,
       { opacity: "0", transform: `translateY(6px)` },
       { opacity: "1", transform: `translateY(0)` }

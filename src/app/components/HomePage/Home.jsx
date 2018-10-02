@@ -1,12 +1,12 @@
-import React, {Component} from "react";
-import {connect} from "react-redux";
-import {bindActionCreators} from "redux";
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
 import WishList from "./WishList/WishList";
 import PlusButton from "../single/PlusButton/PlusButton";
 import HomeIntro from "./HomeIntro/HomeIntro";
 import Footer from "../single/Footer/Footer";
-import {CloseAllWishMenuAndAnimate} from "../../../store/reducers/reducer.wishes";
-import {WHO_CANNOT_CLOSE_WISH_MENU} from "../../../constants/constants";
+import { CloseAllWishMenuAndAnimate } from "../../../store/reducers/reducer.wishes";
+import { WHO_CANNOT_CLOSE_WISH_MENU } from "../../../constants/constants";
 
 class Home extends Component {
   checkAndClose = e => {

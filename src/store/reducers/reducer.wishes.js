@@ -3,7 +3,6 @@ import { uniqueID } from "../../services/api.utils";
 import {
   AnimateAllMenusClose,
   AnimateMenuOnClose,
-  AnimateOnRemove,
   AnimateWishMenuOnOpen
 } from "../../services/api.animate";
 
@@ -12,13 +11,23 @@ const initialState = {
     wishText: "Live in Hawaii",
     dateToAchieve: moment(),
     isEditing: false,
-    isMenuOpen: false
+    isMenuOpen: false,
+    stepsToAchieve: [{}],
+    diary: {
+      lastWrite: moment(),
+      comments: ["start to work on my goals"]
+    }
   },
   [uniqueID()]: {
     wishText: "Visit France",
     dateToAchieve: moment(),
     isEditing: false,
-    isMenuOpen: false
+    isMenuOpen: false,
+    stepsToAchieve: [{}],
+    diary: {
+      lastWrite: moment(),
+      comments: ["start to work on my goals"]
+    }
   }
 };
 
@@ -118,12 +127,13 @@ export const OpenWishMenu = wishID => {
   };
 };
 
-export const CloseMenuAndAnimate = wishID => {
+export const CloseMenuAndAnimate = (wishID, target) => {
   return dispatch => {
     dispatch({
       type: CLOSE_MENU,
       payload: wishID
     });
+    AnimateMenuOnClose(target);
   };
 };
 
@@ -132,6 +142,7 @@ export const CloseAllWishMenuAndAnimate = () => {
     dispatch({
       type: CLOSE_ALL_WISH_MENU
     });
+    AnimateAllMenusClose();
   };
 };
 
