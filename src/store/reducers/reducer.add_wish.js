@@ -1,8 +1,3 @@
-import {
-  AnimateAddFormClose,
-  AnimateAddFormOpen
-} from "../../services/api.animate";
-
 let initialState = {
   isAddFormOpen: false
 };
@@ -21,17 +16,15 @@ export default (state = initialState, action) => {
   }
 };
 
-export const OpenAddForm = () => {
+export const OpenAddWishForm = () => {
   return dispatch => {
-    AnimateAddFormOpen();
     dispatch({
       type: TOGGLE_ADD_FORM
     });
   };
 };
 
-export const CloseAddForm = () => {
-  AnimateAddFormClose();
+export const CloseAddWishForm = () => {
   return dispatch => {
     dispatch({
       type: TOGGLE_ADD_FORM

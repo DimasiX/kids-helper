@@ -26,33 +26,14 @@ body {
 
 .home {
   display: flex;
-  flex-direction: column; }
-
-.add {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  height: 100%;
-  color: #eaeaea; }
-  .add__intro {
-    margin-top: 3rem;
-    font-size: 3rem;
-    text-transform: uppercase;
-    border-bottom: 3px solid #eaeaea; }
-  .add__plus {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%; }
+  padding-bottom: 4rem; }
 
 .app {
   width: 100%;
   height: 100%; }
 
-/* WISH COMPONENTS */
+/* HOME COMPONENTS*/
 .home__intro {
   display: flex;
   flex-direction: column;
@@ -70,6 +51,7 @@ body {
     position: absolute;
     bottom: 4rem; }
 
+/*--- WISH COMPONENTS ---*/
 .wish {
   display: flex;
   flex-direction: column;
@@ -200,28 +182,27 @@ body {
         background: #eaeaea;
         border: 5px solid red; }
 
-/* ADD WISH COMPONENTS*/
-.add-wish-form {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 5px;
-  border-radius: 2px;
-  background: #eaeaea;
-  color: #090909;
-  transform: translateY(97%); }
-
-.add-wish-form__container {
+/*--- ADD WISH FORM COMPONENTS*/
+.add-wish {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 9rem;
+  position: fixed;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 80%;
-  height: 75vh;
-  overflow: hidden; }
+  height: 4rem;
+  width: 95%;
+  background: #464646;
+  color: #eaeaea; }
+  .add-wish__form {
+    position: absolute;
+    top: -90vh;
+    width: 100%;
+    height: 90vh;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    background: #464646; }
 
 /* INDEPENDENT COMPONENTS */
 .DayPickerInput {
@@ -260,7 +241,8 @@ body {
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 50%;
-  transition: box-shadow 0.15s; }
+  transition: box-shadow 0.15s;
+  cursor: pointer; }
   .plus--link:hover {
     box-shadow: 0 0 5px #efb025; }
     .plus--link:hover span.gold {
@@ -274,8 +256,12 @@ body {
     width: 4px;
     height: 2rem;
     background: #eaeaea; }
+    .plus span.thin {
+      width: 2px; }
     .plus span.gold {
       background: #efb025; }
+    .plus span.black {
+      background: #090909; }
     .plus span.s {
       height: 2rem; }
     .plus span.m {
@@ -285,7 +271,7 @@ body {
 
 .footer {
   width: 100%;
-  height: 5rem; }
+  height: 4rem; }
   .footer.black {
     border-top: 1px solid #eaeaea;
     background: #090909; }
@@ -293,6 +279,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center; }
+  .footer.fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0; }
 
 .input {
   border: none;

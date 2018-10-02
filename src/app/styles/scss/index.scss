@@ -6,18 +6,21 @@
 
 // Layout
 @import "components/home/home-layout";
-@import "components/add-wish/add-page";
 @import "components/app/app";
 
 // Components
 
-/* WISH COMPONENTS */
+/* HOME COMPONENTS*/
 @import "components/home/home-intro";
+
+/*--- WISH COMPONENTS ---*/
 @import "components/home/wish/wish";
 @import "components/home/wish/wish-menu";
 @import "components/home/wish/open-menu-dots";
-/* ADD WISH COMPONENTS*/
-@import "components/add-wish/form/add-form";
+
+/*--- ADD WISH FORM COMPONENTS*/
+@import "components/home/add-wish-form/add-wish-form";
+
 /* INDEPENDENT COMPONENTS */
 @import "components/single/daypicker-input";
 @import "components/single/plus-button";

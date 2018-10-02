@@ -38,7 +38,6 @@ class WishContainer extends Component {
 
     const { SaveEditedWish, wishID } = this.props;
     let wishData = { ...this.state };
-    console.log(wishData);
     SaveEditedWish(wishID, wishData);
   };
 

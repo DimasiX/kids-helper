@@ -32,7 +32,13 @@ class Wish extends Component {
             transitionEnterTimeout={250}
             transitionLeaveTimeout={300}
           >
-            {isMenuOpen && <WishMenu wishID={wishID} isEditing={isEditing} />}
+            {isMenuOpen && (
+              <WishMenu
+                onSave={onSaveWish}
+                wishID={wishID}
+                isEditing={isEditing}
+              />
+            )}
           </ReactCSSTransitionGroup>
         </div>
 
@@ -62,6 +68,7 @@ class Wish extends Component {
             isEditing={isEditing}
           />
         </form>
+
       </div>
     );
   }

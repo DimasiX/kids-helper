@@ -10,6 +10,12 @@
 
   transition: box-shadow 0.15s;
 
+  cursor: pointer;
+
+  &.thin {
+
+  }
+
   &--link {
     &:hover {
       box-shadow: 0 0 5px $elegant_gold;
@@ -36,8 +42,16 @@
 
     background: $elegant_white; // Default background is white
 
+    &.thin {
+      width: 2px;
+    }
+
     &.gold {
       background: $elegant_gold;
+    }
+
+    &.black {
+      background: $elegant_dark;
     }
 
     &.s {

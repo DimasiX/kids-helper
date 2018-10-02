@@ -43,7 +43,7 @@ class WishMenu extends Component {
       return (
         <div
           className="menu__btn menu__btn--edit"
-          onClick={() => EditWishAndAnimate(wishID)}
+          onClick={() => EditWishAndAnimate(wishID, this.menuRef.current)}
         >
           {EDIT_TEXT}
         </div>

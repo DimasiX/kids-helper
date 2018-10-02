@@ -1,6 +1,6 @@
-import {TweenLite} from "gsap";
+import { TweenLite } from "gsap";
 
-export const AnimateMenuOnClose = target => {
+export const AnimateWishMenuOnClose = target => {
   const duration = 0.15;
   target &&
     TweenLite.fromTo(
@@ -51,28 +51,8 @@ export const AnimateWishMenuOnOpen = target => {
     );
 };
 
-export const AnimateAddFormOpen = () => {
-  const duration = 0.25;
-  let form = document.querySelector(".add-wish-form");
-  TweenLite.fromTo(
-    form,
-    duration,
-    { transform: `translateY(97%)` },
-    { transform: `translateY(0%)` }
-  );
-  let fromContainer = document.querySelector(".add-wish-form__container");
-  fromContainer.style.zIndex = 2;
-};
-
-export const AnimateAddFormClose = () => {
-  const duration = 0.25;
-  let form = document.querySelector(".add-wish-form");
-  TweenLite.fromTo(
-    form,
-    duration,
-    { transform: `translateY(0%)` },
-    { transform: `translateY(97%)` }
-  );
-  let fromContainer = document.querySelector(".add-wish-form__container");
-  fromContainer.style.zIndex = 0;
+export const AnimateAddFormOnOpen = () => {
+  const duration = 0.15;
+  let form = document.querySelector(".add-wish__form");
+  TweenLite.fromTo(form, duration, {}, {});
 };
