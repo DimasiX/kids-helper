@@ -52,7 +52,11 @@ export const AnimateWishMenuOnOpen = target => {
 };
 
 export const AnimateAddFormOnOpen = () => {
-  const duration = 0.15;
+  const duration = .25;
   let form = document.querySelector(".add-wish__form");
-  TweenLite.fromTo(form, duration, {}, {});
+  TweenLite.fromTo(form, duration, {
+    transform: `translateY(90vh)`
+  }, {
+    transform: `translateY(0%)`
+  });
 };

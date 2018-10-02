@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
-import {AnimateWishMenuOnOpen} from "../../../../services/api.animate";
+import {AnimateAddFormOnOpen} from "../../../../services/api.animate";
 
 class Form extends Component {
 
 
   componentDidMount() {
-    AnimateWishMenuOnOpen()
+    AnimateAddFormOnOpen()
   }
 
 

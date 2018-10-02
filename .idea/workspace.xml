@@ -2,30 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ae1d27b-358c-4a0c-ac2e-8850efee13f7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/components/HomePage/AddWish/AddWish.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/components/HomePage/AddWish/Form.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/styles/scss/components/home/add-wish-form/add-wish-form.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/AddWishPage/AddWish.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/AddWishPage/AddWishForm/AddWishForm.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/HomePage/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/HomePage/Home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/HomePage/Wish/Menu/WishMenu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/HomePage/Wish/Menu/WishMenu.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/HomePage/Wish/Wish.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/HomePage/Wish/Wish.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/HomePage/Wish/WishContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/HomePage/Wish/WishContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/HomePage/AddWish/Form.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/HomePage/AddWish/Form.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/styles/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/css/index.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/css/index.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/scss/components/add-wish/add-page.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/scss/components/add-wish/form/add-form.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/scss/components/home/home-layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/scss/components/home/home-layout.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/scss/components/single/footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/scss/components/single/footer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/scss/components/single/plus-button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/scss/components/single/plus-button.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/scss/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/scss/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/styles/scss/variables/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/scss/variables/variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/styles/scss/components/home/add-wish-form/add-wish-form.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/styles/scss/components/home/add-wish-form/add-wish-form.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/api.animate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/api.animate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/reducer.add_wish.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/reducer.add_wish.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/reducer.wishes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/reducer.wishes.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -85,19 +66,19 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="2746" />
+          <entry key="js" value="2787" />
           <entry key="jsx" value="7432" />
           <entry key="md" value="615" />
-          <entry key="scss" value="2243" />
+          <entry key="scss" value="2258" />
           <entry key="ts" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSX Harmony" value="7432" />
-          <entry key="JavaScript" value="2746" />
+          <entry key="JavaScript" value="2787" />
           <entry key="Markdown" value="615" />
-          <entry key="SCSS" value="2243" />
+          <entry key="SCSS" value="2258" />
           <entry key="TypeScript" value="1" />
         </counts>
       </usages-collector>
@@ -132,16 +113,18 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/services/api.animate.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="345">
-                  <caret line="52" selection-start-line="52" selection-end-line="52" />
+                <state relative-caret-position="373">
+                  <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
                   <folding>
                     <element signature="e#180#246#0" expanded="true" />
                     <element signature="e#254#322#0" expanded="true" />
                     <element signature="e#638#704#0" expanded="true" />
                     <element signature="e#712#780#0" expanded="true" />
+                    <element signature="e#1206#1245#0" expanded="true" />
+                    <element signature="e#1247#1284#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -209,7 +192,7 @@
             <entry file="file://$PROJECT_DIR$/src/app/components/HomePage/AddWish/AddWish.jsx">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="228">
-                  <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+                  <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
                     <element signature="e#618#668#0" expanded="true" />
@@ -218,15 +201,16 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/app/components/HomePage/AddWish/Form.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="266">
-                  <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+                <state relative-caret-position="133">
+                  <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
                   <folding>
                     <element signature="e#0#39#0" expanded="true" />
                     <element signature="e#168#169#0" expanded="true" />
                     <element signature="e#198#199#0" expanded="true" />
+                    <element signature="e#100#127#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -284,8 +268,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/app/styles/scss/components/home/add-wish-form/add-wish-form.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="456">
-                  <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+                <state relative-caret-position="361">
+                  <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
                 </state>
               </provider>
             </entry>
@@ -392,11 +376,11 @@
         <option value="$PROJECT_DIR$/src/app/components/HomePage/AddWishForm/Form.jsx" />
         <option value="$PROJECT_DIR$/src/app/components/HomePage/AddWishForm/AddWish.jsx" />
         <option value="$PROJECT_DIR$/src/app/styles/scss/components/single/plus-button.scss" />
-        <option value="$PROJECT_DIR$/src/services/api.animate.js" />
         <option value="$PROJECT_DIR$/src/store/reducers/reducer.add_wish.js" />
         <option value="$PROJECT_DIR$/src/app/components/HomePage/AddWish/AddWish.jsx" />
         <option value="$PROJECT_DIR$/src/app/styles/scss/components/home/add-wish-form/add-wish-form.scss" />
         <option value="$PROJECT_DIR$/src/app/components/HomePage/AddWish/Form.jsx" />
+        <option value="$PROJECT_DIR$/src/services/api.animate.js" />
       </list>
     </option>
   </component>
@@ -726,18 +710,18 @@
       <workItem from="1538240012071" duration="4464000" />
       <workItem from="1538297238451" duration="4060000" />
       <workItem from="1538401864012" duration="14263000" />
-      <workItem from="1538498906987" duration="2864000" />
+      <workItem from="1538498906987" duration="3075000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62344000" />
+    <option name="totallyTimeSpent" value="62555000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18186843" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18186843" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -747,14 +731,14 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.49784017" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33333334" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33333334" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.41144708" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32389936" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32389936" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.32914045" />
@@ -1161,19 +1145,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/api.animate.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
-          <folding>
-            <element signature="e#180#246#0" expanded="true" />
-            <element signature="e#254#322#0" expanded="true" />
-            <element signature="e#638#704#0" expanded="true" />
-            <element signature="e#712#780#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/store/reducers/reducer.add_wish.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -1189,15 +1160,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/styles/scss/components/home/add-wish-form/add-wish-form.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+        <state relative-caret-position="361">
+          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/components/HomePage/AddWish/AddWish.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
-          <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
             <element signature="e#618#668#0" expanded="true" />
@@ -1207,12 +1178,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/components/HomePage/AddWish/Form.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+        <state relative-caret-position="133">
+          <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
             <element signature="e#168#169#0" expanded="true" />
             <element signature="e#198#199#0" expanded="true" />
+            <element signature="e#100#127#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/api.animate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
+          <folding>
+            <element signature="e#180#246#0" expanded="true" />
+            <element signature="e#254#322#0" expanded="true" />
+            <element signature="e#638#704#0" expanded="true" />
+            <element signature="e#712#780#0" expanded="true" />
+            <element signature="e#1206#1245#0" expanded="true" />
+            <element signature="e#1247#1284#0" expanded="true" />
           </folding>
         </state>
       </provider>
