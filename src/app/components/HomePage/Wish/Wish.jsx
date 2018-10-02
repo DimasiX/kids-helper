@@ -1,76 +1,42 @@
 import React, { Component } from "react";
 import WishMenu from "./Menu/WishMenu";
-import { WISH_DATE, WISH_NAME } from "./Info/WishInfo";
-import SaveWishButton from "./SaveWishButton";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import WishInfoContainer from "./Info/WishInfoContainer";
 import MenuDots from "./Menu/MenuDots";
-import moment from "moment";
-import { SaveEditedWish } from "../../../../store/reducers/reducer.wishes";
+import {
+  OpenWishMenu,
+  SaveEditedWish
+} from "../../../../store/reducers/reducer.wishes";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
+import WishInfoContainer from "./Info/WishInfoContainer";
+import SaveWishButton from "./SaveWishButton";
+import { WISH_DATE, WISH_NAME } from "./Info/WishInfo";
+import {Motion, spring} from "react-motion";
 
 class Wish extends Component {
-  constructor() {
-    super();
-    this.state = {
-      wishText: "",
-      dateToAchieve: ""
-    };
-  }
-
-  componentWillMount() {
-    const { wish } = this.props;
-    this.setState({
-      wishText: wish.wishText,
-      dateToAchieve: wish.dateToAchieve
-    });
-  }
-
-  onTextInputChange = e => {
-    let v = e.target.value;
-    this.setState({
-      wishText: v
-    });
-  };
-
-  onDateInputChange = date => {
-    let newDate = moment(date);
-    this.setState({
-      dateToAchieve: newDate
-    });
-  };
-
-  onSaveWish = () => {
-    let { SaveEditedWish, wishKey } = this.props;
-
-    let wishData = this.state;
-
-    if (wishData.wishText !== "") {
-      SaveEditedWish(wishKey, wishData);
-    }
-  };
-
   render() {
-    const { wishText, dateToAchieve } = this.state;
+    const {
+      isMenuOpen,
+      wishID,
+      isEditing,
+      OpenWishMenu,
+      dateToAchieve,
+      wishText,
+      onTextInputChange,
+      onDateInputChange,
+      onSaveWish
+    } = this.props;
 
-    const { wish, wishKey } = this.props;
     return (
       <div className="wish">
         <div className="more-options">
-          <MenuDots wishKey={wishKey} />
+          <MenuDots onWishMenuOpen={OpenWishMenu} wishID={wishID} />
           <ReactCSSTransitionGroup
             transitionName="menu"
             transitionEnterTimeout={250}
             transitionLeaveTimeout={300}
           >
-            {wish.isMenuOpen ? (
-              <WishMenu
-                onSave={this.onSaveWish}
-                wishKey={wishKey}
-                isEditing={wish.isEditing}
-              />
-            ) : null}
+            {isMenuOpen && <WishMenu wishID={wishID} isEditing={isEditing} />}
           </ReactCSSTransitionGroup>
         </div>
 
@@ -78,26 +44,26 @@ class Wish extends Component {
           onSubmit={() => {
             console.log("SUBMIT");
           }}
-          className={`wish__info ${wish.isEditing ? "wish__info--edit" : ""}`}
+          className={`wish__info ${isEditing ? "wish__info--edit" : ""}`}
         >
           <WishInfoContainer
+            isEditing={isEditing}
             dateToAchieve={dateToAchieve}
             wishText={wishText}
-            onTextChange={this.onTextInputChange}
+            onTextChange={onTextInputChange}
             elName={WISH_NAME}
-            wish={wish}
           />
           <WishInfoContainer
+            isEditing={isEditing}
             dateToAchieve={dateToAchieve}
             wishText={wishText}
-            onDateChange={this.onDateInputChange}
+            onDateChange={onDateInputChange}
             elName={WISH_DATE}
-            wish={wish}
           />
           <SaveWishButton
             type={"submit"}
-            onClick={this.onSaveWish}
-            wish={wish}
+            onClick={onSaveWish}
+            isEditing={isEditing}
           />
         </form>
       </div>
@@ -105,22 +71,10 @@ class Wish extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    wishList: state.wishList
-  };
-};
-
-const mapDispatchToProps = dispatch => {
-  return bindActionCreators(
-    {
-      SaveEditedWish: (wishID, wishData) => SaveEditedWish(wishID, wishData)
-    },
-    dispatch
-  );
-};
+const mapDispatchToProps = dispatch =>
+  bindActionCreators({ SaveEditedWish, OpenWishMenu }, dispatch);
 
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps
 )(Wish);

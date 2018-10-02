@@ -1,9 +1,9 @@
 import React, {Component} from "react";
 import {WISH_DATE, WISH_NAME} from "./WishInfo";
 import InputText from "../../../single/Inputs/InputText";
-import DayPickerInput from "react-day-picker/DayPickerInput";
 import "react-day-picker/lib/style.css";
-import {DATEFORMAT} from "../../../../../services/api.values";
+import {DATEFORMAT} from "../../../../../constants/constants";
+import InputDate from "../../../single/Inputs/InputDate";
 
 class WishInfoEdit extends Component {
   renderEditElement = elName => {
@@ -22,9 +22,10 @@ class WishInfoEdit extends Component {
         return (
           <div className="wish__info__date wish__info__date--edit">
             <p>Date to achieve:</p>
-            <DayPickerInput
-              onDayChange={onDateChange}
+            <InputDate
+              onChange={onDateChange}
               value={dateToAchieve}
+              color="elegant_white"
               showOverlay={false}
               placeholder="Select Date"
             />

@@ -1,28 +1,19 @@
-import React, { Component } from "react";
-import { bindActionCreators } from "redux";
-import {
-  CloseMenuAndAnimate,
-  EditWishAndAnimate,
-  RemoveWish
-} from "../../../../../store/reducers/reducer.wishes";
+import React, {Component} from "react";
+import {bindActionCreators} from "redux";
+import {CloseMenuAndAnimate, EditWishAndAnimate, RemoveWish} from "../../../../../store/reducers/reducer.wishes";
 import connect from "react-redux/es/connect/connect";
-import { AnimateWishMenuOnOpen } from "../../../../../services/api.animate";
 
 class WishMenu extends Component {
-  componentDidMount() {
-    AnimateWishMenuOnOpen();
-  }
-
   render() {
     const SAVE_TEXT = "Save";
     const EDIT_TEXT = "Edit";
 
     const {
-      wishKey,
+      wishID,
       isEditing,
       onSave,
-      CloseMenu,
-      EditWish,
+      CloseMenuAndAnimate,
+      EditWishAndAnimate,
       RemoveWish
     } = this.props;
 
@@ -37,8 +28,8 @@ class WishMenu extends Component {
     const editBtn = () => {
       return (
         <div
-          className="menu__btn menu__btn--save"
-          onClick={() => EditWish(wishKey)}
+          className="menu__btn menu__btn--edit"
+          onClick={() => EditWishAndAnimate(wishID)}
         >
           {EDIT_TEXT}
         </div>
@@ -46,13 +37,16 @@ class WishMenu extends Component {
     };
 
     return (
-      <div className="menu ">
-        <div className="menu__close" onClick={() => CloseMenu(wishKey)} />
+      <div className="menu">
+        <div
+          className="menu__close"
+          onClick={() => CloseMenuAndAnimate(wishID)}
+        />
         {isEditing ? saveBtn() : editBtn()}
         {/*<div className="menu__" />*/}
         <div
           className="menu__btn menu__btn--delete"
-          onClick={() => RemoveWish(wishKey)}
+          onClick={() => RemoveWish(wishID)}
         >
           Remove
         </div>
@@ -64,18 +58,14 @@ class WishMenu extends Component {
 const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
-      CloseMenu: wishID => CloseMenuAndAnimate(wishID),
-      EditWish: wishID => EditWishAndAnimate(wishID),
-      RemoveWish: wishID => RemoveWish(wishID)
+      CloseMenuAndAnimate,
+      EditWishAndAnimate,
+      RemoveWish
     },
     dispatch
   );
 
-const mapStateToProps = state => {
-  return {};
-};
-
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps
 )(WishMenu);

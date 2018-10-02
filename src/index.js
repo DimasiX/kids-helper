@@ -8,6 +8,8 @@ import "./app/styles/css/index.css";
 import { Provider } from "react-redux";
 import store from "./store/store";
 
+
+
 ReactDOM.render(
   <Provider store={store}>
     <App />

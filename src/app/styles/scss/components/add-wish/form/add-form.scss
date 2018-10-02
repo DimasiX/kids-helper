@@ -1,21 +1,20 @@
 .add-wish-form {
+  width: 100%;
+  height: 100%;
+
   position: absolute;
 
   top: 5px;
 
-  width: 100%;
-  height: 100%;
-
   border-radius: 2px;
 
   background: $elegant_white;
+  color: $elegant_dark;
 
   transform: translateY(97%);
 }
 
 .add-wish-form__container {
-  //z-index: 5;
-
   display: flex;
   justify-content: center;
   align-items: center;

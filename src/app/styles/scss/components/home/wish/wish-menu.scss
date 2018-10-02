@@ -90,8 +90,11 @@
       background: rgba(0, 0, 0, 0.2);
     }
 
-    &--save {
-      border-bottom: 1px solid $elegant_dark;
+    &--save,
+    &--edit {
+      border-bottom: 1px solid rgba($elegant_dark, 0.3);
+    }
+    &--delete {
     }
   }
 }

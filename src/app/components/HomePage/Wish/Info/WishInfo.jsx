@@ -1,22 +1,22 @@
 import React, { Component } from "react";
-import {DATEFORMAT} from "../../../../../services/api.values";
+import { DATEFORMAT } from "../../../../../constants/constants";
 
 export const WISH_NAME = "WISH_NAME";
 export const WISH_DATE = "WISH_DATE";
 
 class WishInfo extends Component {
-  returnElement = (elName, wish) => {
+  returnElement = (elName, wishText, dateToAchieve) => {
     switch (elName) {
       case WISH_NAME:
         return (
           <div className="wish__info__text">
-            <p className="">{wish.wishText}</p>
+            <p className="">{wishText}</p>
           </div>
         );
       case WISH_DATE:
         return (
           <div className="wish__info__date">
-            <p className="">Date: {wish.dateToAchieve.format(DATEFORMAT)}</p>
+            <p className="">Date: {dateToAchieve.format(DATEFORMAT)}</p>
           </div>
         );
       default:
@@ -25,8 +25,8 @@ class WishInfo extends Component {
   };
 
   render() {
-    const { elName, wish } = this.props;
-    return this.returnElement(elName, wish);
+    const { elName, wishText, dateToAchieve } = this.props;
+    return this.returnElement(elName, wishText, dateToAchieve);
   }
 }
 

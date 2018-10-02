@@ -2,10 +2,10 @@ import React, { Component } from "react";
 
 class InputText extends Component {
   render() {
-    const { onChange, value, name, required = false } = this.props;
+    const { onChange, color, value, name, required = false } = this.props;
     return (
       <input
-        className="input input__text input--rounded"
+        className={`input input__text input--rounded input--${color}`}
         required={required}
         value={value}
         name={name}

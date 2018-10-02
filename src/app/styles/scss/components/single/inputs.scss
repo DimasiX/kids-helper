@@ -22,4 +22,8 @@
   &--rounded {
     border-radius: 4px;
   }
+  &--elegant_black {
+    background: $elegant_half_dark;
+    color: $elegant_white;
+  }
 }

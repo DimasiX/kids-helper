@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const PlusButton = props => {
-  const { styles, endpoint, size = "s", isLink = true, onClick } = props;
+  const { styles = "", endpoint, size = "s", isLink = true, onClick } = props;
 
   const renderPlus = isLink => {
     if (isLink) {
@@ -14,7 +14,7 @@ const PlusButton = props => {
       );
     } else {
       return (
-        <div className="plus plus--link" onClick={onClick}>
+        <div className="plus plus--regular" onClick={onClick}>
           <span className={`${styles} ${size}`} />
           <span className={`${styles} ${size}`} />
         </div>

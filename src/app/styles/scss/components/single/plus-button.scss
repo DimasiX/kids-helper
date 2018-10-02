@@ -10,14 +10,22 @@
 
   transition: box-shadow 0.15s;
 
-  &:hover {
-    box-shadow: 0 0 5px $elegant_gold;
+  &--link {
+    &:hover {
+      box-shadow: 0 0 5px $elegant_gold;
 
-    span {
-      &.gold {
-        background: $elegant_dark_gold;
+      span {
+        &.gold {
+          background: $elegant_dark_gold;
+        }
       }
     }
+  }
+
+  &--regular {
+    z-index: 0;
+    height: 5rem;
+    width: 5rem;
   }
 
   span {
@@ -36,7 +44,7 @@
       height: 2rem;
     }
 
-    &.m{
+    &.m {
       height: 5rem;
     }
 

@@ -6,15 +6,15 @@ class WishInfoContainer extends Component {
   render() {
     const {
       elName,
-      wish,
+      isEditing,
       onTextChange,
       onDateChange,
       dateToAchieve,
-      wishText
+      wishText,
     } = this.props;
     return (
       <Fragment>
-        {wish.isEditing ? (
+        {isEditing ? (
           <WishInfoEdit
             dateToAchieve={dateToAchieve}
             wishText={wishText}
@@ -23,7 +23,7 @@ class WishInfoContainer extends Component {
             elName={elName}
           />
         ) : (
-          <WishInfo elName={elName} wish={wish} />
+          <WishInfo elName={elName} wishText={wishText} dateToAchieve={dateToAchieve}/>
         )}
       </Fragment>
     );
