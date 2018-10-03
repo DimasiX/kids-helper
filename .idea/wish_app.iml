@@ -11,5 +11,6 @@
     <orderEntry type="library" name="@types/flux" level="application" />
     <orderEntry type="library" name="@types/lodash" level="application" />
     <orderEntry type="library" name="@types/react-native" level="application" />
+    <orderEntry type="library" name="@types/gsap" level="application" />
   </component>
 </module>

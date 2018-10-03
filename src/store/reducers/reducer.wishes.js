@@ -1,6 +1,6 @@
 import moment from "moment";
 import {uniqueID} from "../../services/api.utils";
-import {AnimateAllMenusClose, AnimateWishMenuOnClose} from "../../services/api.animate";
+import {animations} from "../../services/api.animate";
 
 const initialState = {
   [uniqueID()]: {
@@ -105,7 +105,7 @@ export const EditWishAndAnimate = (wishID, target) => {
       type: EDIT_WISH,
       payload: wishID
     });
-    AnimateAllMenusClose();
+    animations.AnimateAllMenusClose();
   };
 };
 
@@ -115,13 +115,13 @@ export const SaveEditedWish = (wishID, wishData) => {
       type: SAVE_EDITED_WISH,
       payload: { wishID, wishData }
     });
-    AnimateAllMenusClose();
+    animations.AnimateAllMenusClose();
   };
 };
 
 export const OpenWishMenu = wishID => {
   return dispatch => {
-    AnimateAllMenusClose();
+    animations.AnimateAllMenusClose();
     dispatch({
       type: OPEN_MENU,
       payload: wishID
@@ -135,7 +135,7 @@ export const CloseMenuAndAnimate = (wishID, target) => {
       type: CLOSE_MENU,
       payload: wishID
     });
-    AnimateWishMenuOnClose(target);
+    animations.AnimateWishMenuOnClose(target);
   };
 };
 
@@ -144,7 +144,7 @@ export const CloseAllWishMenuAndAnimate = () => {
     dispatch({
       type: CLOSE_ALL_WISH_MENU
     });
-    AnimateAllMenusClose();
+    animations.AnimateAllMenusClose();
   };
 };
 
@@ -154,6 +154,6 @@ export const RemoveWish = wishID => {
       type: REMOVE_WISH,
       payload: wishID
     });
-    AnimateAllMenusClose();
+    animations.AnimateAllMenusClose();
   };
 };

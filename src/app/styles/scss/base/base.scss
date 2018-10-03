@@ -5,12 +5,24 @@
 
   margin: 0;
   padding: 0;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  -webkit-tap-highlight-color: transparent;
+
+  //backface-visibility: hidden;
 }
 
 html {
   font-size: 82.5%; // 16px
-  font-family: 'Inconsolata', monospace;
-  font-family: 'Noto Serif JP', sans-serif;
+  font-family: "Inconsolata", monospace;
+  font-family: "Roboto", sans-serif;
+  font-family: "Noto Serif JP", sans-serif;
   height: 100%;
 }
 
@@ -21,7 +33,7 @@ body {
   height: 100%;
 }
 
-#root{
+#root {
   height: 100%;
   width: 100%;
 }

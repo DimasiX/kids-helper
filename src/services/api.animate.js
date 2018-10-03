@@ -1,62 +1,107 @@
-import { TweenLite } from "gsap";
+import { TweenLite, Power2 } from "gsap";
 
-export const AnimateWishMenuOnClose = target => {
-  const duration = 0.15;
-  target &&
+export const animations = {
+  AnimateWishMenuOnClose: target => {
+    const duration = 0.15;
+    target &&
+      TweenLite.fromTo(
+        target,
+        duration,
+        {
+          opacity: "1",
+          transform: `translateY(0)`
+        },
+        {
+          opacity: "0",
+          transform: `translateY(6px)`
+        }
+      );
+  },
+  AnimateOnRemove: () => {
+    let menu = document.querySelector(".menu");
+    menu.style.display = "none";
+  },
+  AnimateAllMenusClose: () => {
+    const duration = 0.15;
+    let menu = document.querySelectorAll(".menu");
+    menu &&
+      TweenLite.fromTo(
+        menu,
+        duration,
+        {
+          opacity: "1",
+          transform: `translateY(0)`
+        },
+        {
+          opacity: "0",
+          transform: `translateY(6px)`
+        }
+      );
+  },
+  AnimateWishMenuOnOpen: target => {
+    const duration = 0.15;
+    target &&
+      TweenLite.fromTo(
+        target,
+        duration,
+        { opacity: "0", transform: `translateY(6px)` },
+        { opacity: "1", transform: `translateY(0)` }
+      );
+  },
+  AnimateAddFormOnOpen: () => {
+    const duration = 0.4;
+    let form = document.querySelector(".add-wish__form");
     TweenLite.fromTo(
-      target,
+      form,
       duration,
       {
-        opacity: "1",
-        transform: `translateY(0)`
+        transform: `translateY(100%)`,
       },
       {
-        opacity: "0",
-        transform: `translateY(6px)`
+        transform: `translateY(10vh)`,
+        ease: Power2.easeInOut
       }
     );
-};
 
-export const AnimateOnRemove = () => {
-  let menu = document.querySelector(".menu");
-  menu.style.display = "none";
-};
-
-export const AnimateAllMenusClose = () => {
-  const duration = 0.15;
-  let menu = document.querySelectorAll(".menu");
-  menu &&
+    let plus = document.querySelector(".plus");
     TweenLite.fromTo(
-      menu,
+      plus,
       duration,
       {
-        opacity: "1",
-        transform: `translateY(0)`
+        transform: `rotate(0deg)`,
       },
       {
-        opacity: "0",
-        transform: `translateY(6px)`
+        transform: `rotate(135deg)`,
+        ease: Power2.easeInOut
       }
     );
-};
-
-export const AnimateWishMenuOnOpen = target => {
-  const duration = 0.15;
-  target &&
+  },
+  AnimateAddFormOnClose: () => {
+    const duration = 0.4;
+    let form = document.querySelector(".add-wish__form");
     TweenLite.fromTo(
-      target,
+      form,
       duration,
-      { opacity: "0", transform: `translateY(6px)` },
-      { opacity: "1", transform: `translateY(0)` }
+      {
+        transform: `translateY(10vh)`,
+      },
+      {
+        transform: `translateY(100%)`,
+        ease: Power2.easeInOut
+      }
     );
-};
 
-export const AnimateAddFormOnOpen = () => {
-  const duration = .25;
-  let form = document.querySelector(".add-wish__form");
-  TweenLite.fromTo(form, duration, {
-    transform: `translateY(90vh)`
-  }, {
-    transform: `translateY(0%)`
-  });
+    let plus = document.querySelector(".plus");
+    TweenLite.fromTo(
+      plus,
+      duration,
+      {
+        transform: `rotate(135deg)`,
+      },
+      {
+        transform: `rotate(0deg)`,
+        ease: Power2.easeInOut
+      }
+    );
+  }
 };

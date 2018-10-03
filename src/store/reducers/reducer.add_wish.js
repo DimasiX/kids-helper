@@ -1,3 +1,5 @@
+import { animations} from "../../services/api.animate";
+
 let initialState = {
   isAddFormOpen: false
 };
@@ -24,10 +26,11 @@ export const OpenAddWishForm = () => {
   };
 };
 
-export const CloseAddWishForm = () => {
+export const CloseAddWishFormAndAnimate = () => {
   return dispatch => {
     dispatch({
       type: TOGGLE_ADD_FORM
     });
+    animations.AnimateAddFormOnClose();
   };
 };

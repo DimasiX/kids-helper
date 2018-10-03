@@ -1,29 +1,38 @@
-.input {
-  border: none;
-  outline: none;
-
-  font-size: 1.5rem;
-
-  box-shadow: none;
-
-  transition: box-shadow 0.15s;
-
-  background: $elegant_white;
-  color: $elegant_deep_blue;
-
-  &:focus {
-    box-shadow: 0 2px 4px rgba($elegant_dark, 0.25);
+.input-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &__label{
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
   }
-  &__text {
-    font-family: "Inconsolata", monospace;
-    padding: 0.25rem 0;
-    padding-left: 1rem;
-  }
-  &--rounded {
-    border-radius: 4px;
-  }
-  &--elegant_black {
-    background: $elegant_half_dark;
-    color: $elegant_white;
+  .input {
+    border: none;
+    outline: none;
+
+    font-size: 1.5rem;
+
+    box-shadow: none;
+
+    transition: box-shadow 0.15s;
+
+    background: $elegant_white;
+    color: $elegant_deep_blue;
+
+    &:focus {
+      box-shadow: 0 2px 4px rgba($elegant_dark, 0.25);
+    }
+    &__text {
+      font-family: "Inconsolata", monospace;
+      padding: 0.25rem 0;
+      padding-left: 1rem;
+    }
+    &--rounded {
+      border-radius: 4px;
+    }
+    &--elegant_black {
+      background: $elegant_half_dark;
+      color: $elegant_white;
+    }
   }
 }

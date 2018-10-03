@@ -6,7 +6,7 @@ import {
   RemoveWish
 } from "../../../../../store/reducers/reducer.wishes";
 import connect from "react-redux/es/connect/connect";
-import { AnimateWishMenuOnOpen } from "../../../../../services/api.animate";
+import { animations} from "../../../../../services/api.animate";
 
 class WishMenu extends Component {
   constructor() {
@@ -15,7 +15,7 @@ class WishMenu extends Component {
   }
 
   componentDidMount() {
-    AnimateWishMenuOnOpen(this.menuRef.current);
+    animations.AnimateWishMenuOnOpen(this.menuRef.current);
   }
 
   render() {
