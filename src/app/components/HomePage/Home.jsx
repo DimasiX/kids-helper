@@ -6,7 +6,6 @@ import HomeIntro from "./HomeIntro/HomeIntro";
 import {CloseAllWishMenuAndAnimate} from "../../../store/reducers/reducer.wishes";
 import {WHO_CANNOT_CLOSE_WISH_MENU} from "../../../constants/constants";
 import AddWish from "./AddWish/AddWish";
-import {animations} from "../../../services/api.animate";
 
 class Home extends Component {
   checkAndClose = e => {

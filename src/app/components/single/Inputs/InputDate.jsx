@@ -4,7 +4,6 @@ import DayPickerInput from "react-day-picker/DayPickerInput";
 class InputDate extends Component {
   render() {
     const {
-      placeholder = "YYYY-MM-DD",
       label,
       value,
       name = "dayinput",
@@ -16,12 +15,14 @@ class InputDate extends Component {
     } = this.props;
     return (
       <div className={`daypicker ${color}`}>
-        {label && <label className="daypicker__label" htmlFor={id}>
-          {label}
-        </label>}
+        {label && (
+          <label className="daypicker__label" htmlFor={id}>
+            {label}
+          </label>
+        )}
         <DayPickerInput
           keepFocus={false}
-          inputProps={{ value, id, name, required }}
+          inputProps={{ value, id, name, required, readOnly: true }}
           onDayChange={onChange}
           value={value}
           showOverlay={showOverlay}

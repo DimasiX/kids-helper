@@ -59,6 +59,8 @@ export const animations = {
       },
       {
         transform: `translateY(10vh)`,
+        borderTopLeftRadius: `8px`,
+        borderTopRightRadius: `8px`,
         ease: Power2.easeInOut
       }
     );
@@ -87,6 +89,8 @@ export const animations = {
       },
       {
         transform: `translateY(100%)`,
+        borderTopLeftRadius: `0px`,
+        borderTopRightRadius: `0px`,
         ease: Power2.easeInOut
       }
     );

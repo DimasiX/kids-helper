@@ -1,6 +1,6 @@
 import moment from "moment";
-import {uniqueID} from "../../services/api.utils";
-import {animations} from "../../services/api.animate";
+import { uniqueID } from "../../services/api.utils";
+import { animations } from "../../services/api.animate";
 
 const initialState = {
   [uniqueID()]: {
@@ -33,6 +33,7 @@ export const EDIT_WISH = "wish/EDIT_WISH";
 export const SAVE_EDITED_WISH = "wish/SAVE_EDITED_WISH";
 export const REMOVE_WISH = "wish/REMOVE_WISH";
 export const CLOSE_ALL_WISH_MENU = "wish/CLOSE_ALL_WISH_MENU";
+export const ADD_NEW_WISH = "ADD_NEW_WISH";
 
 export default (state = initialState, action) => {
   switch (action.type) {
@@ -93,6 +94,23 @@ export default (state = initialState, action) => {
         newState[v] = { ...state[v], isMenuOpen: false };
       });
       return newState;
+    }
+    case ADD_NEW_WISH: {
+      const { wishText, wishDate } = action.payload;
+      return {
+        ...state,
+        [uniqueID()]: {
+          wishText,
+          dateToAchieve: wishDate,
+          isEditing: false,
+          isMenuOpen: false,
+          stepsToAchieve: [{}],
+          diary: {
+            lastWrite: moment(),
+            comments: ["start to work on my goals"]
+          }
+        }
+      };
     }
     default:
       return state;
@@ -155,5 +173,14 @@ export const RemoveWish = wishID => {
       payload: wishID
     });
     animations.AnimateAllMenusClose();
+  };
+};
+
+export const AddNewWish = wishData => {
+  return dispatch => {
+    dispatch({
+      type: ADD_NEW_WISH,
+      payload: wishData
+    });
   };
 };
