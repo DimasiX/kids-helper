@@ -5,24 +5,27 @@ class InputDate extends Component {
   render() {
     const {
       placeholder = "YYYY-MM-DD",
+      label,
       value,
       name = "dayinput",
       showOverlay,
       color = "elegant_white",
       onChange,
-      id = "day"
+      id = "day",
+      required = true
     } = this.props;
     return (
       <div className={`daypicker ${color}`}>
-        <label className="daypicker__label" htmlFor={id}>
-          {placeholder}
-        </label>
+        {label && <label className="daypicker__label" htmlFor={id}>
+          {label}
+        </label>}
         <DayPickerInput
-          inputProps={{ value, id, name }}
+          keepFocus={false}
+          inputProps={{ value, id, name, required }}
           onDayChange={onChange}
           value={value}
           showOverlay={showOverlay}
-          placeholder={"YYYY-MM-DD"}
+          placeholder={""}
         />
       </div>
     );

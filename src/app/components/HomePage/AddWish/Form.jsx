@@ -11,7 +11,7 @@ class Form extends Component {
           <InputText label="What Wish You Have?" />
         </div>
         <div className="date-input">
-          <InputDate placeholder="Date To Achieve:" />
+          <InputDate showOverlay={true} label="Date To Achieve:" />
         </div>
         <div className="save-btn">SAVE</div>
       </div>
