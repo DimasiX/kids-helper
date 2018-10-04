@@ -42,7 +42,7 @@ body {
   height: 100%; }
 
 /* HOME COMPONENTS*/
-.home__intro {
+.home-intro {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,14 +50,24 @@ body {
   position: relative;
   height: 100vh;
   width: 100%;
+  padding: 0 3rem;
   background: #090909; }
-  .home__intro h1 {
+  .home-intro__descr {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 80%;
+    color: rgba(234, 234, 234, 0.3); }
+  .home-intro h1 {
     font-size: 3rem;
     font-weight: 300;
-    color: #ffffff; }
-  .home__intro .home__arrow {
+    color: #ffffff;
+    text-shadow: 1px 1px 0 #52ff41, 2px 2px 0 #ff3763; }
+  .home-intro .home__arrow {
     position: absolute;
-    bottom: 4rem; }
+    bottom: 6rem; }
 
 /*--- WISH COMPONENTS ---*/
 .wish {
@@ -251,9 +261,11 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-top: 5rem;
+      margin-top: 3rem;
       margin-bottom: 0rem;
       background: #eaeaea;
+      outline: none;
+      border: none;
       color: #464646;
       font-size: 1.5rem;
       width: 10rem;

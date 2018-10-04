@@ -64,7 +64,7 @@ class AddWish extends Component {
           onClick={this.toggleAddWishForm}
         />
 
-        <form action="" onChange={this.onInputChange}>
+        <form action="">
           {isAddFormOpen && (
             <div className="close-on-click" onClick={this.toggleAddWishForm} />
           )}
@@ -72,6 +72,7 @@ class AddWish extends Component {
             wishText={wishText}
             wishDate={wishDate}
             onSave={this.onSave}
+            onInputChange={this.onInputChange}
             onDateChange={this.onDateChange}
           />
         </form>

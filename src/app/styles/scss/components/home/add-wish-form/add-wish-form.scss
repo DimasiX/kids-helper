@@ -42,7 +42,7 @@
 
     transform: translateY(100%);
 
-    background: linear-gradient(to right bottom, #ff3763, #c61f39);
+    background: linear-gradient(to right bottom, $elegant_light_pink, $elegant_dark_pink);
 
     &__name {
       text-align: center;
@@ -79,10 +79,14 @@
       justify-content: center;
       align-items: center;
 
-      margin-top: 5rem;
+      margin-top: 3rem;
       margin-bottom: 0rem;
 
       background: $elegant_white;
+
+      outline: none;
+
+      border: none;
 
       color: $elegant_half_dark;
 

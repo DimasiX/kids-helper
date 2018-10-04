@@ -1,4 +1,4 @@
-.home__intro{
+.home-intro {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,16 +9,35 @@
   height: 100vh;
   width: 100%;
 
+  padding: 0 3rem;
+
   background: $elegant_dark;
+
+  &__descr{
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    text-align: center;
+
+    width: 80%;
+
+    color: rgba($elegant_white, .3);
+  }
 
   h1 {
     font-size: 3rem;
     font-weight: 300;
+
     color: #ffffff;
+
+    text-shadow: 1px 1px 0 $elegant_green, 2px 2px 0 $elegant_light_pink;
   }
 
-  .home__arrow{
+  .home__arrow {
     position: absolute;
-    bottom: 4rem;
+    bottom: 6rem;
   }
 }
