@@ -1,9 +1,6 @@
 import React, {Component} from "react";
 import WishMenu from "./Menu/WishMenu";
-import {connect} from "react-redux";
-import {bindActionCreators} from "redux";
 import MenuDots from "./Menu/MenuDots";
-import {OpenWishMenu, SaveEditedWish} from "../../../../store/reducers/reducer.wishes";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import WishInfoContainer from "./Info/WishInfoContainer";
 import SaveWishButton from "./SaveWishButton";
@@ -15,18 +12,18 @@ class Wish extends Component {
       isMenuOpen,
       wishID,
       isEditing,
-      OpenWishMenu,
       dateToAchieve,
       wishText,
       onTextInputChange,
       onDateInputChange,
+      onOpenWishMenu,
       onSaveWish
     } = this.props;
 
     return (
       <div className="wish">
         <div className="more-options">
-          <MenuDots onWishMenuOpen={OpenWishMenu} wishID={wishID} />
+          <MenuDots onWishMenuOpen={onOpenWishMenu} wishID={wishID} />
           <ReactCSSTransitionGroup
             transitionName="menu"
             transitionEnterTimeout={250}
@@ -68,16 +65,9 @@ class Wish extends Component {
             isEditing={isEditing}
           />
         </form>
-
       </div>
     );
   }
 }
 
-const mapDispatchToProps = dispatch =>
-  bindActionCreators({ SaveEditedWish, OpenWishMenu }, dispatch);
-
-export default connect(
-  null,
-  mapDispatchToProps
-)(Wish);
+export default Wish;

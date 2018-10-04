@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import { SaveEditedWish } from "../../../../store/reducers/reducer.wishes";
+import { SaveEditedWish, OpenWishMenu } from "../../../../store/reducers/reducer.wishes";
 import Wish from "./Wish";
 import moment from "moment";
 
@@ -42,7 +42,7 @@ class WishContainer extends Component {
   };
 
   render() {
-    const { wishID, wish } = this.props;
+    const { wishID, wish, OpenWishMenu } = this.props;
     const { isMenuOpen, isEditing } = wish;
     const { wishText, dateToAchieve } = this.state;
     return (
@@ -55,13 +55,14 @@ class WishContainer extends Component {
         onTextInputChange={this.onTextInputChange}
         onDateInputChange={this.onDateInputChange}
         onSaveWish={this.onSaveWish}
+        onOpenWishMenu={OpenWishMenu}
       />
     );
   }
 }
 
 const mapDispatchToProps = dispatch =>
-  bindActionCreators({ SaveEditedWish }, dispatch);
+  bindActionCreators({ SaveEditedWish, OpenWishMenu }, dispatch);
 
 export default connect(
   null,
