@@ -18,13 +18,14 @@ class AddWish extends Component {
   };
 
   toggleAddWishForm = () => {
-    const { isAddFormOpen, OpenAddWishForm, CloseAddWishForm } = this.props;
+    const { isAddFormOpen, openForm, closeForm } = this.props;
+    const { AnimateAddFormOnClose, AnimateAddFormOnOpen } = animations;
     if (isAddFormOpen) {
-      CloseAddWishForm();
-      animations.AnimateAddFormOnClose();
+      closeForm();
+      AnimateAddFormOnClose();
     } else {
-      OpenAddWishForm();
-      animations.AnimateAddFormOnOpen();
+      openForm();
+      AnimateAddFormOnOpen();
     }
   };
   onInputChange = e => {
@@ -41,15 +42,15 @@ class AddWish extends Component {
   };
   onSave = e => {
     e.preventDefault();
-    const { AddNewWish, CloseAddWishForm } = this.props;
+    const { addWish, closeForm } = this.props;
     const { wishText, dateToAchieve } = this.state;
     if (wishText !== "" && dateToAchieve !== "") {
       this.setState({
         wishText: "",
         dateToAchieve: moment()
       });
-      AddNewWish({ wishText, dateToAchieve });
-      CloseAddWishForm();
+      addWish({ wishText, dateToAchieve });
+      closeForm();
       animations.AnimateAddFormOnClose();
     }
   };
@@ -81,15 +82,15 @@ class AddWish extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  isAddFormOpen: state.addWishes.isAddFormOpen
+const mapStateToProps = ({ addWishes }) => ({
+  isAddFormOpen: addWishes.isAddFormOpen
 });
 const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
-      AddNewWish,
-      OpenAddWishForm,
-      CloseAddWishForm: CloseAddWishFormAndAnimate
+      addWish: AddNewWish,
+      openForm: OpenAddWishForm,
+      closeForm: CloseAddWishFormAndAnimate
     },
     dispatch
   );

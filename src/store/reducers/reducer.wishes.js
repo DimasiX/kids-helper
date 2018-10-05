@@ -117,7 +117,7 @@ export default (state = initialState, action) => {
   }
 };
 
-export const EditWishAndAnimate = (wishID, target) => {
+export const EditWishAndAnimate = wishID => {
   return dispatch => {
     dispatch({
       type: EDIT_WISH,

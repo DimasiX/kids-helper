@@ -1,4 +1,4 @@
-import { animations} from "../../services/api.animate";
+import { animations } from "../../services/api.animate";
 
 let initialState = {
   isAddFormOpen: false
