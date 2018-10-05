@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { DATEFORMAT } from "../../../../../constants/constants";
+import { DATEFORMAT } from "../../../../constants/constants";
 
 export const WISH_NAME = "WISH_NAME";
 export const WISH_DATE = "WISH_DATE";

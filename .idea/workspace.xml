@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ae1d27b-358c-4a0c-ac2e-8850efee13f7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/HomePage/AddWish/AddWish.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/HomePage/AddWish/AddWish.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/reducer.add_wish.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/reducer.add_wish.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/reducer.wishes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/reducer.wishes.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,9 +38,9 @@
         <counts>
           <entry key="gitignore" value="2" />
           <entry key="html" value="2" />
-          <entry key="js" value="28" />
+          <entry key="js" value="31" />
           <entry key="jsx" value="62" />
-          <entry key="md" value="1" />
+          <entry key="md" value="2" />
           <entry key="scss" value="28" />
           <entry key="ts" value="18" />
           <entry key="xml" value="1" />
@@ -48,8 +51,8 @@
           <entry key="Git file" value="2" />
           <entry key="HTML" value="2" />
           <entry key="JSX Harmony" value="62" />
-          <entry key="JavaScript" value="28" />
-          <entry key="Markdown" value="1" />
+          <entry key="JavaScript" value="31" />
+          <entry key="Markdown" value="2" />
           <entry key="SCSS" value="28" />
           <entry key="TypeScript" value="18" />
           <entry key="XML" value="1" />
@@ -67,7 +70,7 @@
           <entry key="html" value="22" />
           <entry key="js" value="3462" />
           <entry key="jsx" value="9642" />
-          <entry key="md" value="615" />
+          <entry key="md" value="935" />
           <entry key="scss" value="4058" />
           <entry key="ts" value="1" />
         </counts>
@@ -77,7 +80,7 @@
           <entry key="HTML" value="22" />
           <entry key="JSX Harmony" value="9642" />
           <entry key="JavaScript" value="3462" />
-          <entry key="Markdown" value="615" />
+          <entry key="Markdown" value="935" />
           <entry key="SCSS" value="4058" />
           <entry key="TypeScript" value="1" />
         </counts>
@@ -86,19 +89,42 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/components/HomePage/AddWish/AddWish.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="26" column="17" lean-forward="true" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+            <state relative-caret-position="380">
+              <caret line="91" column="22" lean-forward="true" selection-start-line="91" selection-start-column="22" selection-end-line="91" selection-end-column="22" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
                 <element signature="e#1664#2226#0" expanded="true" />
                 <element signature="e#1823#2213#0" expanded="true" />
                 <element signature="e#1973#2197#0" expanded="true" />
                 <element signature="e#2237#2281#0" expanded="true" />
-                <element signature="e#2349#2460#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/store/reducers/reducer.add_wish.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="20" column="38" lean-forward="true" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+              <folding>
+                <element signature="e#462#497#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="171">
+                <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -160,6 +186,46 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/store/reducers/reducer.wishes.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2261">
+              <caret line="119" column="41" selection-start-line="119" selection-start-column="41" selection-end-line="119" selection-end-column="41" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+                <element signature="e#161#655#0" expanded="true" />
+                <element signature="e#179#408#0" expanded="true" />
+                <element signature="e#324#404#0" expanded="true" />
+                <element signature="e#426#653#0" expanded="true" />
+                <element signature="e#569#649#0" expanded="true" />
+                <element signature="e#1197#1198#0" expanded="true" />
+                <element signature="e#1263#1264#0" expanded="true" />
+                <element signature="e#1424#1537#0" expanded="true" />
+                <element signature="e#1462#1529#0" expanded="true" />
+                <element signature="e#1615#1755#0" expanded="true" />
+                <element signature="e#1653#1747#0" expanded="true" />
+                <element signature="e#1979#2196#0" expanded="true" />
+                <element signature="e#2017#2188#0" expanded="true" />
+                <element signature="e#2306#2332#0" expanded="true" />
+                <element signature="e#2435#2436#0" expanded="true" />
+                <element signature="e#2501#2502#0" expanded="true" />
+                <element signature="e#2630#2956#0" expanded="true" />
+                <element signature="e#2672#2948#0" expanded="true" />
+                <element signature="e#2840#2938#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/store/reducers/reducer.root.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -188,8 +254,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/app/styles/scss/components/app/app.scss" />
-        <option value="$PROJECT_DIR$/src/app/components/Independent Components/PlusButton/PlusButton.jsx" />
         <option value="$PROJECT_DIR$/src/store/reducers/reducer.root.js" />
         <option value="$PROJECT_DIR$/src/app/styles/scss/components/add-wish/add-page.scss" />
         <option value="$PROJECT_DIR$/src/app/components/HomePage/Wish/Info/WishInfoEdit.jsx" />
@@ -216,7 +280,6 @@
         <option value="$PROJECT_DIR$/src/app/components/HomePage/AddWishForm/Form.jsx" />
         <option value="$PROJECT_DIR$/src/app/components/HomePage/AddWishForm/AddWish.jsx" />
         <option value="$PROJECT_DIR$/src/app/components/HomePage/Wish/Menu/WishMenu.jsx" />
-        <option value="$PROJECT_DIR$/src/store/reducers/reducer.add_wish.js" />
         <option value="$PROJECT_DIR$/src/app/styles/scss/components/single/plus-button.scss" />
         <option value="$PROJECT_DIR$/src/app/styles/scss/components/single/daypicker-input.scss" />
         <option value="$PROJECT_DIR$/src/app/components/single/Inputs/InputText.jsx" />
@@ -226,7 +289,6 @@
         <option value="$PROJECT_DIR$/src/app/components/single/Inputs/InputDate.jsx" />
         <option value="$PROJECT_DIR$/src/services/api.animate.js" />
         <option value="$PROJECT_DIR$/src/app/styles/scss/components/home/wish/wish.scss" />
-        <option value="$PROJECT_DIR$/src/store/reducers/reducer.wishes.js" />
         <option value="$PROJECT_DIR$/src/app/components/HomePage/AddWish/Form.jsx" />
         <option value="$PROJECT_DIR$/src/app/styles/scss/variables/variables.scss" />
         <option value="$PROJECT_DIR$/src/services/api.utils.js" />
@@ -239,6 +301,10 @@
         <option value="$PROJECT_DIR$/src/app/components/HomePage/Wish/WishContainer.jsx" />
         <option value="$PROJECT_DIR$/src/app/components/HomePage/Wish/Wish.jsx" />
         <option value="$PROJECT_DIR$/src/app/components/HomePage/AddWish/AddWish.jsx" />
+        <option value="$PROJECT_DIR$/src/store/reducers/reducer.wishes.js" />
+        <option value="$PROJECT_DIR$/src/store/reducers/add-wish/reducer.add_wish.js" />
+        <option value="$PROJECT_DIR$/src/store/reducers/reducer.add_wish.js" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -374,6 +440,12 @@
             </path>
             <path>
               <item name="wish_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wish_app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="store" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wish_app" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -388,7 +460,7 @@
     <property name="SearchEverywhereHistoryKey" value="services&#9;FILE&#9;file:///home/dima/programming/projects/wish_app/src/services&#10;HomePa&#9;FILE&#9;file:///home/dima/programming/projects/wish_app/src/app/components/HomePage&#10;api&#9;FILE&#9;file:///home/dima/programming/projects/wish_app/src/services/api.animate.js&#10;$elegant&#9;null&#9;null&#10;components&#9;FILE&#9;file:///home/dima/programming/projects/wish_app/src/app/styles/scss/components" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538745308277" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538745320488" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.11.0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../.." />
@@ -400,11 +472,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/store/reducers" />
+      <recent name="$PROJECT_DIR$/src/store/reducers/add-wish" />
       <recent name="$PROJECT_DIR$/src/constants" />
       <recent name="$PROJECT_DIR$/src/app/components/AddWishPage/AddWishForm" />
       <recent name="$PROJECT_DIR$/src/app/styles/scss/components/independent" />
-      <recent name="$PROJECT_DIR$/src/app/styles/scss/components" />
-      <recent name="$PROJECT_DIR$/src/app/components/Independent Components" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -420,7 +492,7 @@
     </option>
   </component>
   <component name="RunManager" selected="npm.WISH_APP">
-    <configuration name="Wish.jsx" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="Wish.jsx" working-dir="$PROJECT_DIR$/src/app/components/HomePage/Wish">
+    <configuration name="Wish.jsx" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/app/HomePage/Wish/Wish.jsx" working-dir="$PROJECT_DIR$/src/app/HomePage/Wish">
       <method v="2" />
     </configuration>
     <configuration name="WISH_APP" type="js.build_tools.npm" factoryName="npm">
@@ -479,18 +551,17 @@
       <workItem from="1538585623070" duration="1256000" />
       <workItem from="1538633120740" duration="3548000" />
       <workItem from="1538672192633" duration="794000" />
-      <workItem from="1538722766308" duration="1693000" />
+      <workItem from="1538722766308" duration="2310000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86710000" />
+    <option name="totallyTimeSpent" value="87327000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21779989" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21779989" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -507,7 +578,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3197065" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3197065" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.32914045" />
@@ -561,14 +632,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/store/reducers/reducer.root.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/AddWishPage/AddWishForm/AddWishForm.jsx" />
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -688,13 +751,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/reducers/reducer.add_wish.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/components/single/Inputs/InputText.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
@@ -763,26 +819,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="14" selection-start-column="14" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/reducers/reducer.wishes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1330">
-          <caret line="142" column="13" selection-start-line="142" selection-start-column="13" selection-end-line="142" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-            <element signature="e#161#655#0" expanded="true" />
-            <element signature="e#179#408#0" expanded="true" />
-            <element signature="e#324#404#0" expanded="true" />
-            <element signature="e#426#653#0" expanded="true" />
-            <element signature="e#569#649#0" expanded="true" />
-            <element signature="e#2615#2936#0" expanded="true" />
-            <element signature="e#2657#2928#0" expanded="true" />
-            <element signature="e#2820#2918#0" expanded="true" />
-            <element signature="e#3509#3561#0" expanded="true" />
-            <element signature="e#4209#4266#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -924,16 +960,71 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/components/HomePage/AddWish/AddWish.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="26" column="17" lean-forward="true" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+        <state relative-caret-position="380">
+          <caret line="91" column="22" lean-forward="true" selection-start-line="91" selection-start-column="22" selection-end-line="91" selection-end-column="22" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
             <element signature="e#1664#2226#0" expanded="true" />
             <element signature="e#1823#2213#0" expanded="true" />
             <element signature="e#1973#2197#0" expanded="true" />
             <element signature="e#2237#2281#0" expanded="true" />
-            <element signature="e#2349#2460#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/reducers/reducer.root.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/reducers/reducer.wishes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2261">
+          <caret line="119" column="41" selection-start-line="119" selection-start-column="41" selection-end-line="119" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#161#655#0" expanded="true" />
+            <element signature="e#179#408#0" expanded="true" />
+            <element signature="e#324#404#0" expanded="true" />
+            <element signature="e#426#653#0" expanded="true" />
+            <element signature="e#569#649#0" expanded="true" />
+            <element signature="e#1197#1198#0" expanded="true" />
+            <element signature="e#1263#1264#0" expanded="true" />
+            <element signature="e#1424#1537#0" expanded="true" />
+            <element signature="e#1462#1529#0" expanded="true" />
+            <element signature="e#1615#1755#0" expanded="true" />
+            <element signature="e#1653#1747#0" expanded="true" />
+            <element signature="e#1979#2196#0" expanded="true" />
+            <element signature="e#2017#2188#0" expanded="true" />
+            <element signature="e#2306#2332#0" expanded="true" />
+            <element signature="e#2435#2436#0" expanded="true" />
+            <element signature="e#2501#2502#0" expanded="true" />
+            <element signature="e#2630#2956#0" expanded="true" />
+            <element signature="e#2672#2948#0" expanded="true" />
+            <element signature="e#2840#2938#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/reducers/reducer.add_wish.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="20" column="38" lean-forward="true" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+          <folding>
+            <element signature="e#462#497#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="171">
+            <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

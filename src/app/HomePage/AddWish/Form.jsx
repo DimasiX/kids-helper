@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import InputText from "../../single/Inputs/InputText";
-import InputDate from "../../single/Inputs/InputDate";
-import { DATEFORMAT } from "../../../../constants/constants";
+import InputText from "../../components/single/Inputs/InputText";
+import InputDate from "../../components/single/Inputs/InputDate";
+import { DATEFORMAT } from "../../../constants/constants";
 
 class Form extends Component {
   render() {

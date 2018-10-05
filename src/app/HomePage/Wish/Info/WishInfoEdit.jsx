@@ -1,9 +1,9 @@
 import React, {Component} from "react";
 import {WISH_DATE, WISH_NAME} from "./WishInfo";
-import InputText from "../../../single/Inputs/InputText";
+import InputText from "../../../components/single/Inputs/InputText";
 import "react-day-picker/lib/style.css";
-import {DATEFORMAT} from "../../../../../constants/constants";
-import InputDate from "../../../single/Inputs/InputDate";
+import {DATEFORMAT} from "../../../../constants/constants";
+import InputDate from "../../../components/single/Inputs/InputDate";
 
 class WishInfoEdit extends Component {
   renderEditElement = elName => {

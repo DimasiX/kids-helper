@@ -1,15 +1,15 @@
 import React, { Component } from "react";
-import PlusButton from "../../single/PlusButton/PlusButton";
+import PlusButton from "../../components/single/PlusButton/PlusButton";
 import AddWishForm from "./Form";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import {
   CloseAddWishFormAndAnimate,
   OpenAddWishForm
-} from "../../../../store/reducers/reducer.add_wish";
-import { animations } from "../../../../services/api.animate";
+} from "../../../store/reducers/reducer.add_wish";
+import { animations } from "../../../services/api.animate";
 import moment from "moment";
-import { AddNewWish } from "../../../../store/reducers/reducer.wishes";
+import { AddNewWish } from "../../../store/reducers/reducer.wishes";
 
 class AddWish extends Component {
   state = {

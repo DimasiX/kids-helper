@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import { SaveEditedWish, OpenWishMenu } from "../../../../store/reducers/reducer.wishes";
+import { SaveEditedWish, OpenWishMenu } from "../../../store/reducers/reducer.wishes";
 import Wish from "./Wish";
 import moment from "moment";
 

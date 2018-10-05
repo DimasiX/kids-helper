@@ -3,8 +3,8 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import WishList from "./WishList/WishList";
 import HomeIntro from "./HomeIntro/HomeIntro";
-import { CloseAllWishMenuAndAnimate } from "../../../store/reducers/reducer.wishes";
-import { WHO_CANNOT_CLOSE_WISH_MENU } from "../../../constants/constants";
+import { CloseAllWishMenuAndAnimate } from "../../store/reducers/reducer.wishes";
+import { WHO_CANNOT_CLOSE_WISH_MENU } from "../../constants/constants";
 import AddWish from "./AddWish/AddWish";
 
 class Home extends Component {

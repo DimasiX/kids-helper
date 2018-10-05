@@ -4,9 +4,9 @@ import {
   CloseMenuAndAnimate,
   EditWishAndAnimate,
   RemoveWish
-} from "../../../../../store/reducers/reducer.wishes";
+} from "../../../../store/reducers/reducer.wishes";
 import connect from "react-redux/es/connect/connect";
-import { animations} from "../../../../../services/api.animate";
+import { animations} from "../../../../services/api.animate";
 
 class WishMenu extends Component {
   constructor() {
