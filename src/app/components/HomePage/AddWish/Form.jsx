@@ -10,7 +10,7 @@ class Form extends Component {
       onDateChange,
       onSave,
       wishText,
-      wishDate
+      dateToAchieve
     } = this.props;
     return (
       <div className="add-wish__form">
@@ -25,7 +25,7 @@ class Form extends Component {
         </div>
         <div className="date-input">
           <InputDate
-            value={wishDate.format(DATEFORMAT)}
+            value={dateToAchieve.format(DATEFORMAT)}
             onChange={onDateChange}
             name="date"
             showOverlay={true}

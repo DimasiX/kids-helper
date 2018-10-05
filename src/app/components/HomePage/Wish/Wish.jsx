@@ -1,10 +1,10 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import WishMenu from "./Menu/WishMenu";
 import MenuDots from "./Menu/MenuDots";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import WishInfoContainer from "./Info/WishInfoContainer";
 import SaveWishButton from "./SaveWishButton";
-import {WISH_DATE, WISH_NAME} from "./Info/WishInfo";
+import { WISH_DATE, WISH_NAME } from "./Info/WishInfo";
 
 class Wish extends Component {
   render() {
@@ -39,12 +39,7 @@ class Wish extends Component {
           </ReactCSSTransitionGroup>
         </div>
 
-        <form
-          onSubmit={() => {
-            console.log("SUBMIT");
-          }}
-          className={`wish__info ${isEditing ? "wish__info--edit" : ""}`}
-        >
+        <form className={`wish__info ${isEditing && "wish__info--edit"}`}>
           <WishInfoContainer
             isEditing={isEditing}
             dateToAchieve={dateToAchieve}

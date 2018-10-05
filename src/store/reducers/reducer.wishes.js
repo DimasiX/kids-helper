@@ -69,13 +69,13 @@ export default (state = initialState, action) => {
     case SAVE_EDITED_WISH: {
       const wishID = action.payload.wishID;
       const newWishText = action.payload.wishData.wishText;
-      const newWishDate = action.payload.wishData.dateToAchieve;
+      const newdateToAchieve = action.payload.wishData.dateToAchieve;
       return {
         ...state,
         [wishID]: {
           ...state[wishID],
           wishText: newWishText,
-          dateToAchieve: newWishDate,
+          dateToAchieve: newdateToAchieve,
           isEditing: false,
           isMenuOpen: false
         }
@@ -96,12 +96,12 @@ export default (state = initialState, action) => {
       return newState;
     }
     case ADD_NEW_WISH: {
-      const { wishText, wishDate } = action.payload;
+      const { wishText, dateToAchieve } = action.payload;
       return {
         ...state,
         [uniqueID()]: {
           wishText,
-          dateToAchieve: wishDate,
+          dateToAchieve: dateToAchieve,
           isEditing: false,
           isMenuOpen: false,
           stepsToAchieve: [{}],

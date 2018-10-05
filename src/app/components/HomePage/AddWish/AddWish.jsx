@@ -14,7 +14,7 @@ import { AddNewWish } from "../../../../store/reducers/reducer.wishes";
 class AddWish extends Component {
   state = {
     wishText: "",
-    wishDate: moment()
+    dateToAchieve: moment()
   };
 
   toggleAddWishForm = () => {
@@ -36,25 +36,25 @@ class AddWish extends Component {
   onDateChange = date => {
     console.log("DATE:", date);
     this.setState({
-      wishDate: moment(date)
+      dateToAchieve: moment(date)
     });
   };
   onSave = e => {
     e.preventDefault();
     const { AddNewWish, CloseAddWishForm } = this.props;
-    const { wishText, wishDate } = this.state;
-    if (wishText !== "" && wishDate !== "") {
+    const { wishText, dateToAchieve } = this.state;
+    if (wishText !== "" && dateToAchieve !== "") {
       this.setState({
         wishText: "",
-        wishDate: moment()
+        dateToAchieve: moment()
       });
-      AddNewWish({ wishText, wishDate });
+      AddNewWish({ wishText, dateToAchieve });
       CloseAddWishForm();
       animations.AnimateAddFormOnClose();
     }
   };
   render() {
-    const { wishText, wishDate } = this.state;
+    const { wishText, dateToAchieve } = this.state;
     const { isAddFormOpen } = this.props;
     return (
       <div className="add-wish">
@@ -70,7 +70,7 @@ class AddWish extends Component {
           )}
           <AddWishForm
             wishText={wishText}
-            wishDate={wishDate}
+            dateToAchieve={dateToAchieve}
             onSave={this.onSave}
             onInputChange={this.onInputChange}
             onDateChange={this.onDateChange}

@@ -17,10 +17,8 @@ class WishList extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    wishes: state.wishes
-  };
+const mapStateToProps = ({ wishes }) => {
+  return { wishes };
 };
 
 export default connect(

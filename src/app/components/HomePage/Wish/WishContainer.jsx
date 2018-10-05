@@ -37,6 +37,7 @@ class WishContainer extends Component {
     e.preventDefault();
 
     const { SaveEditedWish, wishID } = this.props;
+
     let wishData = { ...this.state };
     SaveEditedWish(wishID, wishData);
   };

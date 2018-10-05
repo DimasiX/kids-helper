@@ -8,15 +8,20 @@ import { WHO_CANNOT_CLOSE_WISH_MENU } from "../../../constants/constants";
 import AddWish from "./AddWish/AddWish";
 
 class Home extends Component {
-  checkAndCloseWishMenu = e => {
-    const { CloseAllWishMenuAndAnimate } = this.props;
-    const clickedClass = e.target.className;
-
-    let clickedOutside = WHO_CANNOT_CLOSE_WISH_MENU.filter(
+  checkClickedClass = clickedClass => {
+    return WHO_CANNOT_CLOSE_WISH_MENU.filter(
       classWhoCantClose => classWhoCantClose === clickedClass
     ).length;
+  };
 
-    if (clickedOutside === 0) {
+  checkAndCloseWishMenu = e => {
+    const { CloseAllWishMenuAndAnimate } = this.props;
+
+    const clickedClass = e.target.className;
+
+    let isClickedAnyOutside = this.checkClickedClass(clickedClass);
+
+    if (isClickedAnyOutside === 0) {
       CloseAllWishMenuAndAnimate();
     }
   };
