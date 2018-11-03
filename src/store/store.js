@@ -3,6 +3,7 @@ import { createStore, applyMiddleware, compose } from "redux";
 import rootReducer from "./reducers/reducer.root";
 
 // Initialize middleware and enhancers
+
 const middleware = [thunk];
 const devToolsExtension = window.devToolsExtension;
 const enhancers = [];
