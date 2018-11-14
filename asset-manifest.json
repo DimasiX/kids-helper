@@ -1,15 +1,15 @@
 {
-  "main.css": "/wish-app/static/css/main.99089567.chunk.css",
-  "main.js": "/wish-app/static/js/main.d725473d.chunk.js",
-  "main.js.map": "/wish-app/static/js/main.d725473d.chunk.js.map",
-  "static/css/1.7adead3e.chunk.css": "/wish-app/static/css/1.7adead3e.chunk.css",
-  "static/js/1.4d4e7b06.chunk.js": "/wish-app/static/js/1.4d4e7b06.chunk.js",
-  "static/js/1.4d4e7b06.chunk.js.map": "/wish-app/static/js/1.4d4e7b06.chunk.js.map",
-  "runtime~main.js": "/wish-app/static/js/runtime~main.fb9e8b9b.js",
-  "runtime~main.js.map": "/wish-app/static/js/runtime~main.fb9e8b9b.js.map",
-  "static/css/1.7adead3e.chunk.css.map": "/wish-app/static/css/1.7adead3e.chunk.css.map",
-  "static/css/main.99089567.chunk.css.map": "/wish-app/static/css/main.99089567.chunk.css.map",
-  "index.html": "/wish-app/index.html",
-  "precache-manifest.6235cbeaa95badc6f405b5c0ac238276.js": "/wish-app/precache-manifest.6235cbeaa95badc6f405b5c0ac238276.js",
-  "service-worker.js": "/wish-app/service-worker.js"
+  "main.css": "/wish_app/static/css/main.99089567.chunk.css",
+  "main.js": "/wish_app/static/js/main.ce90e245.chunk.js",
+  "main.js.map": "/wish_app/static/js/main.ce90e245.chunk.js.map",
+  "static/css/1.7adead3e.chunk.css": "/wish_app/static/css/1.7adead3e.chunk.css",
+  "static/js/1.4d4e7b06.chunk.js": "/wish_app/static/js/1.4d4e7b06.chunk.js",
+  "static/js/1.4d4e7b06.chunk.js.map": "/wish_app/static/js/1.4d4e7b06.chunk.js.map",
+  "runtime~main.js": "/wish_app/static/js/runtime~main.952c7795.js",
+  "runtime~main.js.map": "/wish_app/static/js/runtime~main.952c7795.js.map",
+  "static/css/1.7adead3e.chunk.css.map": "/wish_app/static/css/1.7adead3e.chunk.css.map",
+  "static/css/main.99089567.chunk.css.map": "/wish_app/static/css/main.99089567.chunk.css.map",
+  "index.html": "/wish_app/index.html",
+  "precache-manifest.f17bd2d9a37fd69de0ac6caae3d8fa5f.js": "/wish_app/precache-manifest.f17bd2d9a37fd69de0ac6caae3d8fa5f.js",
+  "service-worker.js": "/wish_app/service-worker.js"
 }
